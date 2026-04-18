@@ -1,8 +1,9 @@
 # Salvage Electronics — Implementation Plan
+open-circuits can be found here: github.com/trydydd/open-circuits
 
 > **Audience:** Claude Code, running in the user's repo workspace.
 > **Goal:** Bootstrap a new repo `salvage` that builds a static
-> HTML site, sharing design assets with the existing `open-circuits` repo.
+> HTML site, sharing design assets with the existing `open-circuits` repo (github.com/trydydd/open-circuits).
 > **Scope:** Repo skeleton, build pipeline, path contract, and stub content
 > for every section. Not full content — that's for human authors.
 
@@ -41,20 +42,17 @@ inherits:
 
 ## 0.5. Working Setup
 
-**Both repos are checked out side by side on the local machine.** From the
-`salvage/` working directory, the open-circuits repo is
-available at `../open-circuits/`.
+**Use the `open-circuits` GitHub repository as the source of truth** at
+`https://github.com/trydydd/open-circuits`.
 
 This means:
 
 - **For reference reads** (design context, CSS architecture, doc structure),
-  read files directly from `../open-circuits/`. No need to fetch from
-  GitHub.
-- **For copying files** noted in Section 2, use direct filesystem copies
-  (`cp ../open-circuits/.impeccable.md .`) rather than fetching via URL.
+  fetch files directly from `https://github.com/trydydd/open-circuits`.
+- **For copying files** noted in Section 2, copy from the same GitHub repo
+  source (not from local sibling paths).
 - **For understanding patterns** (Makefile style, build script layout,
-  documentation conventions), you have the full source tree available —
-  use it generously.
+  documentation conventions), consult the full source tree in that repo.
 
 **Build-time fetching is separate.** `build/fetch_shared.py` still pulls a
 release tarball from GitHub when the build runs. That's intentional: the
@@ -62,7 +60,7 @@ build treats open-circuits as a versioned dependency via its releases,
 not as a sibling directory. This keeps the build reproducible on CI and
 on Hearth deployments where only one repo is checked out.
 
-If `../open-circuits/` is missing for any reason, stop and report — do not
+If reading from the open-circuits repo fails for any reason, stop and report — do not
 attempt to guess at the patterns. The design consistency between the two
 projects matters, and guessing will drift.
 
