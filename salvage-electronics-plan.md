@@ -1,7 +1,7 @@
 # Salvage Electronics — Implementation Plan
 
 > **Audience:** Claude Code, running in the user's repo workspace.
-> **Goal:** Bootstrap a new repo `salvage-electronics` that builds a static
+> **Goal:** Bootstrap a new repo `salvage` that builds a static
 > HTML site, sharing design assets with the existing `open-circuits` repo.
 > **Scope:** Repo skeleton, build pipeline, path contract, and stub content
 > for every section. Not full content — that's for human authors.
@@ -10,8 +10,8 @@
 
 ## 0. Context You Need
 
-**Read these files from the `open-circuits` repo first.** They establish the
-patterns, design language, and integration contract that `salvage-electronics`
+**Read these files from the `open-circuits-ref` directory first.** They establish the
+patterns, design language, and integration contract that `salvage`
 inherits:
 
 - `CLAUDE.md` — design context, brand personality, users
@@ -32,7 +32,7 @@ inherits:
 - Open Circuits uses a Python build pipeline that wraps Kuphaldt's HTML
   with an overlay. Salvage Electronics has no such upstream — it builds
   original Markdown into HTML via Jinja2 templates.
-- Shared visual design: salvage-electronics should look like a section
+- Shared visual design: salvage should look like a section
   of the same reference library, not a separate product. Same fonts,
   same colors, same header/footer style. The only net-new UI is the
   hazard banner.
@@ -73,7 +73,7 @@ projects matters, and guessing will drift.
 Create this structure at the top of the new repo:
 
 ```
-salvage-electronics/
+salvage/
 ├── .gitignore
 ├── .impeccable.md                   # COPY from open-circuits/
 ├── ATTRIBUTION.md                   # WRITE — see section 3
@@ -164,7 +164,7 @@ salvage-electronics/
 
 **Do not re-write these. Copy them, then make the edits noted.**
 
-| Source (in `open-circuits/`) | Destination (in `salvage-electronics/`) | Edits |
+| Source (in `open-circuits/`) | Destination (in `salvage/`) | Edits |
 |---|---|---|
 | `.impeccable.md` | `.impeccable.md` | None — the design philosophy is shared. |
 
@@ -268,7 +268,7 @@ Thumbs.db
 
 ```toml
 [project]
-name = "salvage-electronics"
+name = "salvage"
 version = "0.1.0"
 description = "A practical guide to salvaging electronic components from discarded devices"
 requires-python = ">=3.10"
@@ -585,7 +585,7 @@ each with a one-sentence description of what belongs there. No placeholder
 lorem-ipsum. The intent: someone reading the stub should understand the
 planned scope and be able to start writing any section independently.
 
-Reference `salvage-electronics-outline.md` (attached separately, or
+Reference `salvage-outline.md` (attached separately, or
 reconstructible from Section 11 of this plan) for the full outline of
 each page's intended contents.
 
