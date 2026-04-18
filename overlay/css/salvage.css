@@ -1,0 +1,248 @@
+/* salvage.css
+ * Salvage-specific styles layered on top of open-circuits.css.
+ * Self-contained: no external URLs, fonts, or remote assets.
+ */
+
+:root {
+  --haz-1-bg: rgb(232, 246, 232);
+  --haz-1-border: rgb(46, 140, 60);
+  --haz-1-text: rgb(25, 72, 32);
+
+  --haz-2-bg: rgb(252, 245, 205);
+  --haz-2-border: rgb(187, 138, 18);
+  --haz-2-text: rgb(94, 69, 10);
+
+  --haz-3-bg: rgb(252, 232, 214);
+  --haz-3-border: rgb(215, 91, 10);
+  --haz-3-text: rgb(111, 43, 4);
+
+  --haz-4-bg: rgb(251, 225, 225);
+  --haz-4-border: rgb(201, 26, 26);
+  --haz-4-text: rgb(105, 11, 18);
+}
+
+@supports (color: oklch(0% 0 0)) {
+  :root {
+    --haz-1-bg: oklch(95.4% 0.040 145);
+    --haz-1-border: oklch(63% 0.170 145);
+    --haz-1-text: oklch(36% 0.085 145);
+
+    --haz-2-bg: oklch(96.8% 0.055 102);
+    --haz-2-border: oklch(73% 0.155 95);
+    --haz-2-text: oklch(40% 0.085 92);
+
+    --haz-3-bg: oklch(93.6% 0.058 52);
+    --haz-3-border: oklch(68% 0.185 46);
+    --haz-3-text: oklch(38% 0.105 42);
+
+    --haz-4-bg: oklch(93.5% 0.062 24);
+    --haz-4-border: oklch(64% 0.225 26);
+    --haz-4-text: oklch(37% 0.115 24);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --haz-1-bg: rgb(26, 54, 31);
+    --haz-1-border: rgb(84, 193, 101);
+    --haz-1-text: rgb(215, 240, 218);
+
+    --haz-2-bg: rgb(61, 51, 12);
+    --haz-2-border: rgb(224, 183, 52);
+    --haz-2-text: rgb(247, 236, 176);
+
+    --haz-3-bg: rgb(73, 37, 10);
+    --haz-3-border: rgb(241, 129, 58);
+    --haz-3-text: rgb(251, 223, 198);
+
+    --haz-4-bg: rgb(78, 20, 26);
+    --haz-4-border: rgb(235, 74, 74);
+    --haz-4-text: rgb(250, 219, 221);
+  }
+
+  @supports (color: oklch(0% 0 0)) {
+    :root {
+      --haz-1-bg: oklch(30% 0.050 145);
+      --haz-1-border: oklch(74% 0.165 145);
+      --haz-1-text: oklch(90% 0.032 145);
+
+      --haz-2-bg: oklch(34% 0.060 98);
+      --haz-2-border: oklch(81% 0.145 96);
+      --haz-2-text: oklch(92% 0.050 98);
+
+      --haz-3-bg: oklch(34% 0.072 46);
+      --haz-3-border: oklch(78% 0.182 46);
+      --haz-3-text: oklch(91% 0.046 46);
+
+      --haz-4-bg: oklch(31% 0.085 24);
+      --haz-4-border: oklch(74% 0.205 26);
+      --haz-4-text: oklch(91% 0.048 24);
+    }
+  }
+}
+
+.haz {
+  --haz-bg-current: var(--haz-2-bg);
+  --haz-border-current: var(--haz-2-border);
+  --haz-text-current: var(--haz-2-text);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin: 1.5em 0;
+  padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 6px);
+  border: 1px solid var(--haz-border-current);
+  border-radius: var(--oc-radius);
+  background: var(--haz-bg-current);
+  color: var(--haz-text-current);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.haz::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--haz-border-current);
+}
+
+.haz--level-1 {
+  --haz-bg-current: var(--haz-1-bg);
+  --haz-border-current: var(--haz-1-border);
+  --haz-text-current: var(--haz-1-text);
+}
+
+.haz--level-2 {
+  --haz-bg-current: var(--haz-2-bg);
+  --haz-border-current: var(--haz-2-border);
+  --haz-text-current: var(--haz-2-text);
+}
+
+.haz--level-3 {
+  --haz-bg-current: var(--haz-3-bg);
+  --haz-border-current: var(--haz-3-border);
+  --haz-text-current: var(--haz-3-text);
+}
+
+.haz--level-4 {
+  --haz-bg-current: var(--haz-4-bg);
+  --haz-border-current: var(--haz-4-border);
+  --haz-text-current: var(--haz-4-text);
+  box-shadow:
+    0 1px 2px rgba(82, 9, 14, 0.14),
+    0 6px 16px rgba(156, 20, 20, 0.18);
+}
+
+.haz__icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  inline-size: 48px;
+  block-size: 48px;
+  display: grid;
+  place-items: center;
+  margin-top: 2px;
+}
+
+.haz__icon img {
+  width: 40px;
+  height: 40px;
+  inline-size: 40px;
+  block-size: 40px;
+  margin: 0;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+
+.haz__content {
+  min-width: 0;
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.haz__level,
+.haz__summary {
+  margin: 0;
+  color: inherit;
+}
+
+.haz__level {
+  /* Shared Open Circuits assets load Chivo; reuse it here for banner headings. */
+  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.015em;
+}
+
+.haz__summary {
+  max-width: 65ch;
+}
+
+.tier {
+  --tier-accent: var(--oc-accent);
+  position: relative;
+  margin: 1.25em 0;
+  padding: 0.9em 1.1em 0.9em calc(1.1em + 5px);
+  border: 1px solid var(--oc-border);
+  border-radius: var(--oc-radius);
+  background: color-mix(in oklch, var(--oc-surface) 72%, var(--oc-bg) 28%);
+  color: var(--oc-text);
+  font-style: normal;
+}
+
+.tier::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--tier-accent);
+}
+
+blockquote.tier {
+  border-left: 0;
+}
+
+.tier > :first-child {
+  margin-top: 0;
+}
+
+.tier > :last-child {
+  margin-bottom: 0;
+}
+
+.tier--none {
+  --tier-accent: var(--haz-1-border);
+}
+
+.tier--improv {
+  --tier-accent: var(--haz-2-border);
+}
+
+.tier--basic {
+  --tier-accent: var(--oc-border-strong);
+}
+
+.tier--equipped {
+  --tier-accent: var(--oc-accent);
+}
+
+.yield-rating {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+
+@media print {
+  .haz {
+    box-shadow: none;
+    border-width: 2px;
+  }
+}
