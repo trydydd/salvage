@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salvage Electronics — {{ title }}</title>
+    <link rel="stylesheet" href="{{ css_shared }}">
+    <link rel="stylesheet" href="{{ css_salvage }}">
+    <script src="{{ js_nav }}" defer></script>
+  </head>
+  <body>
+    <noscript><style>.oc-sidebar,.oc-nav-toggle{display:none!important}</style></noscript>
+    <script>document.body.classList.add('sidebar-closed');</script>
+    {% include "partials/header.html" %}
+    <aside id="oc-sidebar" class="oc-sidebar" aria-label="Chapter navigation">
+      <!-- populated by navigation.js -->
+    </aside>
+    <main>
+      {% if hazard %}{% include "partials/hazard-banner.html" %}{% endif %}
+      <article>{{ body | safe }}</article>
+    </main>
+    {% include "partials/footer.html" %}
+  </body>
+</html>
