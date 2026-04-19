@@ -18,4 +18,4 @@ Explain why transformers and chokes from mains equipment need context, and why u
 Show where salvaged inductors and transformers shine, where custom magnetics are too specific, and what measurements are worth writing on the storage bag.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for basic winding checks and to [experiments](/circuits/Exper/EXPER_1.html) for simple low-voltage coil tests.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for basic winding checks and to [experiments](/open-circuits/Exper/EXPER_1.html) for simple low-voltage coil tests.

@@ -31,8 +31,8 @@ Explain how to strip mechanical modules in layers, keep matched sensor pairs tog
 Call out ink mess, toner dust, spring-loaded mechanisms, scanner glass, and the fact that laser printers bring mains wiring and hot fuser assemblies that deserve a higher-hazard approach.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for testing motors, switches, and sensor harnesses after removal.
-- [Experiments](/circuits/Exper/EXPER_1.html) for simple bench setups that help sort motors and optical sensors into known-good bins.
+- [DC measurements](/open-circuits/DC/DC_5.html) for testing motors, switches, and sensor harnesses after removal.
+- [Experiments](/open-circuits/Exper/EXPER_1.html) for simple bench setups that help sort motors and optical sensors into known-good bins.
 
 ## TODO: Specific Teardowns
 Leave room for future inkjet and laser teardown notes, especially which families give the best motor and rail yields for small motion projects.

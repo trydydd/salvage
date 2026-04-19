@@ -18,4 +18,4 @@ Show how base-emitter and base-collector junction checks reveal a likely good tr
 Explain how to combine package lookup, board traces, and meter checks when the part markings are incomplete or hard to search.
 
 ## TODO: Theory links
-Point readers to [semiconductors](/circuits/Semi/SEMI_6.html) for transistor action and to [experiments](/circuits/Exper/EXPER_1.html) for simple transistor test fixtures.
+Point readers to [semiconductors](/open-circuits/Semi/SEMI_6.html) for transistor action and to [experiments](/open-circuits/Exper/EXPER_1.html) for simple transistor test fixtures.

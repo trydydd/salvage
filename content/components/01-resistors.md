@@ -18,4 +18,4 @@ Cover overheating, cracked bodies, drift, open-circuit failures, and the signs t
 State where salvaged resistors are perfectly fine, where flameproof or precision parts matter, and how to store values so they stay findable.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for resistance checking and to [experiments](/circuits/Exper/EXPER_1.html) for simple resistor-based test circuits.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for resistance checking and to [experiments](/open-circuits/Exper/EXPER_1.html) for simple resistor-based test circuits.

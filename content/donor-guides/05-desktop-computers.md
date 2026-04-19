@@ -31,8 +31,8 @@ Explain the order that preserves value: pull whole modules first, strip cables i
 Mention sharp chassis edges, hidden screws in drive cages, stale thermal paste, and the temptation to open the PSU as if it were just another low-voltage board.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for continuity checks and fan testing.
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for reading the regulator and MOSFET-heavy power sections around a motherboard CPU socket.
+- [DC measurements](/open-circuits/DC/DC_5.html) for continuity checks and fan testing.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for reading the regulator and MOSFET-heavy power sections around a motherboard CPU socket.
 
 ## TODO: Specific Teardowns
 Reserve this section for future examples that compare office desktops, gaming towers, and mini PCs by salvage yield and ease of disassembly.

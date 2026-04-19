@@ -18,4 +18,4 @@ Describe PS_ON control, output rail selection, dummy-load decisions if needed, a
 Explain how to verify each rail, label current expectations honestly, and avoid treating the finished unit as isolated from mains hazards.
 
 ## TODO: Theory links and extensions
-Point readers to [DC measurements](/circuits/DC/DC_5.html) and [semiconductors](/circuits/Semi/SEMI_6.html) for the power-supply concepts that support the conversion.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) and [semiconductors](/open-circuits/Semi/SEMI_6.html) for the power-supply concepts that support the conversion.

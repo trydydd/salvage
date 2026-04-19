@@ -18,4 +18,4 @@ Describe the transformer-to-rectifier-to-regulator chain, heat sinking, filterin
 Explain no-load and loaded voltage checks, heat monitoring, polarity confirmation, and the signs that the transformer or regulator choice is not suitable.
 
 ## TODO: Theory links and safety notes
-Point readers to [DC measurements](/circuits/DC/DC_5.html) and [semiconductors](/circuits/Semi/SEMI_6.html), while noting that mains-related cautions must be stated plainly in the final draft.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) and [semiconductors](/open-circuits/Semi/SEMI_6.html), while noting that mains-related cautions must be stated plainly in the final draft.

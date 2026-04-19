@@ -21,7 +21,7 @@ and self-hosted distribution as part of the broader Hearth reference library.
    International (CC BY 4.0)** and are used here with attribution.
 
 2. **Theory Cross-References** — Salvage Electronics links to Open Circuits
-   chapters using absolute URLs such as `/circuits/Semi/SEMI_6.html`. These are
+   chapters using absolute URLs such as `/open-circuits/Semi/SEMI_6.html`. These are
    hyperlinks only. No Open Circuits theory text is copied into this project.
 
 ---

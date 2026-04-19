@@ -18,4 +18,4 @@ Describe enclosure, insulation, strain relief, and labeling choices that keep th
 Outline the step-by-step workflow for applying the tool, waiting, verifying with a meter, and storing it where it is available before a teardown starts.
 
 ## TODO: Theory links and cautions
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for discharge verification and note that the page must keep all theory links in short absolute `/circuits/...` form.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for discharge verification and note that the page must keep all theory links in short absolute `/open-circuits/...` form.

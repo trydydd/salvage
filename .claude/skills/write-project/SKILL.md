@@ -119,9 +119,9 @@ If the project has an ongoing hazard during use (e.g. the ATX bench supply has e
 
 Keep any existing theory links from the stub exactly as written. If no links exist, add the most relevant one or two from:
 
-- DC measurements and continuity: `/circuits/DC/DC_5.html`
-- Semiconductors and regulators: `/circuits/Semi/SEMI_6.html`
-- Bench experiments and test fixtures: `/circuits/Exper/EXPER_1.html`
+- DC measurements and continuity: `/open-circuits/DC/DC_5.html`
+- Semiconductors and regulators: `/open-circuits/Semi/SEMI_6.html`
+- Bench experiments and test fixtures: `/open-circuits/Exper/EXPER_1.html`
 
 Write each as a short inline sentence.
 

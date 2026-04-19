@@ -59,9 +59,9 @@ If the unit uses a relay rather than a MOSFET, the relay is worth pulling only i
 
 ## Theory Links
 
-For measuring DC voltages on the solar panel and battery, see [DC measurements](/circuits/DC/DC_5.html).
+For measuring DC voltages on the solar panel and battery, see [DC measurements](/open-circuits/DC/DC_5.html).
 
-For the MOSFETs, IGBTs, and HV rectifier diodes in the pulse circuit, see [Semiconductors](/circuits/Semi/SEMI_6.html).
+For the MOSFETs, IGBTs, and HV rectifier diodes in the pulse circuit, see [Semiconductors](/open-circuits/Semi/SEMI_6.html).
 
 ## Specific Teardowns
 

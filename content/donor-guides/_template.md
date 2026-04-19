@@ -29,7 +29,7 @@ Explain the teardown order, what tools help at different tiers, and which parts 
 State the donor-specific hazards, the common ways people break salvageable parts during removal, and the point where the guide should tell an untrained reader to stop.
 
 ## TODO: Theory Links
-Add short inline links to Open Circuits chapters using absolute paths such as [DC measurements](/circuits/DC/DC_5.html), [semiconductors](/circuits/Semi/SEMI_6.html), or [experiments](/circuits/Exper/EXPER_1.html).
+Add short inline links to Open Circuits chapters using absolute paths such as [DC measurements](/open-circuits/DC/DC_5.html), [semiconductors](/open-circuits/Semi/SEMI_6.html), or [experiments](/open-circuits/Exper/EXPER_1.html).
 
 ## TODO: Specific Teardowns
 Leave room for future model-specific links and note what a teardown entry should add beyond the generic guide: exact fasteners, board revisions, and the best-yield parts for that model.

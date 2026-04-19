@@ -98,13 +98,13 @@ Match hazard level (see Step 2). For level 3–4, lead with the stored-energy ha
 
 Keep any existing theory links from the stub exactly as written. If no links exist, add the appropriate subset from:
 
-- DC measurements and continuity: `/circuits/DC/DC_5.html`
-- Semiconductors and regulators: `/circuits/Semi/SEMI_6.html`
-- Bench experiments and test fixtures: `/circuits/Exper/EXPER_1.html`
+- DC measurements and continuity: `/open-circuits/DC/DC_5.html`
+- Semiconductors and regulators: `/open-circuits/Semi/SEMI_6.html`
+- Bench experiments and test fixtures: `/open-circuits/Exper/EXPER_1.html`
 
 Write each as a short inline sentence, e.g.:
 
-> For measuring DC voltages on salvaged boards, see [DC Measurements](/circuits/DC/DC_5.html).
+> For measuring DC voltages on salvaged boards, see [DC Measurements](/open-circuits/DC/DC_5.html).
 
 ---
 

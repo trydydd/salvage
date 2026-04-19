@@ -31,8 +31,8 @@ Explain when to keep wires attached, how to free battery tabs without tearing th
 Call out corrosion, sharp battery tabs, trapped springs, and the occasional hidden rechargeable pack even in devices that look disposable.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for checking battery polarity, voltage, and switch continuity.
-- [Experiments](/circuits/Exper/EXPER_1.html) for simple LED and battery test setups you can reuse while sorting parts.
+- [DC measurements](/open-circuits/DC/DC_5.html) for checking battery polarity, voltage, and switch continuity.
+- [Experiments](/open-circuits/Exper/EXPER_1.html) for simple LED and battery test setups you can reuse while sorting parts.
 
 ## TODO: Specific Teardowns
 Reserve this section for future examples such as toy keyboards, remotes, and battery lanterns, each with notes on which parts are worth the time.

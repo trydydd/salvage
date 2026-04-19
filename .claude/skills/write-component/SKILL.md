@@ -84,13 +84,13 @@ Practical and direct. No moralising about waste or reuse.
 
 Keep any existing theory links from the stub exactly as written. If no links exist, add the most relevant one or two from:
 
-- DC measurements and continuity: `/circuits/DC/DC_5.html`
-- Semiconductors and regulators: `/circuits/Semi/SEMI_6.html`
-- Bench experiments and test fixtures: `/circuits/Exper/EXPER_1.html`
+- DC measurements and continuity: `/open-circuits/DC/DC_5.html`
+- Semiconductors and regulators: `/open-circuits/Semi/SEMI_6.html`
+- Bench experiments and test fixtures: `/open-circuits/Exper/EXPER_1.html`
 
 Write each as a short inline sentence, e.g.:
 
-> To understand how this component behaves in a circuit, see [Semiconductors](/circuits/Semi/SEMI_6.html).
+> To understand how this component behaves in a circuit, see [Semiconductors](/open-circuits/Semi/SEMI_6.html).
 
 Do not add more than two theory links.
 

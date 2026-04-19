@@ -70,7 +70,7 @@ location /salvage/ {
 
 **Paths must not change across versions.**
 
-Open Circuits may deep-link into Salvage Electronics, and Salvage content already uses absolute `/circuits/...` links back into Open Circuits. The following `/salvage/...` paths are stable by contract:
+Open Circuits may deep-link into Salvage Electronics, and Salvage content already uses absolute `/open-circuits/...` links back into Open Circuits. The following `/salvage/...` paths are stable by contract:
 
 | Area | Stable URL pattern |
 |------|--------------------|
@@ -92,13 +92,13 @@ If a structural change ever becomes necessary, it must be coordinated with both 
 
 ## Cross-references into Open Circuits
 
-Salvage Electronics links into Open Circuits with absolute `/circuits/...` paths only. The current cross-reference map is:
+Salvage Electronics links into Open Circuits with absolute `/open-circuits/...` paths only. The current cross-reference map is:
 
 | Salvage topic | Open Circuits chapter URL | Used for |
 |---------------|---------------------------|----------|
-| DC measurements, continuity, polarity, discharge verification | `/circuits/DC/DC_5.html` | donor guides, most component pages, and every project stub that depends on bench measurements |
-| Semiconductors, rectifiers, MOSFETs, regulators, inverter devices | `/circuits/Semi/SEMI_6.html` | power-focused donor guides, active-device component pages, and PSU / charger projects |
-| Bench experiments, quick test rigs, low-voltage fixtures | `/circuits/Exper/EXPER_1.html` | battery-device and low-voltage donor guides, passive/mechanical component pages, and simple project builds |
+| DC measurements, continuity, polarity, discharge verification | `/open-circuits/DC/DC_5.html` | donor guides, most component pages, and every project stub that depends on bench measurements |
+| Semiconductors, rectifiers, MOSFETs, regulators, inverter devices | `/open-circuits/Semi/SEMI_6.html` | power-focused donor guides, active-device component pages, and PSU / charger projects |
+| Bench experiments, quick test rigs, low-voltage fixtures | `/open-circuits/Exper/EXPER_1.html` | battery-device and low-voltage donor guides, passive/mechanical component pages, and simple project builds |
 
 Keep these links short and inline. Do not use copied theory text, footnotes, or relative cross-project paths.
 

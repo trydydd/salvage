@@ -18,4 +18,4 @@ Give the ranges worth documenting so readers can connect a measurement to a like
 Describe shorted, open, leaky, and heat-stressed diodes, especially in power sections and reverse-polarity protection positions.
 
 ## TODO: Theory links
-Point readers to [semiconductors](/circuits/Semi/SEMI_6.html) for diode behavior and to [DC measurements](/circuits/DC/DC_5.html) for meter habits that make the readings meaningful.
+Point readers to [semiconductors](/open-circuits/Semi/SEMI_6.html) for diode behavior and to [DC measurements](/open-circuits/DC/DC_5.html) for meter habits that make the readings meaningful.

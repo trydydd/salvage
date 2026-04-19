@@ -31,8 +31,8 @@ Explain how to free board-edge connectors without ripping pads, when hot air hel
 Mention fragile plastic clips, RF shield edges, hidden screws under rubber feet, and the occasional telephone-line protection parts that can tear off if the board is flexed.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for tracing input filtering and regulator outputs.
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for identifying regulators, transistors, and protection devices around the power section.
+- [DC measurements](/open-circuits/DC/DC_5.html) for tracing input filtering and regulator outputs.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for identifying regulators, transistors, and protection devices around the power section.
 
 ## TODO: Specific Teardowns
 Reserve this space for future router and modem teardowns that show which brands are easy to open and which are mostly glue and shield cans.

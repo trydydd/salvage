@@ -31,8 +31,8 @@ Explain that the battery comes out first, that wiring should be insulated as soo
 Call out the battery short-circuit hazard, heavy components that shift when the case opens, charged capacitors in the inverter stage, and acid or corrosion from aged sealed lead-acid packs.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for testing fans, relays, and battery-side continuity only after the live battery path is removed.
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for identifying the inverter transistors and rectifiers that often dominate the board layout.
+- [DC measurements](/open-circuits/DC/DC_5.html) for testing fans, relays, and battery-side continuity only after the live battery path is removed.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for identifying the inverter transistors and rectifiers that often dominate the board layout.
 
 ## TODO: Specific Teardowns
 Leave room for future UPS teardowns that compare standby and line-interactive designs, with strong notes about battery isolation and which salvage tasks are reasonable for non-experts.

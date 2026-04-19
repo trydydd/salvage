@@ -58,9 +58,9 @@ Hot air is only worth setting up if you're after the PWM controller IC and it's 
 
 ## Theory Links
 
-For measuring DC voltages on salvaged boards, see [DC measurements](/circuits/DC/DC_5.html).
+For measuring DC voltages on salvaged boards, see [DC measurements](/open-circuits/DC/DC_5.html).
 
-For understanding the MOSFETs and rectifiers that dominate PSU salvage value, see [Semiconductors](/circuits/Semi/SEMI_6.html).
+For understanding the MOSFETs and rectifiers that dominate PSU salvage value, see [Semiconductors](/open-circuits/Semi/SEMI_6.html).
 
 ## Specific Teardowns
 
