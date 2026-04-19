@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')",
+      "passed": true,
+      "evidence": "Error 1: N-channel body diode polarity stated backwards — correctly identified"
+    },
+    {
+      "text": "Correctly states the fix: body diode runs from source to drain with anode at source",
+      "passed": true,
+      "evidence": "Correction states 'anode at source, cathode at drain' with correct probe assignments"
+    },
+    {
+      "text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+      "passed": false,
+      "evidence": "Report uses 'Errors Found' and 'Items Verified as Correct' sections with no two-tier Critical/Fact-Check separation. No fact-check items with source recommendations."
+    },
+    {
+      "text": "Numbers all findings sequentially",
+      "passed": true,
+      "evidence": "Findings numbered 1–4 sequentially in the priority summary table"
+    },
+    {
+      "text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip",
+      "passed": false,
+      "evidence": "No fix-application workflow. Report ends after priority summary table."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 2,
+    "total": 5,
+    "pass_rate": 0.6
+  },
+  "execution_metrics": {
+    "tool_calls": {"Read": 1, "Write": 1},
+    "total_tool_calls": 6,
+    "errors_encountered": 0
+  },
+  "notes": [
+    "FALSE POSITIVE: Error 2 flags P-channel body diode as wrong ('anode at drain' stated as incorrect). But P-channel body diode anode IS at drain — this is correct electronics. The with-skill run correctly left this as Clean.",
+    "Gate discharge path error (Error 3) correctly identified as an issue"
+  ]
+}

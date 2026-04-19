@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "skill_name": "review-technical",
+    "skill_path": ".claude/skills/review-technical",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-19T00:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "Diodes Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 51.3,
+        "tokens": 18889,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)", "passed": true, "evidence": "Critical Error 1: '20V DC range' correctly flagged with fix to confirm diode mode selector"},
+        {"text": "Flags silicon diode forward voltage '1.4-2.0V' as a critical error (correct range is 0.55-0.80V)", "passed": true, "evidence": "Critical Error 2: '1.4–2.0V' correctly flagged with fix '0.5–0.8 V'"},
+        {"text": "Flags '0.55-0.80 ohms' in the forward voltage table as a critical error (should be volts, not ohms)", "passed": true, "evidence": "Critical Error 3: unit error Ω→V correctly identified"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors, ## Fact-Check Items, and ## Clean sections"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": true, "evidence": "Report ends with standard Apply fixes prompt with all four options"}
+      ],
+      "notes": ["Also found 3 legitimate fact-check items: silicon Vf lower bound, green LED upper bound, HB-green lower bound"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Diodes Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 55.2,
+        "tokens": 17414,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)", "passed": true, "evidence": "Error 1 correctly identified"},
+        {"text": "Flags silicon diode forward voltage '1.4-2.0V' as a critical error (correct range is 0.55-0.80V)", "passed": true, "evidence": "Error 2 correctly identified"},
+        {"text": "Flags '0.55-0.80 ohms' in the forward voltage table as a critical error (should be volts, not ohms)", "passed": true, "evidence": "Error 3 correctly identified"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Uses 'Errors Found' and 'Items Verified as Correct' — no two-tier Critical/Fact-Check structure, no source recommendations"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": false, "evidence": "No fix-application workflow offered"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "MOSFETs Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 95.6,
+        "tokens": 22245,
+        "tool_calls": 7,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')", "passed": true, "evidence": "Critical Error 1: N-channel body diode direction correctly reversed with fix"},
+        {"text": "Correctly states the fix: body diode runs from source to drain with anode at source", "passed": true, "evidence": "Fix: 'body diode runs from source to drain with the anode at the source'"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors, ## Fact-Check Items, ## Clean"},
+        {"text": "Numbers all findings sequentially", "passed": true, "evidence": "Findings numbered 1–5 sequentially without restarting"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": true, "evidence": "Standard Apply fixes prompt present"}
+      ],
+      "notes": [
+        "Correctly left P-channel body diode direction as Clean — no false positive (baseline incorrectly flagged this)",
+        "Also caught gate discharge path error (gate-to-source, not drain-to-source) as a real additional finding"
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "MOSFETs Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 85.2,
+        "tokens": 18625,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')", "passed": true, "evidence": "Error 1 correctly identified with fix"},
+        {"text": "Correctly states the fix: body diode runs from source to drain with anode at source", "passed": true, "evidence": "Correction listed in detail"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Uses 'Errors Found' with severity labels, no Fact-Check Items tier with source recommendations"},
+        {"text": "Numbers all findings sequentially", "passed": true, "evidence": "Numbered 1–4 in priority summary table"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": false, "evidence": "No fix workflow offered"}
+      ],
+      "notes": [
+        "FALSE POSITIVE: flagged P-channel body diode 'anode at drain' as wrong — but this is correct electronics. With-skill avoided this error."
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Relays Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 84.0,
+        "tokens": 20750,
+        "tool_calls": 8,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies '200mA current range' meter instruction as a critical error (should be resistance/ohms range)", "passed": true, "evidence": "Critical Error 1: '200mA current range' correctly flagged with fix to resistance mode"},
+        {"text": "Flags 5V relay coil resistance '10-30 ohms' as a critical error (correct range is 50-150 ohms)", "passed": true, "evidence": "Critical Error 2: '10–30Ω' flagged, fix '50–150Ω'"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors, ## Fact-Check Items, ## Clean"},
+        {"text": "Numbers all findings sequentially", "passed": true, "evidence": "Findings 1–4 sequentially"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": true, "evidence": "Standard Apply fixes prompt present"}
+      ],
+      "notes": ["Also flagged 1N4001 PIV adequacy concern as a legitimate secondary fact-check item"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Relays Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 96.2,
+        "tokens": 18917,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies '200mA current range' meter instruction as a critical error (should be resistance/ohms range)", "passed": true, "evidence": "Error 1 correctly identified"},
+        {"text": "Flags 5V relay coil resistance '10-30 ohms' as a critical error (correct range is 50-150 ohms)", "passed": true, "evidence": "Error 2 correctly identified"},
+        {"text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Uses 'Errors Found' with severity table, no two-tier Critical/Fact-Check structure"},
+        {"text": "Numbers all findings sequentially", "passed": true, "evidence": "Numbered 1–6"},
+        {"text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip", "passed": false, "evidence": "No fix workflow offered"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 76.97, "stddev": 22.98, "min": 51.3, "max": 95.6},
+      "tokens": {"mean": 20628.0, "stddev": 1681.0, "min": 18889, "max": 22245}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.6, "stddev": 0.0, "min": 0.6, "max": 0.6},
+      "time_seconds": {"mean": 78.87, "stddev": 21.21, "min": 55.2, "max": 96.2},
+      "tokens": {"mean": 18318.7, "stddev": 797.0, "min": 17414, "max": 18917}
+    },
+    "delta": {
+      "pass_rate": "+0.40",
+      "time_seconds": "-1.9",
+      "tokens": "+2309"
+    }
+  },
+  "notes": [
+    "Skill produces 100% pass rate vs 60% baseline — consistent across all three test pages",
+    "The 2 failing baseline assertions are always the same: no Critical/Fact-Check tier separation, and no fix-application workflow — these are the structural behaviours the skill uniquely provides",
+    "Error detection rate is identical in both configurations (both find the injected errors); the skill's value is in structure, source recommendations, and the resolve workflow",
+    "MOSFETs baseline produced a false positive on P-channel body diode direction — the skill's calibration table prevented this",
+    "Time overhead is negligible: with-skill 77s vs without-skill 79s average",
+    "Token overhead is modest: ~2300 tokens more with skill, for structured output and source recommendations"
+  ]
+}
