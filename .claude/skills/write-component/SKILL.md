@@ -109,7 +109,37 @@ Apply these throughout:
 - **No marketing language.** No "excellent", "handy", "great choice."
 - **Pair hazards with procedures.** If a cap can retain charge, say how to discharge it before the next sentence.
 
-## Step 4 — Write the file
+## Step 4 — AI writing antipatterns to avoid
+
+These are the patterns Wikipedia's editors use to identify AI-generated text. Every one of them will make the output feel synthetic. Avoid them without exception.
+
+**Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
+> delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, cutting-edge
+
+**Banned phrases:**
+- "it is worth noting that" → just say the thing
+- "in conclusion" / "in summary" / "overall" → don't summarise; end when the content ends
+- "plays a vital/significant role" → say what role, specifically
+- "stands as a testament to" → say what it actually demonstrates
+- "leaves a lasting impact" / "deeply rooted" → too vague; name the specific effect
+- Trailing participle clauses: "...highlighting its importance", "...showcasing its versatility" → cut them
+- "not only X but also Y" → restructure the sentence
+
+**Banned structural patterns:**
+- Bullet lists where every item has a bolded lead-in. Reserve bold for genuine key terms.
+- Every paragraph the same length. Vary sentence and paragraph rhythm.
+- Em dashes used where a comma or colon would be correct.
+- A summary paragraph restating what was just said. End on content.
+- Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic.
+
+**Banned tone patterns:**
+- Vague specs instead of real numbers. "A relatively high voltage" → "25–50 V". Always give the actual range.
+- Generic framing: "These components are commonly found in many types of circuits." → say which circuits, where on the board.
+- Inflated claims about salvage value: "These are extremely valuable finds." → say what they are actually worth and why.
+- Hedging preambles: "It is important to note that..." / "Keep in mind that..." → say the thing directly.
+- Treating the reader as a beginner who needs reminders to be careful — pair hazards with procedures and move on.
+
+## Step 5 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all five sections with full content. Write it back to the same path that was passed as the argument.
 

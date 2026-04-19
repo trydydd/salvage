@@ -142,7 +142,38 @@ Apply these throughout:
 - **No marketing language.** No "incredibly useful", "great project", "amazing result."
 - **Specs as ranges.** "10–47 Ω, 5–10 W" not "a suitable resistor."
 
-## Step 5 — Write the file
+## Step 5 — AI writing antipatterns to avoid
+
+These are the patterns Wikipedia's editors use to identify AI-generated text. Every one of them will make the output feel synthetic. Avoid them without exception.
+
+**Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
+> delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, cutting-edge, innovative, transformative
+
+**Banned phrases:**
+- "it is worth noting that" → just say the thing
+- "in conclusion" / "in summary" / "overall" → end on content, not a summary
+- "stands as a testament to" → say what it actually does
+- "plays a vital role" → say what role, specifically
+- "leaves a lasting impact" / "a truly rewarding project" → vague; say what the reader actually gets
+- Trailing participle clauses: "...demonstrating the power of salvage", "...showcasing resourcefulness" → cut them
+- "not only X but also Y" → restructure the sentence
+
+**Banned structural patterns:**
+- Every bullet with a bolded lead-in. Reserve bold for genuine key terms.
+- Uniform paragraph lengths and sentence rhythms. Vary deliberately.
+- Em dashes where a comma or colon belongs.
+- A concluding paragraph restating what the project does. End on the last real step.
+- Rule-of-three negative parallelisms: "No special skills. No expensive tools. Just parts." → AI tic.
+- Opening the project goal with a sentence about why salvage is worthwhile. The reader already knows.
+
+**Banned tone patterns:**
+- Inflated project descriptions. "This versatile bench supply will serve you for years to come." → say what voltages it provides and at what current.
+- Vague parts references. "A suitable resistor from a salvaged board" → name the donor guide and the board location.
+- Abstract safety warnings without procedures. "Ensure safety before applying power." → name the check and how to do it.
+- Encouragement that substitutes for information. "Don't be afraid to experiment!" → give the actual step.
+- Marketing register. "This project is a great way to..." → cut the frame; start with what the project does.
+
+## Step 6 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all five sections with full content. Write it back to the same path that was passed as the argument.
 

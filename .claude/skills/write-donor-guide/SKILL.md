@@ -129,7 +129,36 @@ Apply these throughout — they are non-negotiable:
 - **Short paragraphs.** Three to five sentences maximum per paragraph. One idea per paragraph.
 - **No marketing language.** No "excellent", "amazing", "great find." Be plain.
 
-## Step 5 — Write the file
+## Step 5 — AI writing antipatterns to avoid
+
+These are the patterns Wikipedia's editors use to identify AI-generated text. Every one of them will make the output feel synthetic. Avoid them without exception.
+
+**Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
+> delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, cutting-edge
+
+**Banned phrases:**
+- "stands as a testament to" → say what it actually does
+- "plays a vital/significant role" → say what role, specifically
+- "it is worth noting that" → just say the thing
+- "in conclusion" / "in summary" / "overall" → don't summarise; end when the content ends
+- "not only X but also Y" → restructure the sentence
+- "leaves a lasting impact" / "watershed moment" / "deeply rooted" → too vague; name the actual effect
+- Trailing participle clauses: "...highlighting the importance of X", "...showcasing the value of Y" → cut them
+
+**Banned structural patterns:**
+- Bullet lists where every item has a bolded lead-in. Reserve bold for genuine key terms, not formatting every point.
+- Every paragraph the same length. Vary sentence and paragraph rhythm.
+- Em dashes in place of commas, colons, or parentheses. Use the right punctuation for the job.
+- A summary or conclusion paragraph at the end that restates what was just said. End on content.
+- Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic; avoid it.
+
+**Banned tone patterns:**
+- Generic positive framing instead of specific facts. "A reliable source of useful components" → say which components, what specs, what donor board location.
+- Treating ordinary information as uniquely significant. Not every cap is remarkable; say what makes this one worth pulling.
+- Hedging preambles before stating something obvious: "It is important to remember that..." → say the thing directly.
+- Inflated hazard language. "Extreme caution is advised" → say what the hazard is and what to do about it.
+
+## Step 6 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all seven sections with full content. Write it back to the same path that was passed as the argument.
 

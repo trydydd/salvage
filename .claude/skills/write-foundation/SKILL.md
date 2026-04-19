@@ -81,7 +81,38 @@ Apply these throughout:
 - **Plain language.** No academic register, no marketing language. Workshop-y and honest.
 - **Pair every hazard with a procedure.** This is the most important rule for the safety page. Do not end a hazard description without telling the reader what to do.
 
-## Step 5 — Write the file
+## Step 5 — AI writing antipatterns to avoid
+
+These are the patterns Wikipedia's editors use to identify AI-generated text. Every one of them will make the output feel synthetic. Avoid them without exception.
+
+**Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
+> delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, empower, transformative
+
+**Banned phrases:**
+- "it is worth noting that" → just say the thing
+- "in conclusion" / "in summary" / "to summarise" → don't summarise; end when the content ends
+- "plays a vital role" / "is critically important" → say what role or consequence, specifically
+- "stands as a testament to" → say what it actually demonstrates
+- "with that in mind" / "that being said" → transition directly
+- Trailing participle clauses: "...emphasising the importance of safety", "...highlighting the need for care" → cut them
+- "not only X but also Y" → restructure
+
+**Banned structural patterns:**
+- Every bullet point with a bolded lead-in phrase. Reserve bold for genuine key terms.
+- Every paragraph the same length, every sentence the same structure. Vary rhythm deliberately.
+- Em dashes where a comma, colon, or parenthesis would serve correctly.
+- Summary paragraph at the end restating the section. End on content.
+- Rule-of-three negative parallelisms: "No experience. No expensive tools. Just patience." → AI tic; avoid.
+- Opening a section with a sentence that restates the heading: "Tools and workspace are important because..." → cut it and start with the first real point.
+
+**Banned tone patterns:**
+- Safety theatre: dramatic, abstract warnings without specific procedures. "Electricity is extremely dangerous." → name the hazard and what to do.
+- Moralising about salvage or sustainability. The reader did not ask for it.
+- Vague encouragement: "With a bit of practice, anyone can learn this skill." → either give a procedure or don't comment.
+- Hedging preambles: "It is important to remember..." / "Always keep in mind..." → state the rule and move on.
+- Treating the reader as fragile. Assume they are capable and resourceful.
+
+## Step 6 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all sections with full content. Write it back to the same path that was passed as the argument.
 
