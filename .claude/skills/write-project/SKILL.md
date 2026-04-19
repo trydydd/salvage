@@ -173,7 +173,27 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 - Encouragement that substitutes for information. "Don't be afraid to experiment!" → give the actual step.
 - Marketing register. "This project is a great way to..." → cut the frame; start with what the project does.
 
-## Step 6 — Write the file
+## Step 6 — Rhythm and structure
+
+These rules address the deeper structural patterns that make AI writing feel robotic even after vocabulary and phrase problems are fixed.
+
+**Sentence length must vary deliberately.** Mix short sentences (5–10 words) with longer ones. A short sentence after a detailed step creates emphasis and signals that a step is complete. Three consecutive sentences of similar length is a tell — break the run.
+
+**Five sections do not need equal depth.** If the build layout needs eight numbered steps and the test procedure needs three, write them that way. A short section after a long one is correct if the content is short. Padding produces filler; compression loses real steps.
+
+**Tiered build sections should not be two equal-weight blocks.** If the minimum breadboard build is the one most readers will attempt, it gets more space. The permanent build tier can be a short paragraph noting what changes.
+
+**Parts tables do not need uniform row structure.** Some parts have a one-word source ("any PSU board"). Others need a note about what to reject. Write the note where it's needed and skip it where it isn't.
+
+**Use contractions.** "You'll", "don't", "it's", "that's fine". Their consistent absence is a tell. Build guides written by people use contractions throughout.
+
+**Include at least one detail that only comes from having built this.** The connection that beginners get backwards. The test that always passes even when something is wrong. The step where the binding post threads strip if you're not careful. The reason the minimum-build version fails in a specific way. These sentences signal firsthand knowledge.
+
+**The author has a view.** When one approach is clearly better, say so: "The breadboard version works but the binding posts pull out under normal use — spend ten minutes making the permanent version." When a listed extension is only worth doing in specific circumstances, name those circumstances.
+
+**Acknowledge variation in donor parts.** "Some ATX supplies use separable connector blocks; others solder the harness directly." "The resistance value you need depends on the LED you pulled." Real builds adapt to what's available.
+
+## Step 7 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all five sections with full content. Write it back to the same path that was passed as the argument.
 

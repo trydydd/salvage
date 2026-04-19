@@ -158,7 +158,27 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 - Hedging preambles before stating something obvious: "It is important to remember that..." → say the thing directly.
 - Inflated hazard language. "Extreme caution is advised" → say what the hazard is and what to do about it.
 
-## Step 6 — Write the file
+## Step 6 — Rhythm and structure
+
+These rules address the deeper structural patterns that make AI writing feel robotic even after vocabulary and phrase problems are fixed.
+
+**Sentence length must vary deliberately.** Mix short sentences (5–10 words) with longer ones. A short sentence after a dense technical clause creates rhythm and emphasis. Three sentences of similar length in a row is a tell — break the run. Single-sentence paragraphs are fine when the sentence earns it.
+
+**Sections do not need equal depth.** If a point needs one sentence, write one sentence and stop. Do not pad to match adjacent sections. A 40-word Watch Out For bullet next to a 15-word one is realistic. Trying to make them match produces obvious filler.
+
+**Tiered extraction sections should not be three equal-weight blocks.** Weight the tier where most of the actual work happens. If 80% of what's worth pulling comes out without a soldering iron, that tier gets the longest treatment. The hot-air tier might be two sentences if there's genuinely less to say.
+
+**Bulleted lists do not need uniform bullet length.** One short bullet followed by a long one is correct if the content demands it. Forcing all bullets to the same length produces visible padding or compression.
+
+**Use contractions.** "You'll", "don't", "it's", "that's", "there's". Their consistent absence in technical writing is a recognisable tell. A repair guide written by a person uses contractions naturally.
+
+**Include at least one detail that only comes from having done this.** A specific latch mechanism that requires a pin to release. A cap that's always corroded on this donor type. A connector that looks identical to another but isn't. A common mistake that damages the part during removal. These sentences signal firsthand knowledge and cannot be generated from general training data alone.
+
+**Acknowledge real variation between specimens.** Write "most ATX supplies", "some units", "older models", "in higher-wattage supplies" — not "ATX power supplies have X" as if all examples are identical. Real salvage is variable. The guide should reflect that.
+
+**The author has a view.** When something is barely worth pulling, say so directly in the prose — don't just assign ★☆☆ and move on. "The PWM controller is only worth desoldering if you already know the part number and have a use for it" is more useful than silence. When one technique is clearly better, name it.
+
+## Step 7 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all seven sections with full content. Write it back to the same path that was passed as the argument.
 

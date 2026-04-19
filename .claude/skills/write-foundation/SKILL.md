@@ -112,7 +112,25 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 - Hedging preambles: "It is important to remember..." / "Always keep in mind..." → state the rule and move on.
 - Treating the reader as fragile. Assume they are capable and resourceful.
 
-## Step 6 — Write the file
+## Step 6 — Rhythm and structure
+
+These rules address the deeper structural patterns that make AI writing feel robotic even after vocabulary and phrase problems are fixed.
+
+**Sentence length must vary deliberately.** Mix short sentences (5–10 words) with longer ones. A very short sentence landing after a complex procedural clause creates emphasis and rest. Three sentences of similar length in a row is a tell — break it. Single-sentence paragraphs are fine when the sentence carries weight.
+
+**Sections do not need equal depth.** A safety section covering a common hazard may need four paragraphs. One covering a rarer hazard may need two sentences. Do not pad the short one or compress the long one to make the page feel balanced. Real reference material is uneven because the subject matter is uneven.
+
+**Numbered procedures do not need uniform step counts.** If one technique has three steps and another has seven, write them that way. A filler step added to reach a round number is always visible.
+
+**Use contractions.** "You'll", "don't", "it's", "you're". Their consistent absence in technical prose is a recognisable tell. Workshop writing uses contractions.
+
+**Include at least one detail that only comes from experience.** The specific thing a beginner always gets wrong with this technique. The reason a seemingly obvious shortcut fails. The exception to the rule that a reader will eventually hit. A detail that requires having actually done the work to know. These cannot be generated from surface-level knowledge.
+
+**The author has a view.** When one approach is clearly safer or more practical, say which and why — don't present all options as equal. When a technique genuinely requires a specific tool and there is no workaround, say so plainly rather than softening it.
+
+**Vary how sections open.** Not every section should begin with a topic sentence that restates the heading. Some sections can open mid-thought, with context, with a direct instruction, or with the exception before the rule.
+
+## Step 7 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all sections with full content. Write it back to the same path that was passed as the argument.
 

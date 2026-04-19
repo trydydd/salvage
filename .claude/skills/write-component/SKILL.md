@@ -139,7 +139,25 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 - Hedging preambles: "It is important to note that..." / "Keep in mind that..." → say the thing directly.
 - Treating the reader as a beginner who needs reminders to be careful — pair hazards with procedures and move on.
 
-## Step 5 — Write the file
+## Step 5 — Rhythm and structure
+
+These rules address the deeper structural patterns that make AI writing feel robotic even after vocabulary and phrase problems are fixed.
+
+**Sentence length must vary deliberately.** Mix short sentences (5–10 words) with longer ones. A short sentence after a dense technical clause creates emphasis. Three sentences of similar length in a row is a tell — break the run. Single-sentence paragraphs are fine when the sentence earns it.
+
+**Five sections do not need equal depth.** If the failure modes section only has two things worth saying, say two things and stop. If the identification section needs four paragraphs, write four. Padding a short section to match a long one produces visible filler; compressing a long one to match a short one loses real information.
+
+**Measurement procedures do not need uniform step counts.** If one test method has two steps and another has five, write them that way. Don't add filler steps to the short one or compress the long one.
+
+**Use contractions.** "You'll", "don't", "it's", "probe it", "that's". Their consistent absence is a tell. A bench guide written by a person uses contractions.
+
+**Include at least one detail that only comes from having done this.** A specific marking code that trips people up. A package that looks like another but measures differently. A failure mode that only shows up at operating temperature, not on the bench. A common desoldering mistake for this specific part type. These sentences cannot be generated from general training data alone.
+
+**Acknowledge real variation.** "Most small-signal transistors", "in switchers you'll often find", "older through-hole parts typically". Not "transistors have a forward voltage of X" as if the bench will always confirm the textbook number.
+
+**The author has a view.** When a reuse case is genuinely marginal, say so: "Electrolytic caps from failed switching supplies are rarely worth the risk — the failure mode that killed the supply may have stressed them." When one test method is clearly better than another, name it and say why.
+
+## Step 6 — Write the file
 
 Produce the complete markdown file: frontmatter unchanged, then all five sections with full content. Write it back to the same path that was passed as the argument.
 
