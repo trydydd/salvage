@@ -156,7 +156,8 @@ The tell: if the adverb is doing the work of specificity (i.e. you could remove 
 **Banned structural patterns:**
 - Bullet lists where every item has a bolded lead-in. Reserve bold for genuine key terms, not formatting every point.
 - Every paragraph the same length. Vary sentence and paragraph rhythm.
-- Em dashes in place of commas, colons, or parentheses. Use the right punctuation for the job.
+- Em dashes anywhere in prose. Use a comma, colon, or parenthesis instead. No exceptions.
+- Semicolons in prose sentences. Split the sentence or use a comma. In table cells, semicolons are fine as spec-list separators.
 - A summary or conclusion paragraph at the end that restates what was just said. End on content.
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic; avoid it.
 - Short imperative fragments used as emphasis beats after a longer sentence: "Start there.", "Do this first.", "Keep that in mind." — no one says these at a bench. Fold the instruction into the sentence it belongs to.
