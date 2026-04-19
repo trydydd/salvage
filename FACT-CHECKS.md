@@ -24,9 +24,9 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Source: IEC 61810-1 §8 (endurance ratings); Omron relay application notes on contact derating for unknown service history.  
   File: content/components/08-relays.md
 
-- [ ] **Diodes** · Use diode mode · FACT-CHECK 4: Standard green LED upper bound is 2.4V in the LED forward voltage section but 2.5V in the Forward voltage by type section; verify the correct upper limit.  
-  Claim: "standard green reads 1.9–2.4V"  
-  Source: Check a representative standard green LED datasheet (e.g. Kingbright L-934GD or equivalent); cross-reference /open-circuits/Semi/SEMI_6.html if it covers LED Vf ranges.  
+- [ ] **Diodes** · Use diode mode · FACT-CHECK 4: Standard green LED lower bound (1.9V) unverified — likely a symmetric assumption around typ 2.2V, not a measured minimum. Upper bound already confirmed at 2.5V and corrected in the prose.  
+  Claim: "standard green reads 1.9–2.5V" (upper bound corrected; lower bound still unverified)  
+  Source: Bench measurement — probe several salvaged standard green LEDs in diode mode (follow the "LED forward voltage by color" procedure in content/components/03-diodes.md; meter technique at /open-circuits/DC/DC_5.html). Note the lowest reading across parts.  
   File: content/components/03-diodes.md
 
 - [ ] **Diodes** · Use diode mode · FACT-CHECK 5: High-brightness green LED upper bound is 3.5V in the LED forward voltage section but 3.6V in the Forward voltage by type section; verify against HB-green LED datasheets.  
