@@ -136,6 +136,11 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 **Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
 > delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, cutting-edge
 
+**Banned register** — do not use clinical or medical language for physical hazards; use plain workshop language instead:
+- "open skin" / "lacerate" / "abrade" → "cut you" or "cut your hand"
+- "expose bare conductors" → "leave bare wire touching X"
+- Use the words a person at a bench would use, not the words a safety manual would use.
+
 **Banned adverb constructions** — do not use adverbs to describe physical properties or hazards in ways no person would say:
 - "cuts fingers reliably" → "the edges are sharp enough to open skin"
 - "effectively removes" → just "removes"
