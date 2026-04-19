@@ -1,0 +1,136 @@
+---
+name: write-donor-guide
+description: Write a complete donor-guide page from a stub. Use when the user wants to fill in a donor guide at content/donor-guides/NN-*.md.
+version: 1.0.0
+user-invocable: true
+argument-hint: "[path/to/donor-guide-stub.md]"
+---
+
+Write a complete donor guide page for the salvage electronics site, replacing every `## TODO` section with real, usable content. The output must match the project's voice and conventions exactly.
+
+## Step 1 — Read source files
+
+Read all of these before writing anything:
+
+1. The stub file passed as the argument (absolute or repo-relative path)
+2. `docs/STYLE-GUIDE.md`
+3. `docs/HAZARD-SYSTEM.md`
+4. `content/donor-guides/_template.md`
+
+Extract from the stub:
+- `title` — the device type
+- `hazard` — integer 1–4
+- `hazard_summary` — the one-line worst-case statement
+- All existing `## Heading` lines (preserve them exactly)
+- Any existing theory links (preserve them exactly)
+
+## Step 2 — Understand the hazard level
+
+The hazard level controls the tone and content of safety sections:
+
+- **Level 1** — Battery-powered consumer devices (remotes, small gadgets). No mains exposure. "Before You Open It" is brief: remove batteries, check for swelling.
+- **Level 2** — Mains-powered but low-risk internally (chargers, routers, printers, laptops, LED drivers). "Before You Open It": unplug, wait 30 s for small caps. "Watch Out For": mostly mechanical — sharp edges, ribbon cables, spring clips.
+- **Level 3** — Mains with substantial stored charge (ATX PSUs, audio amplifiers). "Before You Open It": unplug, wait several minutes, discharge bulk caps with a discharge tool before touching. "Watch Out For": detailed cap discharge procedure; call out capacitor markings and expected voltages.
+- **Level 4** — Can retain lethal voltage after unplugging (microwaves, CRTs, large UPS units). "Before You Open It": strong warning up front, discharge procedures must be specific and step-by-step. "Watch Out For": lead with the worst-case consequence, then the safe-handling procedure. Never soften this section.
+
+## Step 3 — Write each section
+
+Produce content for all seven sections in order. Do not add sections or remove any. Preserve heading text exactly.
+
+---
+
+### What's Inside
+
+Two to four short paragraphs. Describe the major circuit blocks and mechanical assemblies a reader will actually encounter when they open this device. Be specific to the device type — not generic electronics theory. Name real PCB types (switch-mode PSU board, RF front-end, motor driver, etc.). Mention physical features: form factor, screws, clips, heat sinks, board count. End with a sentence about why this device is worth salvaging.
+
+---
+
+### Before You Open It
+
+Opens with an action list tailored to the hazard level (see Step 2). Use a numbered list for any procedure involving more than one step. Then a short paragraph of context if needed.
+
+For all levels: "Unplug from mains and remove any batteries before opening."
+
+Add level-appropriate detail on top. At level 3 or 4, describe exactly which components hold charge and what voltages to expect.
+
+---
+
+### What to Target
+
+A four-column markdown table. Use this exact header:
+
+```
+| Component | Where | Specs | Worth-it |
+|-----------|-------|-------|----------|
+```
+
+Six to ten rows. Each row:
+- **Component**: The part name and type. Be specific (e.g. "Electrolytic cap", "NPN transistor", "Schottky diode", not just "capacitor").
+- **Where**: Physical location on the board — named board, section, or landmark (e.g. "primary PSU board, near transformer", "logic board, flanking CPU", "output stage heatsink").
+- **Specs**: What the reader can read or measure — voltage rating, capacitance, resistance, package type, connector family. Use ranges if values vary (e.g. "470–2200 µF, 6.3–25 V"). No theoretical specs the reader cannot verify.
+- **Worth-it**: ★★★ (always pull), ★★☆ (pull if easy), ★☆☆ (only if you need it).
+
+Favour high-worth-it items. Include at least two ★★★ rows.
+
+---
+
+### How to Get Them Out
+
+Practical extraction techniques for the components listed in the table. Tiered by tool access:
+
+- **No soldering iron**: What can be unclipped, unplugged, or snapped free without heat?
+- **Soldering iron only**: Through-hole desoldering with solder wick or pump; how to avoid pad damage.
+- **With desoldering station / hot air**: SMD part removal; stagger heat to avoid board warp.
+
+Use short paragraphs or a bulleted list per tier. Name the specific components from the table where relevant (e.g. "The output rectifiers are through-hole — wick from below while holding the lead."). Include one or two tips specific to this device type (connector latches, hidden screws, foil shielding that must come off first, etc.).
+
+---
+
+### Watch Out For
+
+A bulleted list. Three to six specific hazards for this device type. Each bullet: state the hazard plainly, then the mitigation in the same sentence or the next. No bullet should be just a warning without a procedure.
+
+Match hazard level (see Step 2). For level 3–4, lead with the stored-energy hazard. Include at least one mechanical hazard (sharp edges, spring-loaded parts, fragile connectors). Include one chemical or thermal hazard if relevant (lead solder, burning insulation smell, swollen electrolyte, hot heatsinks).
+
+---
+
+### Theory Links
+
+Keep any existing theory links from the stub exactly as written. If no links exist, add the appropriate subset from:
+
+- DC measurements and continuity: `/circuits/DC/DC_5.html`
+- Semiconductors and regulators: `/circuits/Semi/SEMI_6.html`
+- Bench experiments and test fixtures: `/circuits/Exper/EXPER_1.html`
+
+Write each as a short inline sentence, e.g.:
+
+> For measuring DC voltages on salvaged boards, see [DC Measurements](/circuits/DC/DC_5.html).
+
+---
+
+### Specific Teardowns
+
+One short paragraph explaining that device-specific teardowns (named make and model) live in a subdirectory and are linked here as they are added. Do not invent teardown links. Use this placeholder text:
+
+> Specific make-and-model teardowns for [device type] will be linked here as they are added. See `content/donor-guides/teardowns/` for in-progress guides.
+
+---
+
+## Step 4 — Voice and style rules
+
+Apply these throughout — they are non-negotiable:
+
+- **Second person, active voice.** "Flip the board over" not "The board should be flipped."
+- **No exclamation marks.** State urgency through specificity, not punctuation.
+- **No moralizing.** Do not add sentences about why salvaging is good or bad. The reader already knows.
+- **No gatekeeping.** Never suggest a reader needs more experience or better tools before trying something.
+- **Pair every hazard with a procedure.** Never end a warning sentence without a mitigation.
+- **Specs as ranges.** "6.3–25 V electrolytic caps" not "a 16 V capacitor."
+- **Short paragraphs.** Three to five sentences maximum per paragraph. One idea per paragraph.
+- **No marketing language.** No "excellent", "amazing", "great find." Be plain.
+
+## Step 5 — Write the file
+
+Produce the complete markdown file: frontmatter unchanged, then all seven sections with full content. Write it back to the same path that was passed as the argument.
+
+Do not add any new headings, sections, or frontmatter fields. Do not remove any existing headings or theory links.
