@@ -18,3 +18,6 @@ Describe how to spot heat damage, cracked packages, bent leads, corrosion, and s
 
 ## TODO: Documenting what you pulled
 Show how photos, quick notes, and small labeled bags preserve context such as board location, polarity, and likely value before memory fades.
+
+## TODO: Wall wart identification and testing
+Cover how to read a wall wart label (output voltage, current rating, regulated vs unregulated, polarity symbol), identify the output connector type (barrel jack OD/ID, USB variant, proprietary), confirm polarity and no-load voltage with a multimeter, and do a basic load check to verify the supply doesn't collapse under draw. Include the common traps: unregulated supplies reading high at no load, centre-negative barrels wired backwards from convention, and VA ratings that look like wattage but aren't. The goal is to let a reader decide in five minutes whether a found wall wart is usable for a specific project without disassembling it.
