@@ -7,51 +7,54 @@ hazard_summary: "Large input caps hold 300V+ for minutes after unplugging."
 
 ## What's Inside
 
-An ATX supply packs a full switch-mode power conversion system into a steel box roughly 150 × 86 × 140 mm, depending on wattage class. Open the case (four Phillips screws on the rear panel) and you'll find one main PCB and a brushless fan mounted between the board and the top grille.
+Four Phillips screws on the rear panel, lid off, and you're looking at one main PCB running most of the case length with a brushless fan sitting above it against the top grille. Higher-wattage units (600 W and above) sometimes have a second daughterboard for extra output rectifiers — same rules apply to both.
 
-The primary side handles mains voltage: an input filter, a bridge rectifier, one or two large filter capacitors, and a pair of switching MOSFETs that drive the main ferrite transformer. Everything on this side operates at line voltage while running and holds charge after unplugging. The isolation boundary — a slot or gap routed into the PCB — marks where primary ends and secondary begins.
+The board splits into two electrical territories. On the primary side: an EMI filter near the IEC socket, a bridge rectifier, one or two large electrolytic caps, and switching MOSFETs bolted to a finned heatsink that drives the main ferrite transformer. This side runs at mains voltage while the supply is on and holds charge after unplugging. A routed slot or air gap crossing the PCB marks where primary ends. Find it before you touch anything.
 
-The secondary side is the low-voltage output stage: Schottky rectifier diodes on an aluminium heatsink, clusters of filter capacitors on each output rail (12 V, 5 V, 3.3 V, and −12 V), and a feedback circuit that keeps outputs regulated. Output wires leave via a harness with standard ATX connectors for motherboard, CPU, drives, and peripherals.
+Past that boundary, the secondary side drops to safe voltages. Schottky rectifier diodes on a second heatsink, banks of filter caps on the 12 V, 5 V, 3.3 V, and −12 V rails, and a PWM feedback loop that keeps everything regulated. Output wiring exits as a bundled harness — or, on modular units, through a socket panel on the back face.
 
-The fan, output harness, secondary caps, heatsinks, and power devices are all worth pulling. The primary input caps can be good, but they're also the part that injures people who work carelessly — save those for after you've confirmed the board fully discharged.
+The fan, harness, and secondary caps alone justify pulling most ATX units. The rest is a bonus.
 
 ## Before You Open It
 
-1. Unplug from mains. The 5 V standby rail is live whenever the PSU is connected, even with the unit switched off.
-2. Wait at least 10 minutes. The large primary filter caps (200–400 V rated) can hold 300 V or more after mains disconnect; some designs discharge slowly.
-3. Before touching the primary side, discharge the input caps deliberately. Probe across each cap's terminals with a multimeter set to DC voltage. If you read above 30 V, connect a 10 kΩ 1 W resistor across the terminals and wait for the reading to drop below 5 V.
-4. Identify the isolation boundary on the PCB before picking up any tools. The slot or air gap running across the board separates mains potential from the output side. Stay on the secondary side of that line until the primary caps are confirmed discharged.
+1. Unplug from mains. The 5 V standby rail is live whenever the supply is connected, regardless of the power switch.
+2. Wait at least 10 minutes. Primary filter caps are rated 200–400 V and some designs hold charge for longer than you'd expect — especially in supplies that were running hard.
+3. Measure across the primary cap terminals with a multimeter on DC voltage before reaching in. Anything above 30 V means wait longer.
+4. If you're above 30 V after 15 minutes, clip a 10 kΩ 1 W resistor across the cap terminals and recheck every couple of minutes until you're below 5 V.
+5. Locate the isolation boundary before picking up any tools. If you can't find it clearly, work only on the fan and harness — both come out without going near the primary side.
 
-If you can't clearly identify the primary-side components or the isolation boundary, harvest only the fan and output harness — both come out without going near the primary side at all.
+The discharge step feels slow. It isn't skippable.
 
 ## What to Target
 
 | Component | Where | Specs | Worth-it |
 |-----------|-------|-------|----------|
-| Case fan | Mounted at top or rear of case | 80 mm or 120 mm; 12 V brushless; 2- or 3-pin connector; spin with a finger to check the bearing | ★★★ |
-| Output wire harness | Bundled cables from secondary PCB | 18–20 AWG; ATX 20/24-pin, 4/8-pin CPU, SATA, Molex peripheral plugs; many units use separable connectors at the PCB | ★★★ |
-| Secondary filter electrolytics | Secondary PCB, output rail clusters | 680–2200 µF, 6.3–16 V; look for Japanese brands (Nichicon, Rubycon, Panasonic); reject any with bulging tops | ★★★ |
-| Schottky rectifier diodes | Secondary heatsink | TO-220 or TO-3P package; 20–100 A, 30–100 V; often dual-package (one body, two diodes) | ★★☆ |
-| Aluminium heatsinks | Primary and secondary power stages | L-bracket or plate; retain isolation hardware (mica or silicone pads, nylon screws) with the part | ★★☆ |
-| Power MOSFETs | Primary heatsink, near transformer | TO-220; N-channel; 400–600 V, 10–20 A typical; markings like IRF840, K2843, or similar | ★★☆ |
-| Primary input electrolytics | Primary PCB, near transformer | 200–400 V, 220–680 µF; reject any with yellowed sleeves, electrolyte crust, or domed tops | ★☆☆ |
-| PWM controller IC | Primary PCB, small IC near optocoupler | Common types: TL494, SG3525, KA7500; check markings before desoldering | ★☆☆ |
+| Case fan | Above main PCB, against top grille | 80 mm or 120 mm; 12 V brushless; 2- or 3-pin connector; spin the blade to check the bearing | ★★★ |
+| Output wire harness | Bundled from secondary PCB; rear socket panel on modular units | 18–20 AWG; 20/24-pin ATX, 4/8-pin CPU, SATA, Molex; often separable at the PCB without desoldering | ★★★ |
+| Secondary filter electrolytics | Secondary PCB, clustered near output rails | 680–2200 µF, 6.3–16 V; Japanese brands (Nichicon, Rubycon, Panasonic) are worth the effort — Samxon and Ltec aren't | ★★★ |
+| Schottky rectifier diodes | Secondary heatsink | TO-220 or TO-3P; 20–100 A, 30–100 V; often dual-package (one body, two diodes) | ★★☆ |
+| Aluminium heatsinks | Primary and secondary power stages | L-bracket or flat plate; keep the isolation hardware (mica pads, nylon shoulder screws) together with it | ★★☆ |
+| Power MOSFETs | Primary heatsink, near transformer | TO-220; N-channel; 400–600 V, 10–20 A typical; IRF840, K2843, and similar are common | ★★☆ |
+| Primary input electrolytics | Primary PCB, flanking the transformer | 200–400 V, 220–680 µF; only worth pulling from known-good brands with no visible aging | ★☆☆ |
+| PWM controller IC | Primary PCB, small DIP or SMD near the optocoupler | TL494, SG3525, KA7500 are the types worth recognising; anything else, check the markings before committing to desoldering | ★☆☆ |
 
 ## How to Get Them Out
 
-Without a soldering iron, the fan, output harness, and case hardware all come out cleanly. The fan is held by two to four screws through the case or a bracket; the connector unplugs from the PCB header. The output harness on many units plugs into the PCB with a separable connector block — lift the latch, pull the block, and the whole harness comes free. On units where harness wires are soldered directly to the board, cut at the PCB end and leave some lead length for later trimming.
+Most of what's worth pulling comes out without a soldering iron. Start there.
 
-With a soldering iron, secondary filter electrolytics are through-hole parts. Heat from the underside while gently rocking the cap; solder wick or a pump works well here. The rectifier diodes on the secondary heatsink are also through-hole — unbolt each from the heatsink first (usually two screws), then desolder. Keep the isolation pad with the diode to identify the package later.
+The fan is two to four screws, accessible from outside the case on most units, plus a connector that unplugs from a header on the PCB. Watch for locking tabs on the fan connector — Seasonic and FSP builds in particular use a small shrouded connector where you need to press a tab before pulling. Yanking it cracks the housing. On modular PSUs the output harness lifts straight off the rear panel socket by socket. On non-modular units the wires are soldered to the board; cut them 30–40 mm from the PCB so you've got lead to work with later. The heatsinks unbolt from the PCB with two or three screws — when you do this, keep the shoulder screws, nylon spacers, and isolation pads in a bag. They're harder to source than the components they came off.
 
-With a desoldering station or hot air: primary MOSFETs are through-hole in most ATX supplies but mounted to a heatsink that limits access. Unbolt each MOSFET from the heatsink before desoldering — trying to pull a bolted device will strip the pads. The PWM controller IC, if SMD, lifts cleanly with hot air at 320–350 °C; hold the board steady with a clip or vise.
+With a soldering iron, the secondary filter caps and rectifier diodes are the main targets. Both are through-hole. For the caps, heat from the underside while rocking gently; wick or a pump works fine. For the rectifier diodes, unbolt each one from the heatsink before applying heat — they're held down by a screw and trying to desolder a bolted part torques the pads off. The isolation pad usually sticks to the heatsink when you unbolt; tap the diode body sideways and it comes away cleanly.
+
+Hot air is only worth setting up if you're after the PWM controller IC and it's an SMD package. 320–350 °C, hold the board steady, and it lifts in a few seconds. The primary MOSFETs are through-hole in most units, so hot air doesn't add much there.
 
 ## Watch Out For
 
-- The primary input caps hold 300 V or higher for several minutes after unplugging, and longer in larger units. Measure across both terminals with a meter before touching. If the reading is above 30 V, discharge through a 10 kΩ 1 W resistor until it drops below 5 V.
-- The isolation boundary on the PCB is a hard line. If you can't see a clear routed slot or gap separating the two halves, treat the whole board as unsafe until you've measured zero volts on the primary caps.
-- Sheet-metal edges on the case lid and fan bracket are sharp. Run a finger along cut edges before reaching in; a strip of electrical tape over burrs makes working inside much easier.
-- Secondary filter caps with bulging or domed tops have failed. They may vent caustic electrolyte if punctured or heated. Discard rather than salvage.
-- Most ATX supplies built before 2006 use leaded solder throughout. Wash hands after handling the PCB, and work with ventilation when desoldering.
+- Primary caps hold 300 V or more for several minutes after unplugging — longer in higher-wattage units. Measure before touching. The meter reading is the only reliable indicator.
+- The isolation boundary is a hard line. If you can't see a clear slot or gap separating the two halves of the board, treat the entire PCB as unsafe until the primary caps read zero.
+- Sheet-metal burrs on the lid and fan bracket cut fingers reliably. Run a finger along the cut edges before reaching in; cover anything sharp with electrical tape while you work.
+- Domed or bulging secondary caps have failed and may be under pressure. Don't heat them — bin them.
+- Pre-2006 units use leaded solder throughout. Wash hands, ventilate when desoldering.
 
 ## Theory Links
 
