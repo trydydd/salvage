@@ -19,7 +19,7 @@ Desolder the relay for clean testing, or test in-circuit on a powered-down board
 
 **Identifying coil and contact pins**
 
-Set your meter to the 200mA current range. Probe between each pair of pins until you find two that read a consistent resistance of 50–1000Ω. Those are the coil pins. For 5V relays, coil resistance runs 10–30Ω. For 12V, expect 200–400Ω. For 24V, 600–1200Ω. Higher voltage means higher resistance for a similar coil power draw.
+Set your meter to resistance (ohms) mode. Probe between each pair of pins until you find two that read a consistent resistance of 50–1000Ω. Those are the coil pins. For 5V relays, coil resistance runs 50–150Ω. For 12V, expect 200–400Ω. For 24V, 600–1200Ω. Higher voltage means higher resistance for a similar coil power draw.
 
 **Normally open and normally closed contacts**
 
@@ -31,7 +31,11 @@ If you can't get continuity in either direction from any pair of contact pins, c
 
 Before energizing, put a flyback diode across the coil pins (anode to the negative coil pin, cathode to the positive coil pin). The inductive kick when the coil turns off can reach 50–100V in a 12V relay coil, which will damage nearby components on the bench without protection. A 1N4148 is fine for signal relays. A 1N4001 or higher for anything with a coil above 100mA.
 
+> ⚠️ **FACT-CHECK 3** — Verify whether inductive kick in a 12 V relay coil can exceed 100 V; 50–100 V may understate the worst case for unprotected coils.
+
 Apply the rated coil voltage from a bench supply or battery. The relay should click audibly and the armature should pull in within about 10–20ms. Immediately after the click, re-check the contact pins: the normally-open pair should now read continuity, and the normally-closed pair should read OL. Remove the supply; you should hear a second click as the spring returns the armature, and the contacts should return to their resting state.
+
+> ⚠️ **FACT-CHECK 4** — Verify typical pull-in time for small PCB relays; most datasheets spec 3–10 ms, making 10–20 ms potentially too slow as a pass threshold.
 
 A clean pull-in click is distinct and immediate. A sluggish pull-in or a buzzing sound when energized suggests the armature is stiff or the contact spring is worn. Both are signs of a relay that has worked hard and may not be reliable for long switching cycles.
 
@@ -39,11 +43,13 @@ A clean pull-in click is distinct and immediate. A sluggish pull-in or a buzzing
 
 In continuity, the closed contacts should read under 0.1Ω. A reading above 0.5Ω on what should be a closed contact suggests oxidation or pitting. You can clean mild oxidation from silver contacts by switching the relay rapidly 20–30 times (cycle the coil on and off quickly) with a small resistive load on the contacts. If the reading drops to under 0.2Ω after that, the contacts are usable. If it stays high, the surface damage is too deep to recover with this method.
 
+> ⚠️ **FACT-CHECK 5** — Verify whether 0.2 Ω is an appropriate "usable" threshold for cleaned contacts; relay datasheets typically specify 100 mΩ (0.1 Ω) max, making 0.2 Ω potentially too permissive for higher-current loads.
+
 ## Failure modes
 
 **Open coil**
 
-The coil winding burns through when the relay runs at elevated temperature or is fed the wrong voltage. In resistance mode, an open coil reads OL where you'd expect 70–1200Ω. The plastic case sometimes shows discoloration near the coil, and you may smell the burned enamel. An open-coil relay can't be repaired.
+The coil winding burns through when the relay runs at elevated temperature or is fed the wrong voltage. In resistance mode, an open coil reads OL where you'd expect 50–1500Ω. The plastic case sometimes shows discoloration near the coil, and you may smell the burned enamel. An open-coil relay can't be repaired.
 
 **Welded contacts**
 
@@ -62,6 +68,8 @@ The return spring can weaken with age or the armature pivot can corrode in damp 
 SPDT relays with a readable coil voltage and contact rating are the most useful thing to pull. A 5V 10A SPDT relay is directly usable in Arduino-scale projects for switching mains lighting or 12V loads. A 12V 30A relay is useful for automotive applications. Pull whatever you find and label the bag with coil voltage, contact form, and contact current rating. If the part number is legible, include that too.
 
 Derate the contact current rating to 75% for salvaged relays used with resistive loads, and to 50% for inductive loads. Contacts that have switched motor or solenoid loads have more surface wear than contacts that switched resistive heating elements. You can't tell the history from the outside, so the derating covers the uncertainty.
+
+> ⚠️ **FACT-CHECK 6** — Verify whether 75% derating is conservative enough for salvaged relay contacts with unknown switching history; some sources recommend 50% for all salvaged contacts regardless of load type.
 
 Store relays upright if possible, leads down, so the armature rests in its natural position. A relay stored on its side for years with the spring compressed slightly will have a softer return force when you pull it out. Label the storage bag; a relay with no coil voltage information is almost useless on a future build when you're in a hurry.
 

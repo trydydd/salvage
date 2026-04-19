@@ -21,7 +21,7 @@ Set your meter to diode mode (the diode symbol, usually shared with the continui
 
 **Forward check**
 
-Touch the red probe to the anode and the black probe to the cathode (the end with the stripe). Set your meter to the 20V DC range to get an accurate reading. A good silicon rectifier or signal diode reads 1.4–2.0V. A Schottky reads 0.15–0.45V. A germanium diode (mostly older through-hole stock) reads 0.20–0.35V.
+Touch the red probe to the anode and the black probe to the cathode (the end with the stripe). Keep the meter in diode mode — do not switch to a voltage range. A good silicon rectifier or signal diode reads 0.55–0.80V. A Schottky reads 0.15–0.45V. A germanium diode (mostly older through-hole stock) reads 0.20–0.35V.
 
 **Reverse check**
 
@@ -35,13 +35,19 @@ For a quick check on an otherwise healthy board, probing in-circuit is sometimes
 
 LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.4V, but high-brightness green reads 2.9–3.5V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode.
 
+> ⚠️ **FACT-CHECK 4** — Standard green LED upper bound is 2.4V here but 2.5V in the Forward voltage by type section; verify the correct upper limit against datasheets.
+
+> ⚠️ **FACT-CHECK 5** — High-brightness green LED upper bound is 3.5V here but 3.6V in the Forward voltage by type section; verify against HB-green LED datasheets (calibration reference gives 3.0–3.6V for this family).
+
+> ⚠️ **FACT-CHECK 6** — The 1.5V threshold for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf (e.g. BPW34, TEPT5700) and whether any common consumer LED type legitimately reads below 1.5V without being defective.
+
 ## Forward voltage by type
 
 The forward voltage range is your best quick-sort tool when you're working through a batch of unmarked parts. Write the reading down and match it to the family:
 
 - 0.15–0.45 V: Schottky silicon
 - 0.20–0.35 V: germanium (old stock, glass body, often marked OA91 or AA119)
-- 0.55–0.80 Ω: standard silicon rectifier or signal diode
+- 0.55–0.80 V: standard silicon rectifier or signal diode
 - 1.7–2.2 V: red or infrared LED
 - 1.8–2.2 V: yellow or amber LED
 - 1.9–2.5 V: standard green LED
