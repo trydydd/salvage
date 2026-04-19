@@ -199,7 +199,7 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 **Include at least one detail that only comes from having built this.** The connection that beginners get backwards. The test that always passes even when something is wrong. The step where the binding post threads strip if you're not careful. The reason the minimum-build version fails in a specific way. These sentences signal firsthand knowledge.
 
-**Name the legitimate shortcut.** AI assumes the reader always wants the full, correct build. Real project guides acknowledge when a shortcut is fine: if soldering the binding posts directly is good enough for occasional bench use, say so rather than always prescribing the permanent version. Name what the shortcut gives up.
+**Name the legitimate shortcut — and the legitimate long way round.** AI assumes one correct build. Real project guides acknowledge both: the quick breadboard version is fine for testing; the permanent stripboard version is worth doing if you'll use it regularly or want the practice. Name both paths and what each one gives the reader.
 
 **The author has a view.** When one approach is clearly better, say so: "The breadboard version works but the binding posts pull out under normal use — spend ten minutes making the permanent version." When a listed extension is only worth doing in specific circumstances, name those circumstances.
 

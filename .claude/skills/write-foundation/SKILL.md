@@ -136,7 +136,7 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 **Include at least one detail that only comes from experience.** The specific thing a beginner always gets wrong with this technique. The reason a seemingly obvious shortcut fails. The exception to the rule that a reader will eventually hit. A detail that requires having actually done the work to know. These cannot be generated from surface-level knowledge.
 
-**Name the legitimate shortcut.** AI tends to prescribe the "correct" procedure and ignore faster alternatives. Real workshop writing acknowledges when a quicker path is fine: if you don't need to discharge a cap because you're not going near the primary side, say so. Name the shortcut when it's genuinely safe, and say what it sacrifices.
+**Name the legitimate shortcut — and the legitimate long way round.** AI prescribes one correct procedure. Real workshop writing acknowledges that readers have different goals: the shortcut is valid when it is, and the harder path is valid when a reader wants to learn or practise. Name both where they apply rather than implying one right way to do something.
 
 **The author has a view.** When one approach is clearly safer or more practical, say which and why — don't present all options as equal. When a technique genuinely requires a specific tool and there is no workaround, say so plainly rather than softening it.
 

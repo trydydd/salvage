@@ -186,7 +186,7 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 **Acknowledge real variation between specimens.** Write "most ATX supplies", "some units", "older models", "in higher-wattage supplies" — not "ATX power supplies have X" as if all examples are identical. Real salvage is variable. The guide should reflect that.
 
-**Name the legitimate shortcut.** AI assumes the "correct" outcome is always the goal. Real workshop writing acknowledges when a shortcut is fine: if you only need the wires, say you can cut them and move on rather than implying the reader must always preserve the connector. When there's a faster or easier path that sacrifices something the reader may not care about, name it.
+**Name the legitimate shortcut — and the legitimate long way round.** AI assumes one correct outcome. Real workshop writing acknowledges that readers have different goals: cutting the wires is fine if you just need the copper; desoldering them is fine if you want the practice. Name the shortcut when it's valid. Also name when the harder path serves a different legitimate goal, rather than implying there's only one right way to do something.
 
 **The author has a view.** When something is barely worth pulling, say so directly in the prose — don't just assign ★☆☆ and move on. "The PWM controller is only worth desoldering if you already know the part number and have a use for it" is more useful than silence. When one technique is clearly better, name it.
 
