@@ -139,6 +139,7 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - Em dashes used where a comma or colon would be correct.
 - A summary paragraph restating what was just said. End on content.
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic.
+- Short imperative fragments used as emphasis beats: "Start there.", "Do this first.", "Keep that in mind." — fold the instruction into the sentence it belongs to.
 
 **Banned tone patterns:**
 - Vague specs instead of real numbers. "A relatively high voltage" → "25–50 V". Always give the actual range.

@@ -40,7 +40,7 @@ The discharge step feels slow. It isn't skippable.
 
 ## How to Get Them Out
 
-Most of what's worth pulling comes out without a soldering iron. Start there.
+Start by removing everything you can without a soldering iron.
 
 The fan is two to four screws, accessible from outside the case on most units, plus a connector that unplugs from a header on the PCB. Watch for locking tabs on the fan connector — Seasonic and FSP builds in particular use a small shrouded connector where you need to press a tab before pulling. Yanking it cracks the housing. On modular PSUs the output harness lifts straight off the rear panel socket by socket. On non-modular units the wires are soldered to the board; cut them 30–40 mm from the PCB so you've got lead to work with later. The heatsinks unbolt from the PCB with two or three screws — when you do this, keep the shoulder screws, nylon spacers, and isolation pads in a bag. They're harder to source than the components they came off.
 

@@ -159,6 +159,7 @@ The tell: if the adverb is doing the work of specificity (i.e. you could remove 
 - Em dashes in place of commas, colons, or parentheses. Use the right punctuation for the job.
 - A summary or conclusion paragraph at the end that restates what was just said. End on content.
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic; avoid it.
+- Short imperative fragments used as emphasis beats after a longer sentence: "Start there.", "Do this first.", "Keep that in mind." — no one says these at a bench. Fold the instruction into the sentence it belongs to.
 
 **Banned tone patterns:**
 - Generic positive framing instead of specific facts. "A reliable source of useful components" → say which components, what specs, what donor board location.
