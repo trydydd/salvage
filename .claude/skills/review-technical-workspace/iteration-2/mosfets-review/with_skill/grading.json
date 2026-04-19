@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Identifies reversed N-channel body diode direction as a critical error", "passed": true, "evidence": "Critical Error 1: body diode direction and probe assignment both correctly flagged and fixed"},
+    {"text": "Critical error text is no longer present in content/components/05-mosfets.md after fixes applied", "passed": true, "evidence": "4 critical fixes applied; all injected error text replaced"},
+    {"text": "File content/components/05-mosfets.md contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "3 FACT-CHECK markers inserted (items 5, 6, 7)"},
+    {"text": "FACT-CHECKS.md exists at repo root and contains an entry for the MOSFETs page", "passed": true, "evidence": "Agent confirms 3 entries appended to FACT-CHECKS.md for MOSFETs page"},
+    {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors (4), ## Fact-Check Items (3), ## Clean"},
+    {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed; report presented before fixes applied"}
+  ],
+  "summary": {"passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0},
+  "execution_metrics": {"tool_calls": {"Read": 3, "Edit": 5, "Write": 2}, "total_tool_calls": 15, "errors_encountered": 0},
+  "notes": ["Also caught drain-overvoltage/gate-oxide failure mechanism error (Critical 4) — a real error in original content, not injected"]
+}

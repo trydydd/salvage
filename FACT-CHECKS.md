@@ -23,3 +23,18 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Claim: "Derate the contact current rating to 75% for salvaged relays used with resistive loads"  
   Source: IEC 61810-1 §8 (endurance ratings); Omron relay application notes on contact derating for unknown service history.  
   File: content/components/08-relays.md
+
+- [ ] **Diodes** · Use diode mode · FACT-CHECK 4: Standard green LED upper bound is 2.4V in the LED forward voltage section but 2.5V in the Forward voltage by type section; verify the correct upper limit.  
+  Claim: "standard green reads 1.9–2.4V"  
+  Source: Check a representative standard green LED datasheet (e.g. Kingbright L-934GD or equivalent); cross-reference /open-circuits/Semi/SEMI_6.html if it covers LED Vf ranges.  
+  File: content/components/03-diodes.md
+
+- [ ] **Diodes** · Use diode mode · FACT-CHECK 5: High-brightness green LED upper bound is 3.5V in the LED forward voltage section but 3.6V in the Forward voltage by type section; verify against HB-green LED datasheets.  
+  Claim: "high-brightness green reads 2.9–3.5V"  
+  Source: Check datasheets for common HB-green LEDs (e.g. Cree C503B-GAN or Wurth Elektronik equivalents); the calibration reference gives 3.0–3.6V for blue/white/HB-green.  
+  File: content/components/03-diodes.md
+
+- [ ] **Diodes** · Use diode mode · FACT-CHECK 6: The 1.5V floor for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf and whether any common consumer LED reads below 1.5V without being defective.  
+  Claim: "A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode."  
+  Source: Check photodiode datasheet Vf (e.g. Vishay BPW34, TEPT5700); verify no common consumer LED type legitimately reads below 1.5V in diode mode without being defective.  
+  File: content/components/03-diodes.md

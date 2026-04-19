@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Identifies '200mA current range' meter instruction as a critical error", "passed": true, "evidence": "Error 1 correctly identified and fixed"},
+    {"text": "Identifies 5V coil resistance '10-30 ohms' as a critical error", "passed": true, "evidence": "Error 2 correctly identified; fixed to 70–200Ω"},
+    {"text": "Critical error text is no longer present in content/components/08-relays.md after fixes applied", "passed": true, "evidence": "Baseline applied both corrections to the file"},
+    {"text": "File content/components/08-relays.md contains at least one FACT-CHECK blockquote marker", "passed": false, "evidence": "Baseline did not insert any markers"},
+    {"text": "FACT-CHECKS.md exists at repo root and contains an entry for the relays page", "passed": false, "evidence": "Baseline did not create or update FACT-CHECKS.md; entries were added by with-skill run"},
+    {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Used freeform severity-table format, no Critical/Fact-Check tier structure"},
+    {"text": "Offers apply fixes prompt before applying", "passed": false, "evidence": "No interactive prompt; fixes applied directly"}
+  ],
+  "summary": {"passed": 3, "failed": 4, "total": 7, "pass_rate": 0.429},
+  "execution_metrics": {"tool_calls": {"Read": 1, "Edit": 2, "Write": 1}, "total_tool_calls": 5, "errors_encountered": 0}
+}
