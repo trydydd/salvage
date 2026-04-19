@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "diodes-review",
+  "prompt": "Review the diodes component page for technical accuracy: content/components/03-diodes.md",
+  "assertions": [
+    "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)",
+    "Flags silicon diode forward voltage '1.4-2.0V' as a critical error (correct range is 0.55-0.80V)",
+    "Flags '0.55-0.80 ohms' in the forward voltage table as a critical error (should be volts, not ohms)",
+    "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+    "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+  ]
+}

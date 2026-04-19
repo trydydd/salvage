@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "mosfets-review",
+  "prompt": "Check the numbers on the MOSFETs page: content/components/05-mosfets.md",
+  "assertions": [
+    "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')",
+    "Correctly states the fix: body diode runs from source to drain with anode at source",
+    "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+    "Numbers all findings sequentially",
+    "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "eval_name": "relays-review",
+  "prompt": "Does this look correct? SME check on the relays page: content/components/08-relays.md",
+  "assertions": [
+    "Identifies '200mA current range' meter instruction as a critical error (should be resistance/ohms range)",
+    "Flags 5V relay coil resistance '10-30 ohms' as a critical error (correct range is 50-150 ohms)",
+    "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+    "Numbers all findings sequentially",
+    "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+  ]
+}

@@ -21,7 +21,7 @@ Desolder the MOSFET before testing. In-circuit measurements on power MOSFETs are
 
 **Finding the body diode**
 
-Set your meter to diode mode. On an N-channel MOSFET, the body diode runs from source to drain with the anode at the source. To find it: probe each combination of the three pins until one pair reads a forward voltage of 0.45–0.65V with the red probe on one pin and the black probe on the other. That forward-biased reading is the body diode. The pin with the red probe is the source; the pin with the black probe is the drain. The remaining pin is the gate.
+Set your meter to diode mode. On an N-channel MOSFET, the body diode runs from drain to source with the anode at the drain. To find it: probe each combination of the three pins until one pair reads a forward voltage of 0.45–0.65V with the red probe on one pin and the black probe on the other. That forward-biased reading is the body diode. The pin with the red probe is the drain; the pin with the black probe is the source. The remaining pin is the gate.
 
 Swap the probes on the same two pins and check that the meter reads OL. If you get a voltage reading in both directions on any pair of pins, the MOSFET is shorted between those terminals.
 
