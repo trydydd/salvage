@@ -114,6 +114,8 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - Rule-of-three negative parallelisms: "No experience. No expensive tools. Just patience." → AI tic; avoid.
 - Short imperative fragments used as emphasis beats after a longer sentence: "Start there.", "Remember that.", "Keep this in mind." — fold the instruction into the sentence it belongs to.
 - Compressed spec-sheet constructions that strip the verb: "A multimeter is 10 MΩ input impedance" → "Most multimeters have 10 MΩ input impedance". Keep the relationship between noun and attribute explicit.
+- Burying prerequisites after the instruction that depends on them. State what the reader needs to do or remove first, then give the main instruction.
+- Listing one method when two legitimate options exist. If the reader can do something the quick way or the thorough way, name both.
 - Opening a section with a sentence that restates the heading: "Tools and workspace are important because..." → cut it and start with the first real point.
 
 **Banned tone patterns:**

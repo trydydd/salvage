@@ -175,6 +175,8 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - Rule-of-three negative parallelisms: "No special skills. No expensive tools. Just parts." → AI tic.
 - Short imperative fragments used as emphasis beats: "Start there.", "Do that first.", "Keep this in mind." — fold the instruction into the sentence it belongs to.
 - Compressed spec-sheet constructions: "The resistor is 10 Ω, 10 W, through-hole" → "You need a 10 Ω 10 W through-hole resistor". Don't strip the verb to pack in specs.
+- Burying prerequisites after the instruction that depends on them. State what the reader needs to prepare or remove before the main step, not after it as an explanation.
+- Listing one build path when two legitimate options exist. If the reader can do something the quick way or the thorough way, name both.
 - Opening the project goal with a sentence about why salvage is worthwhile. The reader already knows.
 
 **Banned tone patterns:**

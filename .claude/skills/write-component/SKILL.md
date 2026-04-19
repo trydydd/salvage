@@ -142,6 +142,8 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic.
 - Short imperative fragments used as emphasis beats: "Start there.", "Do this first.", "Keep that in mind." — fold the instruction into the sentence it belongs to.
 - Compressed spec-sheet constructions: "The package is TO-220, three legs" → "TO-220 packages have three leads". Don't strip the verb to pack in specs. Keep the relationship between noun and attribute explicit.
+- Burying prerequisites after the instruction that depends on them. State what the reader needs to do or remove first, then give the main step.
+- Listing one test or removal method when two legitimate options exist. If the reader can test in-circuit or desoldered, or extract by heat-and-wiggle or with a pump, name both.
 
 **Banned tone patterns:**
 - Vague specs instead of real numbers. "A relatively high voltage" → "25–50 V". Always give the actual range.

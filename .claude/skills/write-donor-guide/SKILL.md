@@ -162,6 +162,8 @@ The tell: if the adverb is doing the work of specificity (i.e. you could remove 
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic; avoid it.
 - Short imperative fragments used as emphasis beats after a longer sentence: "Start there.", "Do this first.", "Keep that in mind." — no one says these at a bench. Fold the instruction into the sentence it belongs to.
 - Compressed spec-sheet constructions that strip the verb: "The fan is two to four screws" → "The fan is held by two to four screws" or "The fan will have two to four screws". Things are not their fasteners. Parts are not their specs. Keep the relationship explicit.
+- Burying prerequisites after the instruction that depends on them: "Unbolt before applying heat. They're held down by a screw." → state the prerequisite first so the reader knows what to do before they start: "Remove the mounting screw first. Trying to desolder a bolted part torques the pads off."
+- Listing one extraction method when two legitimate options exist. If the reader can heat-and-wiggle OR use a pump, say both.
 
 **Banned tone patterns:**
 - Generic positive framing instead of specific facts. "A reliable source of useful components" → say which components, what specs, what donor board location.
