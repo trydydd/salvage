@@ -88,6 +88,14 @@ These are the patterns Wikipedia's editors use to identify AI-generated text. Ev
 **Banned vocabulary** — do not use these words; replace with plain, specific alternatives:
 > delve, crucial, tapestry, landscape, pivotal, underscore, testament, intricate, meticulous, foster, navigate, realm, vibrant, noteworthy, bolstered, garner, enduring, interplay, additionally (as a sentence opener), comprehensive, robust, leverage, seamlessly, empower, transformative
 
+**Banned adverb constructions** — do not use adverbs to describe hazards or techniques in ways no person would say:
+- "dangerously high voltage" → "300 V" (name the voltage)
+- "safely discharged" → say the procedure that makes it safe
+- "reliably works" / "consistently effective" → say what works and why
+- "particularly important" → if it's important, say what happens if you skip it
+
+The tell: if the adverb is doing the work of specificity, replace it with actual detail. If it's just intensifying vaguely, cut it.
+
 **Banned phrases:**
 - "it is worth noting that" → just say the thing
 - "in conclusion" / "in summary" / "to summarise" → don't summarise; end when the content ends

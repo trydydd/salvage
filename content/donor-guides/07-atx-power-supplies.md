@@ -52,7 +52,7 @@ Hot air is only worth setting up if you're after the PWM controller IC and it's 
 
 - Primary caps hold 300 V or more for several minutes after unplugging — longer in higher-wattage units. Measure before touching. The meter reading is the only reliable indicator.
 - The isolation boundary is a hard line. If you can't see a clear slot or gap separating the two halves of the board, treat the entire PCB as unsafe until the primary caps read zero.
-- Sheet-metal burrs on the lid and fan bracket cut fingers reliably. Run a finger along the cut edges before reaching in; cover anything sharp with electrical tape while you work.
+- The lid and fan bracket have stamped edges that are sharp enough to open skin. Run a finger along them before reaching in; cover anything that catches with electrical tape while you work.
 - Domed or bulging secondary caps have failed and may be under pressure. Don't heat them — bin them.
 - Pre-2006 units use leaded solder throughout. Wash hands, ventilate when desoldering.
 
