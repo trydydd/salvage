@@ -173,6 +173,7 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - A concluding paragraph restating what the project does. End on the last real step.
 - Rule-of-three negative parallelisms: "No special skills. No expensive tools. Just parts." → AI tic.
 - Short imperative fragments used as emphasis beats: "Start there.", "Do that first.", "Keep this in mind." — fold the instruction into the sentence it belongs to.
+- Compressed spec-sheet constructions: "The resistor is 10 Ω, 10 W, through-hole" → "You need a 10 Ω 10 W through-hole resistor". Don't strip the verb to pack in specs.
 - Opening the project goal with a sentence about why salvage is worthwhile. The reader already knows.
 
 **Banned tone patterns:**

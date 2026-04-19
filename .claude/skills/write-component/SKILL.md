@@ -140,6 +140,7 @@ The tell: if the adverb is doing the work of specificity, replace it with actual
 - A summary paragraph restating what was just said. End on content.
 - Rule-of-three negative parallelisms: "No X. No Y. Just Z." — this is an AI tic.
 - Short imperative fragments used as emphasis beats: "Start there.", "Do this first.", "Keep that in mind." — fold the instruction into the sentence it belongs to.
+- Compressed spec-sheet constructions: "The package is TO-220, three legs" → "TO-220 packages have three leads". Don't strip the verb to pack in specs. Keep the relationship between noun and attribute explicit.
 
 **Banned tone patterns:**
 - Vague specs instead of real numbers. "A relatively high voltage" → "25–50 V". Always give the actual range.
