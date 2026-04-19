@@ -33,11 +33,11 @@ For a quick check on an otherwise healthy board, probing in-circuit is sometimes
 
 **LED forward voltage by color**
 
-LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.5V, but high-brightness green reads 2.9–3.5V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode.
+LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.5V, but high-brightness green reads 2.9–3.6V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode.
 
 > ⚠️ **FACT-CHECK 4** — Standard green LED lower bound (1.9V) is unverified — it may be a symmetric assumption around the 2.2V typical rather than a measured minimum. Upper bound confirmed at 2.5V (datasheet: typ 2.2V, max 2.5V at IF=20mA). Verify lower bound by measuring several salvaged standard green LEDs in diode mode and noting the lowest reading.
 
-> ⚠️ **FACT-CHECK 5** — High-brightness green LED upper bound is 3.5V here but 3.6V in the Forward voltage by type section; verify against HB-green LED datasheets (calibration reference gives 3.0–3.6V for this family).
+> ⚠️ **FACT-CHECK 5** — HB-green upper bound corrected to 3.6V (Cree C503B: typ 3.2V, max 3.6V at IF=20mA). Lower bound (2.9V) is unverified — no datasheet specifies minimum Vf; verify by bench-measuring several HB-green LEDs in diode mode and noting the lowest reading.
 
 > ⚠️ **FACT-CHECK 6** — The 1.5V threshold for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf (e.g. BPW34, TEPT5700) and whether any common consumer LED type legitimately reads below 1.5V without being defective.
 

@@ -29,9 +29,9 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Source: Bench measurement — probe several salvaged standard green LEDs in diode mode (follow the "LED forward voltage by color" procedure in content/components/03-diodes.md; meter technique at /open-circuits/DC/DC_5.html). Note the lowest reading across parts.  
   File: content/components/03-diodes.md
 
-- [ ] **Diodes** · Use diode mode · FACT-CHECK 5: High-brightness green LED upper bound is 3.5V in the LED forward voltage section but 3.6V in the Forward voltage by type section; verify against HB-green LED datasheets.  
-  Claim: "high-brightness green reads 2.9–3.5V"  
-  Source: Check datasheets for common HB-green LEDs (e.g. Cree C503B-GAN or Wurth Elektronik equivalents); the calibration reference gives 3.0–3.6V for blue/white/HB-green.  
+- [ ] **Diodes** · Use diode mode · FACT-CHECK 5: HB-green upper bound corrected to 3.6V in prose (Cree C503B: typ 3.2V, max 3.6V). Lower bound (2.9V) unverified — LED datasheets do not specify minimum Vf.  
+  Claim: "high-brightness green reads 2.9–3.6V" (upper bound corrected; lower bound still unverified)  
+  Source: Bench measurement — probe several salvaged HB-green LEDs in diode mode (follow the "LED forward voltage by color" procedure in content/components/03-diodes.md; meter technique at /open-circuits/DC/DC_5.html). Note the lowest reading across parts.  
   File: content/components/03-diodes.md
 
 - [ ] **Diodes** · Use diode mode · FACT-CHECK 6: The 1.5V floor for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf and whether any common consumer LED reads below 1.5V without being defective.  
