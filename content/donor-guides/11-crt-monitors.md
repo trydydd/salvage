@@ -31,8 +31,8 @@ Explain that only trained procedures should discuss anything near the tube, anod
 State plainly that the anode can retain tens of thousands of volts for a long time, that implosion and fragile glass are part of the risk picture, and that a curious beginner should pick a different donor.
 
 ## TODO: Theory Links
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for understanding the power devices and regulators on the lower-risk support boards only after safe separation.
-- [Experiments](/circuits/Exper/EXPER_1.html) for testing speakers, switches, and other low-voltage salvage once it is fully removed from the CRT chassis.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for understanding the power devices and regulators on the lower-risk support boards only after safe separation.
+- [Experiments](/open-circuits/Exper/EXPER_1.html) for testing speakers, switches, and other low-voltage salvage once it is fully removed from the CRT chassis.
 
 ## TODO: Specific Teardowns
 Reserve this section for future expert-written CRT teardowns that prioritize safety procedure and identify which parts can be harvested without normalizing reckless tube work.

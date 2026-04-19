@@ -18,4 +18,4 @@ Cover energizing the coil safely, listening for a clean pull-in, and checking wh
 Explain where salvaged relays are great, where contact wear makes them questionable, and why coil voltage should always be labeled before storage.
 
 ## TODO: Theory links
-Point readers to [experiments](/circuits/Exper/EXPER_1.html) for simple relay test rigs and to [DC measurements](/circuits/DC/DC_5.html) for coil resistance and continuity checks.
+Point readers to [experiments](/open-circuits/Exper/EXPER_1.html) for simple relay test rigs and to [DC measurements](/open-circuits/DC/DC_5.html) for coil resistance and continuity checks.

@@ -31,8 +31,8 @@ Explain how to pull panel controls without bending shafts, when to leave wire lo
 Call out mains wiring, charged power-supply capacitors, sharp chassis metal, and the hard stop: valve amps move to level 4 because their high-tension rails stay in a lethal range.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for checking power rails and relay coils once the unit is made safe.
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for identifying the transistors and regulators mounted to amplifier heatsinks.
+- [DC measurements](/open-circuits/DC/DC_5.html) for checking power rails and relay coils once the unit is made safe.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for identifying the transistors and regulators mounted to amplifier heatsinks.
 
 ## TODO: Specific Teardowns
 Leave space for future teardown examples covering powered speakers, stereo receivers, and mixers, with a note that valve gear should only be documented by people trained to work on it safely.

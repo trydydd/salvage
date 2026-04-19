@@ -18,4 +18,4 @@ Describe quick meter checks, ESR testing where available, leakage suspicion, and
 Explain why a salvaged capacitor should usually be reused below its marked voltage and why hot power-supply positions are harder on parts than signal work.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for charge and discharge observations and to [experiments](/circuits/Exper/EXPER_1.html) for safe capacitor test setups.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for charge and discharge observations and to [experiments](/open-circuits/Exper/EXPER_1.html) for safe capacitor test setups.

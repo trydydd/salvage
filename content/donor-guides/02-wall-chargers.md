@@ -31,8 +31,8 @@ Explain when to cut the cable free first, how to keep the low-voltage side isola
 Highlight glued cases, brittle plastic, stored charge on primary capacitors, and the rule that potted or damaged chargers are often better for study than for harvesting live parts.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for testing the output side once the unit is safely isolated and discharged.
-- [Semiconductors](/circuits/Semi/SEMI_6.html) for identifying rectifiers, switches, and other three-terminal power devices on the board.
+- [DC measurements](/open-circuits/DC/DC_5.html) for testing the output side once the unit is safely isolated and discharged.
+- [Semiconductors](/open-circuits/Semi/SEMI_6.html) for identifying rectifiers, switches, and other three-terminal power devices on the board.
 
 ## TODO: Specific Teardowns
 Leave space for future teardowns of older transformer bricks, USB-A chargers, and USB-C adapters, noting how repairability and salvage yield differ.

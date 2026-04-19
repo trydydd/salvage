@@ -18,4 +18,4 @@ Describe how the LEDs, heat sinking, enclosure, and wiring should come together 
 Explain brightness checks, thermal checks, runtime expectations, and the small durability details that turn a salvage project into something you actually keep using.
 
 ## TODO: Theory links and variations
-Point readers to [experiments](/circuits/Exper/EXPER_1.html) and [DC measurements](/circuits/DC/DC_5.html) for the LED and power basics behind the build, then suggest battery and mains variants.
+Point readers to [experiments](/open-circuits/Exper/EXPER_1.html) and [DC measurements](/open-circuits/DC/DC_5.html) for the LED and power basics behind the build, then suggest battery and mains variants.

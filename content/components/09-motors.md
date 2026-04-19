@@ -18,4 +18,4 @@ Cover shaft play, seized bearings, noisy gears, cracked couplers, and how those 
 Show which salvaged motors are easy to reuse, what supporting drivers or gears they need, and why paired hardware such as pulleys or mounts should stay with the motor.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for safe low-voltage motor checks and to [experiments](/circuits/Exper/EXPER_1.html) for basic motor-driving experiments.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for safe low-voltage motor checks and to [experiments](/open-circuits/Exper/EXPER_1.html) for basic motor-driving experiments.

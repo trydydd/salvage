@@ -15,7 +15,7 @@ assets (CSS, fonts, JS) that are pulled at build time under **CC BY 4.0**.
   come from Open Circuits releases via `build/fetch_shared.py`.
 - **Stable URL paths are a contract** — `/salvage/...` paths must remain stable;
   see `docs/HEARTH-INTEGRATION.md`.
-- **Theory cross-links are hyperlinks only** — use absolute `/circuits/...`
+- **Theory cross-links are hyperlinks only** — use absolute `/open-circuits/...`
   paths; do not copy Open Circuits theory text into Salvage content.
 - **Hazard banners use standard safety colors** — they intentionally do not use
   the Open Circuits accent palette.
@@ -74,9 +74,9 @@ hazard_summary: "One-line summary of the primary hazard."
 
 Use absolute Open Circuits paths such as:
 
-- `/circuits/DC/DC_5.html`
-- `/circuits/Semi/SEMI_6.html`
-- `/circuits/Exper/EXPER_1.html`
+- `/open-circuits/DC/DC_5.html`
+- `/open-circuits/Semi/SEMI_6.html`
+- `/open-circuits/Exper/EXPER_1.html`
 
 Keep these as short inline hyperlinks only.
 

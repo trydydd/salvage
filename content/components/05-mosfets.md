@@ -18,4 +18,4 @@ Explain the gate as a charge-controlled node, why static care matters, and how a
 Cover shorted drain-source failures, blown gates, overheated packages, and the signs that a power MOSFET died because something around it failed first.
 
 ## TODO: Theory links
-Point readers to [semiconductors](/circuits/Semi/SEMI_6.html) for field-effect device basics and to [DC measurements](/circuits/DC/DC_5.html) for controlled low-voltage bench checks.
+Point readers to [semiconductors](/open-circuits/Semi/SEMI_6.html) for field-effect device basics and to [DC measurements](/open-circuits/DC/DC_5.html) for controlled low-voltage bench checks.

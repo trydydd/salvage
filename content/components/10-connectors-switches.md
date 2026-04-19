@@ -18,4 +18,4 @@ Cover continuity checks, latch wear, bent pins, oxidation, and the difference be
 Explain when to desolder the part, when to cut the entire wiring loom, and why keeping panel hardware attached often preserves more value than a bare connector alone.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for continuity work and to [experiments](/circuits/Exper/EXPER_1.html) for quick switch-and-connector test setups.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for continuity work and to [experiments](/open-circuits/Exper/EXPER_1.html) for quick switch-and-connector test setups.

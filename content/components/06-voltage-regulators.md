@@ -18,4 +18,4 @@ Describe safe bench setups for confirming output voltage, dropout behavior, and 
 Explain when a salvaged regulator is easy to trust, when the surrounding support parts matter more than the chip itself, and how to label unknown regulators honestly.
 
 ## TODO: Theory links
-Point readers to [DC measurements](/circuits/DC/DC_5.html) for voltage checks and to [semiconductors](/circuits/Semi/SEMI_6.html) for the active devices around regulator circuits.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) for voltage checks and to [semiconductors](/open-circuits/Semi/SEMI_6.html) for the active devices around regulator circuits.

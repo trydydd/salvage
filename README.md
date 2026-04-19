@@ -57,7 +57,7 @@ make clean
 | `hearth` | Deployment and integration | Pins release artifacts and serves them at stable nginx paths |
 
 Salvage Electronics links into Open Circuits using absolute theory URLs such as
-`/circuits/Semi/SEMI_6.html`. Those are hyperlinks only — Salvage does not copy Open Circuits theory text.
+`/open-circuits/Semi/SEMI_6.html`. Those are hyperlinks only — Salvage does not copy Open Circuits theory text.
 
 ---
 

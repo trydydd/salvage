@@ -31,8 +31,8 @@ Explain how to soften glue if needed, lift the LED board without cracking it, an
 Mention broken glass or brittle plastic, sharp shell edges, and the small but real stored charge on the driver board even after the lamp is off the fixture.
 
 ## TODO: Theory Links
-- [DC measurements](/circuits/DC/DC_5.html) for checking LED strings and polarity with a current-limited setup.
-- [Experiments](/circuits/Exper/EXPER_1.html) for simple LED test rigs and current-limited bench habits.
+- [DC measurements](/open-circuits/DC/DC_5.html) for checking LED strings and polarity with a current-limited setup.
+- [Experiments](/open-circuits/Exper/EXPER_1.html) for simple LED test rigs and current-limited bench habits.
 
 ## TODO: Specific Teardowns
 Reserve this section for future bulb teardowns that compare easy-to-open repairable lamps with fully glued disposable ones.

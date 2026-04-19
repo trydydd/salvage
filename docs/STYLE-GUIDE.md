@@ -63,15 +63,15 @@ The guide should describe what readers are likely to find in salvage, not preten
 
 Theory links always use absolute Open Circuits paths:
 
-- `/circuits/DC/DC_5.html`
-- `/circuits/Semi/SEMI_6.html`
-- `/circuits/Exper/EXPER_1.html`
+- `/open-circuits/DC/DC_5.html`
+- `/open-circuits/Semi/SEMI_6.html`
+- `/open-circuits/Exper/EXPER_1.html`
 
 Format them as short inline links, never footnotes.
 
 Example:
 
-`These are MOSFETs ([theory])` with `[theory]` linking to `/circuits/Semi/SEMI_6.html`.
+`These are MOSFETs ([theory])` with `[theory]` linking to `/open-circuits/Semi/SEMI_6.html`.
 
 Do not use relative links into Open Circuits.
 

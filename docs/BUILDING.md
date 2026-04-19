@@ -122,7 +122,7 @@ Today this runs `pytest`. Test coverage will expand later; an empty test collect
 
 For manual verification after a build, also check:
 - header and footer render correctly,
-- `/circuits/index.html` is used for the Theory nav link,
+- `/open-circuits/index.html` is used for the Theory nav link,
 - donor-guide hazard banners appear only where intended,
 - `LICENSE.txt` and `ATTRIBUTION.md` are reachable from the footer,
 - print preview keeps hazard borders and removes banner shadow.
