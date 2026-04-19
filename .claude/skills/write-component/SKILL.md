@@ -165,6 +165,8 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 **Acknowledge real variation.** "Most small-signal transistors", "in switchers you'll often find", "older through-hole parts typically". Not "transistors have a forward voltage of X" as if the bench will always confirm the textbook number.
 
+**Name the legitimate shortcut.** AI assumes the reader always wants the "correct" outcome. Real bench writing names the faster path when it's valid: if a part is only worth pulling for its leads, say so. If testing in-circuit is good enough for a quick check, say that rather than always prescribing full removal. When a shortcut sacrifices something the reader may not care about, name it explicitly.
+
 **The author has a view.** When a reuse case is genuinely marginal, say so: "Electrolytic caps from failed switching supplies are rarely worth the risk — the failure mode that killed the supply may have stressed them." When one test method is clearly better than another, name it and say why.
 
 ## Step 6 — Write the file

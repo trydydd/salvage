@@ -136,6 +136,8 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 **Include at least one detail that only comes from experience.** The specific thing a beginner always gets wrong with this technique. The reason a seemingly obvious shortcut fails. The exception to the rule that a reader will eventually hit. A detail that requires having actually done the work to know. These cannot be generated from surface-level knowledge.
 
+**Name the legitimate shortcut.** AI tends to prescribe the "correct" procedure and ignore faster alternatives. Real workshop writing acknowledges when a quicker path is fine: if you don't need to discharge a cap because you're not going near the primary side, say so. Name the shortcut when it's genuinely safe, and say what it sacrifices.
+
 **The author has a view.** When one approach is clearly safer or more practical, say which and why — don't present all options as equal. When a technique genuinely requires a specific tool and there is no workaround, say so plainly rather than softening it.
 
 **Vary how sections open.** Not every section should begin with a topic sentence that restates the heading. Some sections can open mid-thought, with context, with a direct instruction, or with the exception before the rule.
