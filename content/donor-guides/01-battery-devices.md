@@ -32,7 +32,7 @@ Call out corrosion, sharp battery tabs, trapped springs, and the occasional hidd
 
 ## TODO: Theory Links
 - [DC measurements](/open-circuits/DC/DC_5.html) for checking battery polarity, voltage, and switch continuity.
-- [Experiments](/open-circuits/Exper/EXP_1.html) for simple LED and battery test setups you can reuse while sorting parts.
+- [Experiments](/open-circuits/Exper/EXP_2.html) for simple LED and battery test setups you can reuse while sorting parts.
 
 ## TODO: Specific Teardowns
 Reserve this section for future examples such as toy keyboards, remotes, and battery lanterns, each with notes on which parts are worth the time.

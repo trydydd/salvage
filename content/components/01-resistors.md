@@ -61,4 +61,4 @@ Don't bother with resistors pulled from directly around a failed or exploded com
 
 ## Theory links
 
-For resistance measurement technique and why parallel paths confuse in-circuit readings, see [DC measurements](/open-circuits/DC/DC_5.html). For a simple test circuit that lets you verify a resistor's value by measuring voltage drop rather than resistance directly, see [bench experiments](/open-circuits/Exper/EXP_1.html).
+For resistance measurement technique and why parallel paths confuse in-circuit readings, see [DC measurements](/open-circuits/DC/DC_5.html). For a simple test circuit that lets you verify a resistor's value by measuring voltage drop rather than resistance directly, see [bench experiments](/open-circuits/Exper/EXP_2.html).

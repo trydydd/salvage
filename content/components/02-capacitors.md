@@ -77,4 +77,4 @@ Don't reuse any capacitor with a bulged top, visible corrosion at the base, or a
 
 ## Theory links
 
-For charge and discharge behavior and how to observe it with a meter, see [DC measurements](/open-circuits/DC/DC_5.html). For test setups that let you see how a capacitor behaves under real load conditions, see [bench experiments](/open-circuits/Exper/EXP_1.html).
+For charge and discharge behavior and how to observe it with a meter, see [DC measurements](/open-circuits/DC/DC_5.html). For test setups that let you see how a capacitor behaves under real load conditions, see [bench experiments](/open-circuits/Exper/EXP_3.html).

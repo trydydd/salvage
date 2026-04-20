@@ -86,7 +86,10 @@ Keep any existing theory links from the stub exactly as written. If no links exi
 
 - DC measurements and continuity: `/open-circuits/DC/DC_5.html`
 - Semiconductors and regulators: `/open-circuits/Semi/SEMI_6.html`
-- Bench experiments and test fixtures: `/open-circuits/Exper/EXP_1.html`
+- Basic bench concepts, meter usage, LED/resistor circuits: `/open-circuits/Exper/EXP_2.html`
+- DC circuit experiments (capacitors, relays, motors): `/open-circuits/Exper/EXP_3.html`
+- AC circuit experiments (inductors, transformers): `/open-circuits/Exper/EXP_4.html`
+- Discrete semiconductor experiments (BJT, FET): `/open-circuits/Exper/EXP_5.html`
 
 Write each as a short inline sentence, e.g.:
 

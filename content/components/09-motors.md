@@ -73,4 +73,4 @@ Don't keep motors with seized or heavily worn bearings unless you plan to replac
 
 ## Theory links
 
-For safe low-voltage motor checks and understanding current-limited testing, see [DC measurements](/open-circuits/DC/DC_5.html). For basic motor-driving experiments that show you how to get a brushed or stepper motor moving with simple circuits, see [bench experiments](/open-circuits/Exper/EXP_1.html).
+For safe low-voltage motor checks and understanding current-limited testing, see [DC measurements](/open-circuits/DC/DC_5.html). For basic motor-driving experiments that show you how to get a brushed or stepper motor moving with simple circuits, see [bench experiments](/open-circuits/Exper/EXP_3.html).

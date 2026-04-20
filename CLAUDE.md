@@ -76,9 +76,12 @@ Use absolute Open Circuits paths such as:
 
 - `/open-circuits/DC/DC_5.html`
 - `/open-circuits/Semi/SEMI_6.html`
-- `/open-circuits/Exper/EXP_1.html`
+- `/open-circuits/Exper/EXP_2.html` — basic bench concepts, meter usage, LED/resistor circuits
+- `/open-circuits/Exper/EXP_3.html` — DC circuit experiments (capacitors, relays, motors)
+- `/open-circuits/Exper/EXP_4.html` — AC circuit experiments (inductors, transformers)
+- `/open-circuits/Exper/EXP_5.html` — discrete semiconductor experiments (BJT, FET fixtures)
 
-Keep these as short inline hyperlinks only.
+Keep these as short inline hyperlinks only. `EXP_1.html` is an intro/landing page — do not link to it.
 
 ### Component tables
 

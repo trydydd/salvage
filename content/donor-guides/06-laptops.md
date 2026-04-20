@@ -62,7 +62,7 @@ DC jack and USB-C charge boards come out with one or two screws and a connector 
 
 For testing fans, switches, and speaker modules after removal, see [DC measurements](/open-circuits/DC/DC_5.html).
 
-For simple continuity and low-voltage test fixtures that help sort tiny laptop parts, see [Experiments](/open-circuits/Exper/EXP_1.html).
+For simple continuity and low-voltage test fixtures that help sort tiny laptop parts, see [Experiments](/open-circuits/Exper/EXP_2.html).
 
 ## Specific Teardowns
 

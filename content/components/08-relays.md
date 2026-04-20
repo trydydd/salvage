@@ -71,4 +71,4 @@ Don't reuse a relay that failed to click clearly on the bench test, has welded c
 
 ## Theory links
 
-For simple relay test rigs using a resistor as a load and a battery as the coil supply, see [bench experiments](/open-circuits/Exper/EXP_1.html). For coil resistance measurement and continuity checks across the contact terminals, see [DC measurements](/open-circuits/DC/DC_5.html).
+For simple relay test rigs using a resistor as a load and a battery as the coil supply, see [bench experiments](/open-circuits/Exper/EXP_3.html). For coil resistance measurement and continuity checks across the contact terminals, see [DC measurements](/open-circuits/DC/DC_5.html).
