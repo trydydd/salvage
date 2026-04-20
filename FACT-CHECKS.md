@@ -24,16 +24,6 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Source: IEC 61810-1 §8 (endurance ratings); Omron relay application notes on contact derating for unknown service history.  
   File: content/components/08-relays.md
 
-- [ ] **Diodes** · Use diode mode · FACT-CHECK 4: Standard green LED lower bound (1.9V) unverified — likely a symmetric assumption around typ 2.2V, not a measured minimum. Upper bound already confirmed at 2.5V and corrected in the prose.  
-  Claim: "standard green reads 1.9–2.5V" (upper bound corrected; lower bound still unverified)  
-  Source: Bench measurement — probe several salvaged standard green LEDs in diode mode (follow the "LED forward voltage by color" procedure in content/components/03-diodes.md; meter technique at /open-circuits/DC/DC_5.html). Note the lowest reading across parts.  
-  File: content/components/03-diodes.md
-
-- [ ] **Diodes** · Use diode mode · FACT-CHECK 5: HB-green upper bound corrected to 3.6V in prose (Cree C503B: typ 3.2V, max 3.6V). Lower bound (2.9V) unverified — LED datasheets do not specify minimum Vf.  
-  Claim: "high-brightness green reads 2.9–3.6V" (upper bound corrected; lower bound still unverified)  
-  Source: Bench measurement — probe several salvaged HB-green LEDs in diode mode (follow the "LED forward voltage by color" procedure in content/components/03-diodes.md; meter technique at /open-circuits/DC/DC_5.html). Note the lowest reading across parts.  
-  File: content/components/03-diodes.md
-
 - [ ] **Diodes** · Use diode mode · FACT-CHECK 6: The 1.5V floor for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf and whether any common consumer LED reads below 1.5V without being defective.  
   Claim: "A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode."  
   Source: Check photodiode datasheet Vf (e.g. Vishay BPW34, TEPT5700); verify no common consumer LED type legitimately reads below 1.5V in diode mode without being defective.  
