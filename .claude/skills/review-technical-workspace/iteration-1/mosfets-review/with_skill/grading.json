@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')",
+      "passed": true,
+      "evidence": "Critical Error 1: 'On an N-channel MOSFET, the body diode runs from drain to source with the anode at the drain.' — correctly flagged with exact quote"
+    },
+    {
+      "text": "Correctly states the fix: body diode runs from source to drain with anode at source",
+      "passed": true,
+      "evidence": "Fix: 'On an N-channel MOSFET, the body diode runs from source to drain with the anode at the source.'"
+    },
+    {
+      "text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+      "passed": true,
+      "evidence": "Report has '## Critical Errors', '## Fact-Check Items', and '## Clean' sections with consistent numbered formatting"
+    },
+    {
+      "text": "Numbers all findings sequentially",
+      "passed": true,
+      "evidence": "Findings numbered 1–5 sequentially across Critical Errors and Fact-Check Items without restarting"
+    },
+    {
+      "text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip",
+      "passed": true,
+      "evidence": "Report ends with the standard Apply fixes prompt with all four options"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {"Read": 2, "Write": 1},
+    "total_tool_calls": 7,
+    "errors_encountered": 0
+  },
+  "notes": [
+    "Also correctly identified gate discharge path error (gate-to-source, not drain-to-source) as Critical Error 3 — a real error not injected for testing",
+    "Correctly left P-channel body diode direction as Clean — no false positive unlike baseline"
+  ]
+}

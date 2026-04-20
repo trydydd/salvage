@@ -1,0 +1,44 @@
+{
+  "skill_name": "review-technical",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review the diodes component page for technical accuracy: content/components/03-diodes.md",
+      "expected_output": "A technical review report identifying critical errors including: wrong meter mode (20V DC instead of diode mode), wrong silicon Vf range (1.4–2.0V instead of 0.55–0.80V), and wrong units in the forward voltage table (Ω instead of V). The report should offer to apply fixes.",
+      "files": ["content/components/03-diodes.md"],
+      "expectations": [
+        "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)",
+        "Flags silicon diode forward voltage '1.4–2.0V' as a critical error (correct range is 0.55–0.80V)",
+        "Flags '0.55–0.80 Ω' in the forward voltage table as a critical error (should be V not Ω)",
+        "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+        "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Check the numbers on the MOSFETs page: content/components/05-mosfets.md",
+      "expected_output": "A technical review report identifying the reversed N-channel body diode direction as a critical error. The page says 'anode at the drain' but it should be 'anode at the source'. The report should also verify gate voltage thresholds and ESD guidance.",
+      "files": ["content/components/05-mosfets.md"],
+      "expectations": [
+        "Identifies the reversed N-channel body diode direction as a critical error ('anode at the drain' should be 'anode at the source')",
+        "Correctly notes the MOSFET body diode direction calibration: N-ch anode=source, cathode=drain",
+        "The critical error fix reverses the direction back to: body diode runs from source to drain with anode at source",
+        "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+        "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Does this look correct? SME check on the relays page: content/components/08-relays.md",
+      "expected_output": "A technical review report identifying two critical errors: wrong meter range instruction (200mA current range instead of resistance range) and wrong 5V coil resistance range (10–30Ω instead of 70–125Ω or 50–150Ω). The report should offer to apply fixes.",
+      "files": ["content/components/08-relays.md"],
+      "expectations": [
+        "Identifies '200mA current range' meter instruction as a critical error (should be resistance/ohms range)",
+        "Flags 5V relay coil resistance '10–30Ω' as a critical error (correct range is 50–150Ω per calibration; page previously said 70–125Ω)",
+        "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+        "Numbers all findings sequentially",
+        "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip"
+      ]
+    }
+  ]
+}

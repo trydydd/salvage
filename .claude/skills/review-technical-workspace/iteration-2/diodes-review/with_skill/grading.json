@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Identifies the '20V DC range' meter mode instruction as a critical error", "passed": true, "evidence": "Critical Error 2: '20V DC range' flagged with correct fix"},
+    {"text": "Identifies '1.4-2.0V' silicon diode forward voltage as a critical error", "passed": true, "evidence": "Critical Error 1: '1.4–2.0V' flagged, fix '0.55–0.80V'"},
+    {"text": "Identifies '0.55-0.80 ohms' unit error as a critical error", "passed": true, "evidence": "Critical Error 3: Ω→V unit typo flagged and fixed"},
+    {"text": "Critical error text is no longer present in content/components/03-diodes.md after fixes applied", "passed": true, "evidence": "Agent confirms 3 critical fixes applied; file shows corrected content"},
+    {"text": "File content/components/03-diodes.md contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "3 FACT-CHECK markers inserted (items 4, 5, 6)"},
+    {"text": "FACT-CHECKS.md exists at repo root and contains an entry for the diodes page", "passed": true, "evidence": "FACT-CHECKS.md confirmed populated with 3 diodes entries (items 4–6)"},
+    {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors, ## Fact-Check Items, ## Clean"},
+    {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed: report presented, then fixes applied as per 'all' instruction"}
+  ],
+  "summary": {"passed": 8, "failed": 0, "total": 8, "pass_rate": 1.0},
+  "execution_metrics": {"tool_calls": {"Read": 3, "Edit": 4, "Write": 2}, "total_tool_calls": 18, "errors_encountered": 0}
+}

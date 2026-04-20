@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)",
+      "passed": true,
+      "evidence": "Error 1: 'Set your meter to the 20V DC range' correctly identified as incorrect"
+    },
+    {
+      "text": "Flags silicon diode forward voltage '1.4-2.0V' as a critical error (correct range is 0.55-0.80V)",
+      "passed": true,
+      "evidence": "Error 2: '1.4–2.0V' correctly identified as wrong; states correct range 0.55–0.75V"
+    },
+    {
+      "text": "Flags '0.55-0.80 ohms' in the forward voltage table as a critical error (should be volts, not ohms)",
+      "passed": true,
+      "evidence": "Error 3: '0.55–0.80 Ω' correctly identified as wrong unit"
+    },
+    {
+      "text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+      "passed": false,
+      "evidence": "Report uses 'Errors Found' and 'Items Verified as Correct' sections but has no two-tier Critical/Fact-Check structure. All findings treated equally with no distinction between confirmed errors and items needing human verification."
+    },
+    {
+      "text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip",
+      "passed": false,
+      "evidence": "No fix-application workflow offered. Report ends after summary with no interactive prompt."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 2,
+    "total": 5,
+    "pass_rate": 0.6
+  },
+  "execution_metrics": {
+    "tool_calls": {"Read": 1, "Write": 1},
+    "total_tool_calls": 5,
+    "errors_encountered": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Identifies the '20V DC range' meter mode instruction as a critical error", "passed": true, "evidence": "Error 2 correctly identified"},
+    {"text": "Identifies '1.4-2.0V' silicon diode forward voltage as a critical error", "passed": true, "evidence": "Error 1 correctly identified"},
+    {"text": "Identifies '0.55-0.80 ohms' unit error as a critical error", "passed": true, "evidence": "Error 3 correctly identified"},
+    {"text": "Critical error text is no longer present in content/components/03-diodes.md after fixes applied", "passed": true, "evidence": "Baseline applied all three fixes directly to the file"},
+    {"text": "File content/components/03-diodes.md contains at least one FACT-CHECK blockquote marker", "passed": false, "evidence": "Baseline was instructed not to insert markers; none added"},
+    {"text": "FACT-CHECKS.md exists at repo root and contains an entry for the diodes page", "passed": false, "evidence": "Baseline did not create or update FACT-CHECKS.md; entries present were added by with-skill run"},
+    {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Used freeform error list with no Critical/Fact-Check tier separation"},
+    {"text": "Offers apply fixes prompt before applying", "passed": false, "evidence": "Fixes applied directly with no interactive prompt"}
+  ],
+  "summary": {"passed": 4, "failed": 4, "total": 8, "pass_rate": 0.5},
+  "execution_metrics": {"tool_calls": {"Read": 1, "Edit": 3, "Write": 1}, "total_tool_calls": 9, "errors_encountered": 0}
+}

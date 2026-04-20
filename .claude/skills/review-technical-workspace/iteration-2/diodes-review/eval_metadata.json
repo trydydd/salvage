@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "diodes-review",
+  "prompt": "Review the diodes component page for technical accuracy: content/components/03-diodes.md",
+  "assertions": [
+    "Identifies the '20V DC range' meter mode instruction as a critical error",
+    "Identifies '1.4-2.0V' silicon diode forward voltage as a critical error",
+    "Identifies '0.55-0.80 ohms' unit error as a critical error",
+    "Critical error text is no longer present in content/components/03-diodes.md after fixes applied",
+    "File content/components/03-diodes.md contains at least one FACT-CHECK blockquote marker",
+    "FACT-CHECKS.md exists at repo root and contains an entry for the diodes page",
+    "Presents structured report with Critical Errors and Fact-Check Items sections",
+    "Offers apply fixes prompt before applying"
+  ]
+}

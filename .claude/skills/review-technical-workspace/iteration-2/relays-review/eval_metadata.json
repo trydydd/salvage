@@ -1,0 +1,14 @@
+{
+  "eval_id": 3,
+  "eval_name": "relays-review",
+  "prompt": "Does this look correct? SME check on the relays page: content/components/08-relays.md",
+  "assertions": [
+    "Identifies '200mA current range' meter instruction as a critical error",
+    "Identifies 5V coil resistance '10-30 ohms' as a critical error",
+    "Critical error text is no longer present in content/components/08-relays.md after fixes applied",
+    "File content/components/08-relays.md contains at least one FACT-CHECK blockquote marker",
+    "FACT-CHECKS.md exists at repo root and contains an entry for the relays page",
+    "Presents structured report with Critical Errors and Fact-Check Items sections",
+    "Offers apply fixes prompt before applying"
+  ]
+}

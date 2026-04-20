@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "skill_name": "review-technical",
+    "skill_path": ".claude/skills/review-technical",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-19T00:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "Diodes Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 8, "failed": 0, "total": 8, "time_seconds": 202.2, "tokens": 33475, "tool_calls": 18, "errors": 0},
+      "expectations": [
+        {"text": "Identifies the '20V DC range' meter mode instruction as a critical error", "passed": true, "evidence": "Critical Error 2 flagged with correct fix"},
+        {"text": "Identifies '1.4-2.0V' silicon diode forward voltage as a critical error", "passed": true, "evidence": "Critical Error 1 flagged, fix '0.55–0.80V'"},
+        {"text": "Identifies '0.55-0.80 ohms' unit error as a critical error", "passed": true, "evidence": "Critical Error 3 unit typo flagged and fixed"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "3 critical fixes confirmed applied to file"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "3 FACT-CHECK markers inserted (items 4, 5, 6)"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the diodes page", "passed": true, "evidence": "FACT-CHECKS.md populated with 3 diodes entries"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors, ## Fact-Check Items, ## Clean"},
+        {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed: report then fixes"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Diodes Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.5, "passed": 4, "failed": 4, "total": 8, "time_seconds": 97.4, "tokens": 19685, "tool_calls": 9, "errors": 0},
+      "expectations": [
+        {"text": "Identifies the '20V DC range' meter mode instruction as a critical error", "passed": true, "evidence": "Error correctly identified"},
+        {"text": "Identifies '1.4-2.0V' silicon diode forward voltage as a critical error", "passed": true, "evidence": "Error correctly identified"},
+        {"text": "Identifies '0.55-0.80 ohms' unit error as a critical error", "passed": true, "evidence": "Error correctly identified"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "Baseline applied all three fixes directly to the file"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": false, "evidence": "Baseline does not insert markers — no skill, no markers"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the diodes page", "passed": false, "evidence": "Baseline did not update FACT-CHECKS.md"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Freeform error list, no two-tier structure"},
+        {"text": "Offers apply fixes prompt before applying", "passed": false, "evidence": "Fixes applied directly with no prompt"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "MOSFETs Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 174.7, "tokens": 30516, "tool_calls": 15, "errors": 0},
+      "expectations": [
+        {"text": "Identifies reversed N-channel body diode direction as a critical error", "passed": true, "evidence": "Critical Error 1 flagged with correct fix; probe assignment also corrected as Critical Error 2"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "4 critical fixes applied; all injected and real errors corrected"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "3 FACT-CHECK markers inserted (items 5, 6, 7)"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the MOSFETs page", "passed": true, "evidence": "3 MOSFETs entries appended to FACT-CHECKS.md"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "4 critical errors, 3 fact-check items, Clean section"},
+        {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed"}
+      ],
+      "notes": ["Also caught drain-overvoltage/gate-oxide failure mechanism error — a real error in original content, not injected"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "MOSFETs Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.333, "passed": 2, "failed": 4, "total": 6, "time_seconds": 110.4, "tokens": 20366, "tool_calls": 7, "errors": 0},
+      "expectations": [
+        {"text": "Identifies reversed N-channel body diode direction as a critical error", "passed": true, "evidence": "Error correctly identified with full correction"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "Baseline applied 2 corrections to file"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": false, "evidence": "No markers inserted"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the MOSFETs page", "passed": false, "evidence": "Baseline did not update FACT-CHECKS.md"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Freeform severity-labelled list, no tier structure"},
+        {"text": "Offers apply fixes prompt before applying", "passed": false, "evidence": "Fixes applied directly"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Relays Review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 171.8, "tokens": 31783, "tool_calls": 20, "errors": 0},
+      "expectations": [
+        {"text": "Identifies '200mA current range' meter instruction as a critical error", "passed": true, "evidence": "Critical Error 1 flagged and fixed"},
+        {"text": "Identifies 5V coil resistance '10-30 ohms' as a critical error", "passed": true, "evidence": "Critical Error 2 flagged; corrected to calibration-reference value 50–150Ω"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "2 critical fixes applied; open-coil OL range also updated for consistency"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "4 FACT-CHECK markers inserted (items 3–6)"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the relays page", "passed": true, "evidence": "4 relays entries in FACT-CHECKS.md"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "2 critical errors, 4 fact-check items, Clean section"},
+        {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed"}
+      ],
+      "notes": ["Race condition: baseline had already changed 5V coil range to 70–200Ω; skill overrode with calibration value 50–150Ω"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Relays Review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.429, "passed": 3, "failed": 4, "total": 7, "time_seconds": 71.1, "tokens": 17371, "tool_calls": 5, "errors": 0},
+      "expectations": [
+        {"text": "Identifies '200mA current range' meter instruction as a critical error", "passed": true, "evidence": "Error correctly identified and fixed"},
+        {"text": "Identifies 5V coil resistance '10-30 ohms' as a critical error", "passed": true, "evidence": "Error correctly identified; fixed to 70–200Ω"},
+        {"text": "Critical error text is no longer present in file after fixes applied", "passed": true, "evidence": "Baseline applied both corrections to file"},
+        {"text": "File contains at least one FACT-CHECK blockquote marker", "passed": false, "evidence": "No markers inserted"},
+        {"text": "FACT-CHECKS.md exists and contains an entry for the relays page", "passed": false, "evidence": "Baseline did not update FACT-CHECKS.md"},
+        {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": false, "evidence": "Freeform severity-table format"},
+        {"text": "Offers apply fixes prompt before applying", "passed": false, "evidence": "No prompt; fixes applied directly"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 182.9, "stddev": 16.4, "min": 171.8, "max": 202.2},
+      "tokens": {"mean": 31925, "stddev": 1509, "min": 30516, "max": 33475}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.421, "stddev": 0.084, "min": 0.333, "max": 0.5},
+      "time_seconds": {"mean": 92.97, "stddev": 19.94, "min": 71.1, "max": 110.4},
+      "tokens": {"mean": 19141, "stddev": 1527, "min": 17371, "max": 20366}
+    },
+    "delta": {
+      "pass_rate": "+0.58",
+      "time_seconds": "+89.9",
+      "tokens": "+12784"
+    }
+  },
+  "notes": [
+    "Skill achieves 100% pass rate vs 42% baseline across all three full-flow evals",
+    "The 4 assertions that always fail for baseline are: marker insertion, FACT-CHECKS.md update, two-tier report structure, and fix workflow — all behaviors the skill uniquely provides",
+    "Error detection and fix application both pass for baseline (assertions 1–3 in each eval) — the skill's value is entirely in systematic structure and the persistent tracker",
+    "Race condition: parallel agents sharing source files caused some baseline runs to compete with with-skill runs for the same file; in all cases the final file state was correct",
+    "MOSFETs with-skill found an additional real error not injected: wrong failure mechanism attribution (gate oxide vs drain-body avalanche) — shows the calibration table catches errors beyond the obvious",
+    "Time overhead is substantial in iteration 2: with-skill averages 183s vs 93s without (2× slower), reflecting the full flow: apply fixes + insert markers + update tracker",
+    "Token overhead also larger: +12,784 tokens per run on average, for the full rewrite + marker insertion + FACT-CHECKS.md work"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Identifies '200mA current range' meter instruction as a critical error", "passed": true, "evidence": "Critical Error 1: meter mode correctly flagged and fixed"},
+    {"text": "Identifies 5V coil resistance '10-30 ohms' as a critical error", "passed": true, "evidence": "Critical Error 2: coil range flagged; file was already partially fixed by baseline, skill corrected to calibration-reference value 50–150Ω"},
+    {"text": "Critical error text is no longer present in content/components/08-relays.md after fixes applied", "passed": true, "evidence": "2 critical fixes applied; also corrected open-coil OL range in failure modes to align"},
+    {"text": "File content/components/08-relays.md contains at least one FACT-CHECK blockquote marker", "passed": true, "evidence": "4 FACT-CHECK markers inserted (items 3–6)"},
+    {"text": "FACT-CHECKS.md exists at repo root and contains an entry for the relays page", "passed": true, "evidence": "4 relays entries in FACT-CHECKS.md (items 3–6)"},
+    {"text": "Presents structured report with Critical Errors and Fact-Check Items sections", "passed": true, "evidence": "Report has ## Critical Errors (2), ## Fact-Check Items (4), ## Clean"},
+    {"text": "Offers apply fixes prompt before applying", "passed": true, "evidence": "Skill structure followed; report presented before fixes applied"}
+  ],
+  "summary": {"passed": 7, "failed": 0, "total": 7, "pass_rate": 1.0},
+  "execution_metrics": {"tool_calls": {"Read": 3, "Edit": 4, "Write": 2}, "total_tool_calls": 20, "errors_encountered": 0},
+  "notes": ["Race condition: baseline had already changed 5V coil resistance to 70–200Ω before this agent ran; skill applied its calibration-reference value 50–150Ω on top of that"]
+}

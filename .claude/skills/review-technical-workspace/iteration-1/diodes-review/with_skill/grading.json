@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies the '20V DC range' meter mode instruction as a critical error (should be diode mode)",
+      "passed": true,
+      "evidence": "Critical Error 1: 'Set your meter to the 20V DC range to get an accurate reading.' — correctly identified as critical with fix to confirm diode mode selector"
+    },
+    {
+      "text": "Flags silicon diode forward voltage '1.4-2.0V' as a critical error (correct range is 0.55-0.80V)",
+      "passed": true,
+      "evidence": "Critical Error 2: 'A good silicon rectifier or signal diode reads 1.4–2.0V.' — correctly identified as critical with fix '0.5–0.8 V'"
+    },
+    {
+      "text": "Flags '0.55-0.80 ohms' in the forward voltage table as a critical error (should be volts, not ohms)",
+      "passed": true,
+      "evidence": "Critical Error 3: '0.55–0.80 Ω: standard silicon rectifier or signal diode' — correctly identified as critical unit error with fix 'V'"
+    },
+    {
+      "text": "Presents findings in a structured report with Critical Errors and Fact-Check Items sections",
+      "passed": true,
+      "evidence": "Report has '## Critical Errors', '## Fact-Check Items', and '## Clean' sections with consistent formatting across all findings"
+    },
+    {
+      "text": "Offers to apply fixes with options: all, comma-separated IDs, interactive, or skip",
+      "passed": true,
+      "evidence": "Report ends with 'Apply fixes: enter `all`, a comma-separated list of IDs (e.g. `1,3`), `interactive` to step through one at a time, or `skip`'"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {"Read": 2, "Write": 1},
+    "total_tool_calls": 4,
+    "errors_encountered": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "mosfets-review",
+  "prompt": "Check the numbers on the MOSFETs page: content/components/05-mosfets.md",
+  "assertions": [
+    "Identifies reversed N-channel body diode direction as a critical error",
+    "Critical error text is no longer present in content/components/05-mosfets.md after fixes applied",
+    "File content/components/05-mosfets.md contains at least one FACT-CHECK blockquote marker",
+    "FACT-CHECKS.md exists at repo root and contains an entry for the MOSFETs page",
+    "Presents structured report with Critical Errors and Fact-Check Items sections",
+    "Offers apply fixes prompt before applying"
+  ]
+}
