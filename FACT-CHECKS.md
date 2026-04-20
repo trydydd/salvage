@@ -5,10 +5,6 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
 ---
 
 
-- [ ] **Relays** · Click test and contact condition · FACT-CHECK 4: Verify typical pull-in time for small PCB relays; most datasheets spec 3–10 ms, making 10–20 ms potentially too slow as a pass threshold.  
-  Claim: "the armature should pull in within about 10–20ms"  
-  Source: Omron G5V-2 datasheet (operate time), Songle SRD datasheet — check the "operate time" row.  
-  File: content/components/08-relays.md
 
 - [ ] **Relays** · Contact resistance check · FACT-CHECK 5: Verify whether 0.2 Ω is an appropriate "usable" threshold for cleaned contacts; relay datasheets typically specify 100 mΩ (0.1 Ω) max, making 0.2 Ω potentially too permissive for higher-current loads.  
   Claim: "If the reading drops to under 0.2Ω after that, the contacts are usable."  

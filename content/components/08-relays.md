@@ -31,9 +31,7 @@ If you can't get continuity in either direction from any pair of contact pins, c
 
 Before energizing, put a flyback diode across the coil pins (anode to the negative coil pin, cathode to the positive coil pin). The inductive kickback when the coil turns off can exceed 300V in worst-case scenarios, which will damage nearby components on the bench without protection. A 1N4148 is fine for signal relays. A 1N4001 or higher for anything with a coil above 100mA.
 
-Apply the rated coil voltage from a bench supply or battery. The relay should click audibly and the armature should pull in within about 10–20ms. Immediately after the click, re-check the contact pins: the normally-open pair should now read continuity, and the normally-closed pair should read OL. Remove the supply; you should hear a second click as the spring returns the armature, and the contacts should return to their resting state.
-
-> ⚠️ **FACT-CHECK 4** — Verify typical pull-in time for small PCB relays; most datasheets spec 3–10 ms, making 10–20 ms potentially too slow as a pass threshold.
+Apply the rated coil voltage from a bench supply or battery. The relay should click audibly and the armature should pull in within about 10ms — datasheets typically spec a maximum of 7ms, so anything slower suggests a degraded coil or mechanical damage. Immediately after the click, re-check the contact pins: the normally-open pair should now read continuity, and the normally-closed pair should read OL. Remove the supply; you should hear a second click as the spring returns the armature, and the contacts should return to their resting state.
 
 A clean pull-in click is distinct and immediate. A sluggish pull-in or a buzzing sound when energized suggests the armature is stiff or the contact spring is worn. Both are signs of a relay that has worked hard and may not be reliable for long switching cycles.
 
