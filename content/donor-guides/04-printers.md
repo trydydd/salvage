@@ -32,7 +32,7 @@ Call out ink mess, toner dust, spring-loaded mechanisms, scanner glass, and the 
 
 ## TODO: Theory Links
 - [DC measurements](/open-circuits/DC/DC_5.html) for testing motors, switches, and sensor harnesses after removal.
-- [Experiments](/open-circuits/Exper/EXPER_1.html) for simple bench setups that help sort motors and optical sensors into known-good bins.
+- [Experiments](/open-circuits/Exper/EXP_1.html) for simple bench setups that help sort motors and optical sensors into known-good bins.
 
 ## TODO: Specific Teardowns
 Leave room for future inkjet and laser teardown notes, especially which families give the best motor and rail yields for small motion projects.

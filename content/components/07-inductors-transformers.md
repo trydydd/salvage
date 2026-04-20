@@ -51,4 +51,4 @@ Don't bother with flyback transformers from switching supplies unless you're har
 
 ## Theory links
 
-For basic winding checks and how to use a meter to confirm continuity through each winding, see [DC measurements](/open-circuits/DC/DC_5.html). For simple low-voltage coil tests that show inductive behavior without mains involvement, see [bench experiments](/open-circuits/Exper/EXPER_1.html).
+For basic winding checks and how to use a meter to confirm continuity through each winding, see [DC measurements](/open-circuits/DC/DC_5.html). For simple low-voltage coil tests that show inductive behavior without mains involvement, see [bench experiments](/open-circuits/Exper/EXP_1.html).

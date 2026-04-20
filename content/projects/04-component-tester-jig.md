@@ -18,4 +18,4 @@ Describe how to arrange test points, labels, and removable jumpers so the jig st
 Explain example workflows for different component families and how the jig can reduce wiring mistakes during repeated testing.
 
 ## TODO: Theory links and future add-ons
-Point readers to [experiments](/open-circuits/Exper/EXPER_1.html) and [DC measurements](/open-circuits/DC/DC_5.html) for the simple measurement ideas behind the fixture.
+Point readers to [experiments](/open-circuits/Exper/EXP_1.html) and [DC measurements](/open-circuits/DC/DC_5.html) for the simple measurement ideas behind the fixture.

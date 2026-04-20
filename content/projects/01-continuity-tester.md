@@ -18,4 +18,4 @@ Describe the simple series circuit, the physical layout options, and how to make
 Explain how to verify the tester before trusting it and how to use it for wires, switches, and low-resistance paths without mistaking it for a mains-safe instrument.
 
 ## TODO: Theory links and upgrades
-Point readers to [DC measurements](/open-circuits/DC/DC_5.html) and [experiments](/open-circuits/Exper/EXPER_1.html) for the theory behind the simple indicator circuit and suggest future upgrades such as a buzzer.
+Point readers to [DC measurements](/open-circuits/DC/DC_5.html) and [experiments](/open-circuits/Exper/EXP_1.html) for the theory behind the simple indicator circuit and suggest future upgrades such as a buzzer.

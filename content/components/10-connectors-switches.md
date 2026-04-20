@@ -75,4 +75,4 @@ Store connectors by family and pitch in small bags or compartments. Label with t
 
 ## Theory links
 
-For continuity work and understanding how contact resistance affects circuit behavior, see [DC measurements](/open-circuits/DC/DC_5.html). For quick switch and connector test setups that confirm behavior under real load, see [bench experiments](/open-circuits/Exper/EXPER_1.html).
+For continuity work and understanding how contact resistance affects circuit behavior, see [DC measurements](/open-circuits/DC/DC_5.html). For quick switch and connector test setups that confirm behavior under real load, see [bench experiments](/open-circuits/Exper/EXP_1.html).

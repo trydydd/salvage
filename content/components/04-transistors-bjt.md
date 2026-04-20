@@ -71,4 +71,4 @@ The one test that catches most failures without knowing the pinout at all: in re
 
 ## Theory links
 
-For transistor action and how the base current controls collector current, see [Semiconductors](/open-circuits/Semi/SEMI_6.html). For simple transistor test fixtures you can build at the bench to confirm HFE and switching behavior, see [bench experiments](/open-circuits/Exper/EXPER_1.html).
+For transistor action and how the base current controls collector current, see [Semiconductors](/open-circuits/Semi/SEMI_6.html). For simple transistor test fixtures you can build at the bench to confirm HFE and switching behavior, see [bench experiments](/open-circuits/Exper/EXP_1.html).

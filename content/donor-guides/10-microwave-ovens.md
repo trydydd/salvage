@@ -32,7 +32,7 @@ State plainly that the high-voltage capacitor can remain lethal long after unplu
 
 ## TODO: Theory Links
 - [DC measurements](/open-circuits/DC/DC_5.html) only for the low-voltage control parts once they are safely separated from the HV section.
-- [Experiments](/open-circuits/Exper/EXPER_1.html) for test habits you can use on switches, lamps, and motors after removal from the dangerous chassis.
+- [Experiments](/open-circuits/Exper/EXP_1.html) for test habits you can use on switches, lamps, and motors after removal from the dangerous chassis.
 
 ## TODO: Specific Teardowns
 Leave room for future teardown notes that focus on safe-to-harvest mechanical assemblies and explicitly document which microwave parts should remain out of scope.
