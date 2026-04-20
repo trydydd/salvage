@@ -44,7 +44,7 @@ What to examine in every page:
 | Silicon diode Vf | 0.5–0.8 V |
 | Schottky diode Vf | 0.15–0.45 V |
 | Germanium diode Vf | 0.2–0.35 V |
-| Red / orange / yellow LED Vf | typ 2.0 V, max 2.2 V *(typ unverified — see FACT-CHECKS.md)* |
+| Red / orange / yellow LED Vf | typ 2.0 V, max 2.5 V |
 | Standard green LED Vf | typ 2.2 V, max 2.5 V |
 | Blue / white / HB-green LED Vf | typ 3.2 V, max 3.6 V |
 | MOSFET body diode Vf | 0.4–0.65 V |
