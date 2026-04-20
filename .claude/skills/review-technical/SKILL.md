@@ -44,6 +44,7 @@ What to examine in every page:
 | Silicon diode Vf | 0.5–0.8 V |
 | Schottky diode Vf | 0.15–0.45 V |
 | Germanium diode Vf | 0.2–0.35 V |
+| Infrared LED Vf | 1.2–1.6 V (won't glow visibly in diode mode) |
 | Red / orange / yellow LED Vf | typ 2.0 V, max 2.5 V |
 | Standard green LED Vf | typ 2.2 V, max 2.5 V |
 | Blue / white / HB-green LED Vf | typ 3.2 V, max 3.6 V |

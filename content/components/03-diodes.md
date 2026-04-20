@@ -33,7 +33,7 @@ For a quick check on an otherwise healthy board, probing in-circuit is sometimes
 
 **LED forward voltage by color**
 
-LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.5V, but high-brightness green reads 2.9–3.6V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode. Photodiodes read 0.6–1.0V in diode mode — well below any LED family.
+LEDs in diode mode light faintly if the meter voltage is enough. Red LEDs read up to 2.5V (typ 2.0V). Infrared LEDs read 1.2–1.6V but won't glow visibly — the emission is outside the visible range. Yellow and orange read up to 2.5V (typ 2.1V). Green LEDs vary: standard green reads up to 2.5V (typ 2.2V), but high-brightness green reads up to 3.6V (typ 3.2V). Blue and white read up to 3.6V (typ 3.2V). A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode. Photodiodes read 0.6–1.0V in diode mode — well below any LED family.
 
 ## Forward voltage by type
 
@@ -42,10 +42,11 @@ The forward voltage range is your best quick-sort tool when you're working throu
 - 0.15–0.45 V: Schottky silicon
 - 0.20–0.35 V: germanium (old stock, glass body, often marked OA91 or AA119)
 - 0.55–0.80 V: standard silicon rectifier or signal diode
-- 1.7–2.2 V: red or infrared LED
-- 1.8–2.2 V: yellow or amber LED
-- 1.9–2.5 V: standard green LED (typ 2.2 V, max 2.5 V)
-- 2.9–3.6 V: blue, white, or high-brightness green LED (HB-green typ 3.2 V, max 3.6 V)
+- 1.2–1.6 V: infrared LED (won't glow visibly in diode mode)
+- typ 2.0 V, max 2.5 V: red LED
+- typ 2.1 V, max 2.5 V: yellow or amber LED
+- typ 2.2 V, max 2.5 V: standard green LED
+- typ 3.2 V, max 3.6 V: blue, white, or high-brightness green LED
 
 Zeners read a normal silicon forward voltage in diode mode. You can't identify the zener voltage without a test circuit that applies reverse voltage up to the breakdown point.
 
