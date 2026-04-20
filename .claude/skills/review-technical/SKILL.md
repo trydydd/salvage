@@ -35,6 +35,7 @@ What to examine in every page:
 - Failure mode root causes — accurate? (tantalum shorts from overvoltage not age; gate oxide damage from ESD not drain voltage)
 - Derating percentages — appropriate for the component and the failure mode being guarded against?
 - Safety pairings — every named hazard paired with a procedure?
+- Redundant qualifiers on defined terms — does a modifier restate what the term already means? Forward voltage is by definition the minimum voltage for forward conduction, so "minimum forward voltage" is tautological. Threshold voltage is by definition a minimum, so "minimum threshold voltage" is the same error. Flag these as critical errors when the redundancy is clear.
 
 **Calibration reference** — values outside these windows are critical errors; values near the edge are fact-check candidates:
 
@@ -54,6 +55,7 @@ What to examine in every page:
 | 24 V relay coil resistance | 500–1500 Ω |
 | Electrolytic voltage derating | Less than 80% of rating = flag as unsafe |
 | Tantalum voltage derating | More than 70% of rating = critical error |
+| Redundant qualifier pattern | "minimum Vf", "minimum threshold voltage", "maximum breakdown voltage" = critical error (qualifier restates the term's definition) |
 
 ### Step 2 — Present the report
 
