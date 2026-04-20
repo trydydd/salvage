@@ -4,10 +4,6 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
 
 ---
 
-- [ ] **Relays** · Click test and contact condition · FACT-CHECK 3: Verify whether inductive kick in a 12 V relay coil can exceed 100 V; 50–100 V may understate the worst case for unprotected coils.  
-  Claim: "The inductive kick when the coil turns off can reach 50–100V in a 12V relay coil"  
-  Source: Relay coil inductance specs in SRD-05VDC or G5V-2 datasheets; /open-circuits/DC/DC_5.html for inductive transient background.  
-  File: content/components/08-relays.md
 
 - [ ] **Relays** · Click test and contact condition · FACT-CHECK 4: Verify typical pull-in time for small PCB relays; most datasheets spec 3–10 ms, making 10–20 ms potentially too slow as a pass threshold.  
   Claim: "the armature should pull in within about 10–20ms"  

@@ -29,9 +29,7 @@ If you can't get continuity in either direction from any pair of contact pins, c
 
 ## Click test and contact condition
 
-Before energizing, put a flyback diode across the coil pins (anode to the negative coil pin, cathode to the positive coil pin). The inductive kick when the coil turns off can reach 50–100V in a 12V relay coil, which will damage nearby components on the bench without protection. A 1N4148 is fine for signal relays. A 1N4001 or higher for anything with a coil above 100mA.
-
-> ⚠️ **FACT-CHECK 3** — Verify whether inductive kick in a 12 V relay coil can exceed 100 V; 50–100 V may understate the worst case for unprotected coils.
+Before energizing, put a flyback diode across the coil pins (anode to the negative coil pin, cathode to the positive coil pin). The inductive kickback when the coil turns off can exceed 300V in worst-case scenarios, which will damage nearby components on the bench without protection. A 1N4148 is fine for signal relays. A 1N4001 or higher for anything with a coil above 100mA.
 
 Apply the rated coil voltage from a bench supply or battery. The relay should click audibly and the armature should pull in within about 10–20ms. Immediately after the click, re-check the contact pins: the normally-open pair should now read continuity, and the normally-closed pair should read OL. Remove the supply; you should hear a second click as the spring returns the armature, and the contacts should return to their resting state.
 
