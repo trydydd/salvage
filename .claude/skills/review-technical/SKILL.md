@@ -40,29 +40,30 @@ What to examine in every page:
 
 **Calibration reference** — values outside these windows are critical errors; values near the edge are fact-check candidates:
 
-| Claim type | Critical if outside |
-|---|---|
-| Silicon diode Vf | 0.5–0.8 V |
-| Schottky diode Vf | 0.15–0.45 V |
-| Germanium diode Vf | 0.2–0.35 V |
-| Infrared LED Vf | 1.2–1.6 V (won't glow visibly in diode mode) |
-| Red / orange / yellow LED Vf | typ 2.0 V, max 2.5 V |
-| Standard green LED Vf | typ 2.2 V, max 2.5 V |
-| Blue / white / HB-green LED Vf | typ 3.2 V, max 3.6 V |
-| MOSFET body diode Vf | 0.4–0.65 V |
-| MOSFET body diode direction | N-ch: anode=source, cathode=drain; P-ch: reversed |
-| BJT base-emitter Vf | 0.55–0.75 V |
-| 5 V relay coil resistance | 50–150 Ω |
-| 12 V relay coil resistance | 150–500 Ω |
-| 24 V relay coil resistance | 500–1500 Ω |
-| Electrolytic voltage derating | Less than 80% of rating = flag as unsafe |
-| Tantalum voltage derating | More than 70% of rating = critical error |
-| Relay contact resistance (closed) | < 0.1 Ω for high-current loads; 0.1–0.2 Ω marginal (signal switching only); > 0.2 Ω = unsafe for any load |
-| Small PCB relay operate time | max 7–10 ms; flag claims over 15 ms as too permissive |
-| Relay inductive kickback | can exceed 300 V without flyback protection; flag any claim stating < 100 V as an understatement |
-| Relay contact derating (resistive) | 75% of rated current |
-| Relay contact derating (inductive) | 40% of resistive load rating |
-| Redundant qualifier pattern | "minimum Vf", "minimum threshold voltage", "maximum breakdown voltage" = critical error (qualifier restates the term's definition) |
+| Claim type | Critical if outside | Verified |
+|---|---|---|
+| Silicon diode Vf | 0.5–0.8 V | — |
+| Schottky diode Vf | 0.15–0.45 V | — |
+| Germanium diode Vf | 0.2–0.35 V | — |
+| Infrared LED Vf | 1.2–1.6 V (won't glow visibly in diode mode) | ✓ Farnell datasheet |
+| Red / orange / yellow LED Vf | typ 2.0 V, max 2.5 V | ✓ Farnell datasheet |
+| Standard green LED Vf | typ 2.2 V, max 2.5 V | ✓ datasheet (max); lower bound empirical |
+| Blue / white / HB-green LED Vf | typ 3.2 V, max 3.6 V | ✓ Cree C503B datasheet |
+| Photodiode Vf | 0.6–1.0 V | ✓ NJL6414R datasheet |
+| MOSFET body diode Vf | 0.4–0.65 V | — |
+| MOSFET body diode direction | N-ch: anode=source, cathode=drain; P-ch: reversed | — |
+| BJT base-emitter Vf | 0.55–0.75 V | — |
+| 5 V relay coil resistance | 50–150 Ω | — |
+| 12 V relay coil resistance | 150–500 Ω | — |
+| 24 V relay coil resistance | 500–1500 Ω | — |
+| Electrolytic voltage derating | Less than 80% of rating = flag as unsafe | — |
+| Tantalum voltage derating | More than 70% of rating = critical error | — |
+| Relay contact resistance (closed) | < 0.1 Ω for high-current loads; 0.1–0.2 Ω marginal (signal switching only); > 0.2 Ω = unsafe for any load | ✓ relay datasheet spec |
+| Small PCB relay operate time | max 7–10 ms; flag claims over 15 ms as too permissive | ✓ Omron/Songle datasheets |
+| Relay inductive kickback | can exceed 300 V without flyback protection; flag any claim stating < 100 V as an understatement | ✓ bench/circuit analysis |
+| Relay contact derating (resistive) | 75% of rated current | ✓ Agilent relay lifespan guide |
+| Relay contact derating (inductive) | 40% of resistive load rating | ✓ Agilent relay lifespan guide |
+| Redundant qualifier pattern | "minimum Vf", "minimum threshold voltage", "maximum breakdown voltage" = critical error (qualifier restates the term's definition) | — |
 
 ### Step 2 — Present the report
 
