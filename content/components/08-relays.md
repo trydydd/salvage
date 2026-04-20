@@ -63,9 +63,7 @@ The return spring can weaken with age or the armature pivot can corrode in damp 
 
 SPDT relays with a readable coil voltage and contact rating are the most useful thing to pull. A 5V 10A SPDT relay is directly usable in Arduino-scale projects for switching mains lighting or 12V loads. A 12V 30A relay is useful for automotive applications. Pull whatever you find and label the bag with coil voltage, contact form, and contact current rating. If the part number is legible, include that too.
 
-Derate the contact current rating to 75% for salvaged relays used with resistive loads, and to 50% for inductive loads. Contacts that have switched motor or solenoid loads have more surface wear than contacts that switched resistive heating elements. You can't tell the history from the outside, so the derating covers the uncertainty.
-
-> ⚠️ **FACT-CHECK 6** — Verify whether 75% derating is conservative enough for salvaged relay contacts with unknown switching history; some sources recommend 50% for all salvaged contacts regardless of load type.
+Derate the contact current rating to 75% for salvaged relays used with resistive loads, and to 40% of the resistive load rating for inductive loads. Contacts that have switched motor or solenoid loads have more surface wear than contacts that switched resistive heating elements. You can't tell the history from the outside, so the derating covers the uncertainty.
 
 Store relays upright if possible, leads down, so the armature rests in its natural position. A relay stored on its side for years with the spring compressed slightly will have a softer return force when you pull it out. Label the storage bag; a relay with no coil voltage information is almost useless on a future build when you're in a hurry.
 
