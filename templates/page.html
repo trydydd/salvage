@@ -17,7 +17,10 @@
     </aside>
     <main>
       {% if hazard %}{% include "partials/hazard-banner.html" %}{% endif %}
-      <article>{{ body | safe }}</article>
+      <article>
+        <h1>{{ title }}</h1>
+        {{ body | safe }}
+      </article>
     </main>
     {% include "partials/footer.html" %}
   </body>

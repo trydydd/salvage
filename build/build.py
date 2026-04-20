@@ -24,6 +24,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import re
+
 import mistune
 import yaml
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
@@ -34,8 +36,22 @@ TEMPLATES_DIR = REPO_ROOT / "templates"
 OUTPUT_DIR = REPO_ROOT / "output" / "html"
 SHARED_DIR = REPO_ROOT / "shared"
 OVERLAY_DIR = REPO_ROOT / "overlay"
+
+
+def _slugify(text: str) -> str:
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"[^\w\s-]", "", text.lower())
+    text = re.sub(r"[\s_]+", "-", text).strip("-")
+    return text or "section"
+
+
+class _HeadingIdRenderer(mistune.HTMLRenderer):
+    def heading(self, text: str, level: int, **attrs: object) -> str:
+        return f"<h{level} id=\"{_slugify(text)}\">{text}</h{level}>\n"
+
+
 MARKDOWN = mistune.create_markdown(
-    renderer=mistune.HTMLRenderer(escape=False),
+    renderer=_HeadingIdRenderer(escape=False),
     plugins=["strikethrough", "table", "url", "task_lists"],
 )
 SECTION_DIRS = {

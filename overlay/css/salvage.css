@@ -3,6 +3,24 @@
  * Self-contained: no external URLs, fonts, or remote assets.
  */
 
+/* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
+   because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
+   pages have exactly one H1 — the page title — so reset to normal heading. */
+h1:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--oc-text);
+  letter-spacing: normal;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* Sidebar chapter-nav block is empty on salvage pages (no Kuphaldt image nav). */
+.oc-chnav:empty {
+  display: none;
+}
+
 :root {
   --haz-1-bg: rgb(232, 246, 232);
   --haz-1-border: rgb(46, 140, 60);
