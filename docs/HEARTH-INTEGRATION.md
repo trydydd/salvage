@@ -98,7 +98,7 @@ Salvage Electronics links into Open Circuits with absolute `/open-circuits/...` 
 |---------------|---------------------------|----------|
 | DC measurements, continuity, polarity, discharge verification | `/open-circuits/DC/DC_5.html` | donor guides, most component pages, and every project stub that depends on bench measurements |
 | Semiconductors, rectifiers, MOSFETs, regulators, inverter devices | `/open-circuits/Semi/SEMI_6.html` | power-focused donor guides, active-device component pages, and PSU / charger projects |
-| Bench experiments, quick test rigs, low-voltage fixtures | `/open-circuits/Exper/EXPER_1.html` | battery-device and low-voltage donor guides, passive/mechanical component pages, and simple project builds |
+| Bench experiments, quick test rigs, low-voltage fixtures | `/open-circuits/Exper/EXP_1.html` | battery-device and low-voltage donor guides, passive/mechanical component pages, and simple project builds |
 
 Keep these links short and inline. Do not use copied theory text, footnotes, or relative cross-project paths.
 

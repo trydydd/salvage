@@ -100,7 +100,7 @@ Keep any existing theory links from the stub exactly as written. If no links exi
 
 - DC measurements and continuity: `/open-circuits/DC/DC_5.html`
 - Semiconductors and regulators: `/open-circuits/Semi/SEMI_6.html`
-- Bench experiments and test fixtures: `/open-circuits/Exper/EXPER_1.html`
+- Bench experiments and test fixtures: `/open-circuits/Exper/EXP_1.html`
 
 Write each as a short inline sentence, e.g.:
 

@@ -76,7 +76,7 @@ Use absolute Open Circuits paths such as:
 
 - `/open-circuits/DC/DC_5.html`
 - `/open-circuits/Semi/SEMI_6.html`
-- `/open-circuits/Exper/EXPER_1.html`
+- `/open-circuits/Exper/EXP_1.html`
 
 Keep these as short inline hyperlinks only.
 
