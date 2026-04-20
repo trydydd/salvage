@@ -33,9 +33,7 @@ For a quick check on an otherwise healthy board, probing in-circuit is sometimes
 
 **LED forward voltage by color**
 
-LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.5V, but high-brightness green reads 2.9–3.6V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode.
-
-> ⚠️ **FACT-CHECK 6** — The 1.5V threshold for calling an LED shorted or a photodiode may be slightly too high; verify photodiode Vf (e.g. BPW34, TEPT5700) and whether any common consumer LED type legitimately reads below 1.5V without being defective.
+LEDs in diode mode light faintly if the meter voltage is enough. Red and infrared LEDs read 1.7–2.2V. Yellow and orange read 1.8–2.2V. Green LEDs vary: standard green reads 1.9–2.5V, but high-brightness green reads 2.9–3.6V. Blue and white read 3.0–3.6V. A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode. Photodiodes read 0.6–1.0V in diode mode — well below any LED family.
 
 ## Forward voltage by type
 
