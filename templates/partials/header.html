@@ -16,10 +16,10 @@
     </p>
     <nav aria-label="Section navigation">
       <ul class="oc-vol-nav">
-        <li><a href="{{ foundations }}"{% if section == 'foundations' %} class="is-active"{% endif %}>Foundations</a></li>
-        <li><a href="{{ donor_guides }}"{% if section == 'donor-guides' %} class="is-active"{% endif %}>Donors</a></li>
-        <li><a href="{{ components }}"{% if section == 'components' %} class="is-active"{% endif %}>Components</a></li>
-        <li><a href="{{ projects }}"{% if section == 'projects' %} class="is-active"{% endif %}>Projects</a></li>
+        <li><a href="{{ foundations }}" data-section="foundations"{% if section == 'foundations' %} class="is-active"{% endif %}>Foundations</a></li>
+        <li><a href="{{ donor_guides }}" data-section="donor-guides"{% if section == 'donor-guides' %} class="is-active"{% endif %}>Donors</a></li>
+        <li><a href="{{ components }}" data-section="components"{% if section == 'components' %} class="is-active"{% endif %}>Components</a></li>
+        <li><a href="{{ projects }}" data-section="projects"{% if section == 'projects' %} class="is-active"{% endif %}>Projects</a></li>
         <li><a href="/open-circuits/index.html">Theory</a></li>
       </ul>
     </nav>

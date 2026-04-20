@@ -182,6 +182,10 @@ def copy_static_assets() -> None:
     copy_tree(SHARED_DIR / "fonts", OUTPUT_DIR / "fonts")
     copy_tree(OVERLAY_DIR / "icons", OUTPUT_DIR / "icons")
 
+    overlay_js = OVERLAY_DIR / "js"
+    if overlay_js.is_dir():
+        copy_tree(overlay_js, OUTPUT_DIR / "js")
+
     salvage_css = OVERLAY_DIR / "css" / "salvage.css"
     if not salvage_css.is_file():
         raise FileNotFoundError(f"Missing salvage stylesheet: {salvage_css}")
@@ -224,6 +228,7 @@ def render_pages() -> int:
             "css_shared": f"{prefix}css/open-circuits.css",
             "css_salvage": f"{prefix}css/salvage.css",
             "js_nav": f"{prefix}js/navigation.js",
+            "js_salvage": f"{prefix}js/salvage-nav.js",
             "icons_path": f"{prefix}icons/",
             **navigation_context(prefix),
         }

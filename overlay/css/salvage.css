@@ -21,6 +21,13 @@ h1:first-of-type {
   display: none;
 }
 
+/* open-circuits.css hides .oc-vollist on desktop because its header vol-nav
+   covers the same use case. Salvage injects its own Sections block using
+   this class, and needs it visible on all screen sizes. */
+.oc-vollist {
+  display: block;
+}
+
 :root {
   --haz-1-bg: rgb(232, 246, 232);
   --haz-1-border: rgb(46, 140, 60);
