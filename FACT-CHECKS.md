@@ -28,3 +28,8 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Claim: "A reading below 1.5V on what looks like an LED usually means the part is shorted or it's actually a photodiode."  
   Source: Check photodiode datasheet Vf (e.g. Vishay BPW34, TEPT5700); verify no common consumer LED type legitimately reads below 1.5V in diode mode without being defective.  
   File: content/components/03-diodes.md
+
+- [ ] **review-technical skill** · Calibration reference · LED Vf typical values: red/orange/yellow typ 2.0V and max 2.2V are estimates — not verified against datasheets.  
+  Claim: "typ 2.0 V, max 2.2 V" for red / orange / yellow LED Vf  
+  Source: Check datasheets for common red LEDs (e.g. Kingbright APT2012SRCPRV, Cree C503B-RAN) and yellow/orange LEDs (e.g. Kingbright APT2012SYCK); confirm both typ and max at IF=20mA. Note whether orange and yellow differ enough from red to warrant separate rows.  
+  File: .claude/skills/review-technical/SKILL.md
