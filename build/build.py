@@ -114,9 +114,12 @@ def depth_for_output(output_path: Path) -> int:
 
 
 def section_target(section_dir: str) -> str:
-    """Return the first rendered page path for a section, or its future index."""
+    """Return the section index page path, falling back to the first page."""
     content_section = CONTENT_DIR / section_dir
     if content_section.is_dir():
+        index = content_section / "index.md"
+        if index.is_file():
+            return index.relative_to(CONTENT_DIR).with_suffix(".html").as_posix()
         for candidate in sorted(content_section.glob("*.md")):
             if candidate.name.startswith("_"):
                 continue
