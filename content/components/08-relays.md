@@ -37,7 +37,7 @@ A clean pull-in click is distinct and immediate. A sluggish pull-in or a buzzing
 
 **Contact resistance check**
 
-In continuity, the closed contacts should read under 0.1Ω. A reading above 0.5Ω on what should be a closed contact suggests oxidation or pitting. You can clean mild oxidation from silver contacts by switching the relay rapidly 20–30 times (cycle the coil on and off quickly) with a small resistive load on the contacts. If the reading drops to under 0.2Ω after that, the contacts are usable. If it stays high, the surface damage is too deep to recover with this method.
+In continuity, the closed contacts should read under 0.1Ω. A reading above 0.5Ω on what should be a closed contact suggests oxidation or pitting. You can clean mild oxidation from silver contacts by switching the relay rapidly 20–30 times (cycle the coil on and off quickly) with a small resistive load on the contacts. If the reading drops to under 0.1Ω after that, the contacts are usable for high-current loads. A reading of 0.1–0.2Ω is marginal — safe for low-current signal switching but a heat and voltage-drop hazard at anything above a few amps. If it stays high, the surface damage is too deep to recover with this method.
 
 > ⚠️ **FACT-CHECK 5** — Verify whether 0.2 Ω is an appropriate "usable" threshold for cleaned contacts; relay datasheets typically specify 100 mΩ (0.1 Ω) max, making 0.2 Ω potentially too permissive for higher-current loads.
 
