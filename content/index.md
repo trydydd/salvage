@@ -2,16 +2,28 @@
 title: "Salvage Electronics"
 ---
 
-Welcome to the Salvage Electronics guide, a practical set of stubs for turning discarded gear into reusable parts, simple tools, and small projects without assuming a fancy bench.
+A practical guide to pulling useful parts from discarded consumer devices — no stocked workshop required. Covers what to open, what to look for, how to test what you find, and what to build with it.
 
-## TODO: Foundations
-Introduce the four foundations chapters and explain that they cover mindset, safety, workspace setup, and the core techniques you will use before touching donor devices.
+## Foundations
 
-## TODO: Donor Guides
-Summarize the donor guide section as a device-by-device map of what is worth opening, what parts are usually inside, and which hazards change the way you approach teardown.
+Before touching a donor, four short chapters cover the basics: why salvage is worth doing, how to work safely, what tools matter and which ones you can skip, and the core techniques you'll use on every teardown.
 
-## TODO: Components
-Describe the components section as the place to identify salvaged parts, check whether they still work, and decide what measurements matter before reuse.
+[Start with Foundations](foundations/01-why-salvage.html)
 
-## TODO: Projects
-Frame the projects section as a set of small builds that give salvaged parts a second life, from bench tools to simple power and lighting circuits.
+## Donor Guides
+
+Device-by-device teardown guides covering thirteen common donors — from battery gadgets and wall chargers to desktop computers, ATX power supplies, and CRT monitors. Each guide notes what's typically inside, what's worth pulling, and where the hazards are.
+
+[Browse Donor Guides](donor-guides/01-battery-devices.html)
+
+## Components
+
+Reference pages for ten component families: resistors, capacitors, diodes, transistors, MOSFETs, voltage regulators, inductors, relays, motors, and connectors. Each page explains how to identify the part, what to measure, and how to decide whether it's worth keeping.
+
+[Browse Components](components/01-resistors.html)
+
+## Projects
+
+Small builds that give salvaged parts a second life: a continuity tester, a capacitor discharge tool, an ATX bench supply, a component tester jig, a USB charger, and an LED lamp. Each project lists the salvaged parts it needs and walks through the build.
+
+[Browse Projects](projects/01-continuity-tester.html)
