@@ -36,6 +36,7 @@ What to examine in every page:
 - Derating percentages — appropriate for the component and the failure mode being guarded against?
 - Safety pairings — every named hazard paired with a procedure?
 - Redundant qualifiers on defined terms — does a modifier restate what the term already means? Forward voltage is by definition the minimum voltage for forward conduction, so "minimum forward voltage" is tautological. Threshold voltage is by definition a minimum, so "minimum threshold voltage" is the same error. Flag these as critical errors when the redundancy is clear.
+- LED Vf ranges — if content describes LED Vf as a range (e.g. "1.9–2.5V"), flag as a fact-check item; correct phrasing is "typical X V, max Y V" since LED datasheets do not publish minimum Vf. Also check that IR LEDs (1.2–1.6V) are not conflated with visible red LEDs (typ 2.0V, max 2.5V) in the same Vf entry.
 
 **Calibration reference** — values outside these windows are critical errors; values near the edge are fact-check candidates:
 
@@ -56,6 +57,11 @@ What to examine in every page:
 | 24 V relay coil resistance | 500–1500 Ω |
 | Electrolytic voltage derating | Less than 80% of rating = flag as unsafe |
 | Tantalum voltage derating | More than 70% of rating = critical error |
+| Relay contact resistance (closed) | < 0.1 Ω for high-current loads; 0.1–0.2 Ω marginal (signal switching only); > 0.2 Ω = unsafe for any load |
+| Small PCB relay operate time | max 7–10 ms; flag claims over 15 ms as too permissive |
+| Relay inductive kickback | can exceed 300 V without flyback protection; flag any claim stating < 100 V as an understatement |
+| Relay contact derating (resistive) | 75% of rated current |
+| Relay contact derating (inductive) | 40% of resistive load rating |
 | Redundant qualifier pattern | "minimum Vf", "minimum threshold voltage", "maximum breakdown voltage" = critical error (qualifier restates the term's definition) |
 
 ### Step 2 — Present the report
@@ -136,8 +142,17 @@ The file has existing `⚠️ **FACT-CHECK` markers. Collect all of them, presen
 
 Work through the selected items. For each one:
 
-1. Show the flagged claim, the concern, and the suggested source.
-2. Ask: "What did you find? (or `skip` to leave this one open)"
+1. Present using this exact template — all three fields are required:
+
+   ```
+   Claim:   "[exact quote from the document]"
+   Concern: [why this might be wrong]
+   Source:  [where to verify — specific datasheet family, measurement, or /open-circuits/... path]
+   ```
+
+   Then ask: "What did you find? (or `skip` to leave this one open)"
+
+2. Wait for the user's answer.
 3. Wait for the user's answer.
 4. Draft a replacement for the flagged sentence or passage:
    - Incorporate the user's finding as the objective fact
