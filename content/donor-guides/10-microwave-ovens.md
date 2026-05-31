@@ -9,7 +9,7 @@ review: Needs Human Review
 
 This guide covers microwave ovens as donors, with strong emphasis on the lethal high-voltage capacitor and the safe-to-harvest parts that sit away from the high-voltage section.
 
-A microwave oven is two machines in one box. There's an ordinary low-voltage appliance: a turntable motor, a cooling fan, door switches, and a control board, all of which are good, easy salvage. Wrapped around it is a high-voltage section that runs at around 2000 V and stores enough energy in one capacitor to kill you. That capacitor can stay charged for hours or days after you unplug the oven. This is the most dangerous donor in the whole guide, and the danger is concentrated in one part. Learn to identify the high-voltage section, discharge its capacitor before anything else, and keep clear of it, and the rest of the oven is straightforward.
+A microwave oven is two machines in one box. There's an ordinary low-voltage appliance: a turntable motor, a cooling fan, door switches, and a control board, all of which are good, easy salvage. Wrapped around it is a high-voltage section. The transformer secondary runs at around 2000 V, and a capacitor-and-diode voltage doubler drives the magnetron to roughly 4000 V. The capacitor charges to the peak of that secondary voltage — close to 2.8 kV — and stores enough energy to kill you. That capacitor can stay charged for hours or days after you unplug the oven. This is the most dangerous donor in the whole guide, and the danger is concentrated in one part. Learn to identify the high-voltage section, discharge its capacitor before anything else, and keep clear of it, and the rest of the oven is straightforward.
 
 If you take one thing from this page: discharge the high-voltage capacitor first, every time, before you reach for anything else inside the case.
 
@@ -34,9 +34,7 @@ The high-voltage capacitor is the hazard that defines this donor. Follow this in
 5. Measure across the terminals with a multimeter on DC volts. It must read near zero. If it doesn't, repeat the discharge and measure again.
 6. Only after the meter confirms zero should you reach into the high-voltage section or start removing nearby parts.
 
-The resistor-first step is gentler on the capacitor and on you than a bare short, which throws a large spark at this energy level. The meter reading is the only proof you have. A capacitor that looks identical to a safe one can still be holding 2000 V.
-
-> ⚠️ **FACT-CHECK 1** — "around 2000 V" is the transformer secondary RMS; the capacitor charges to the peak (~2.8 kV) and the cap+diode voltage doubler drives the magnetron to roughly -4 kV. Verify the figure or reword so readers don't take 2000 V as the worst-case stored voltage.
+The resistor-first step is gentler on the capacitor and on you than a bare short, which throws a large spark at this energy level. The meter reading is the only proof you have. A capacitor that looks identical to a safe one can still be holding thousands of volts — it charges to the peak of the secondary, close to 2.8 kV.
 
 ## What to Target
 
