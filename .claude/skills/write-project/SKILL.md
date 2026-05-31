@@ -217,6 +217,13 @@ These rules address the deeper structural patterns that make AI writing feel rob
 
 ## Step 7 — Write the file
 
-Produce the complete markdown file: frontmatter unchanged, then all five sections with full content. Write it back to the same path that was passed as the argument.
+Produce the complete markdown file, then all five sections with full content. Write it back to the same path that was passed as the argument.
 
-Do not add any new headings, sections, or frontmatter fields. Do not remove any existing headings or theory links.
+Preserve all existing frontmatter fields exactly. Add these two fields to the frontmatter if they are not already present:
+
+```yaml
+author: Claude
+review: Needs Human Review
+```
+
+Do not add any new headings or sections. Do not remove any existing headings or theory links.
