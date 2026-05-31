@@ -1,6 +1,8 @@
 ---
 title: "Core Techniques"
 section: foundations
+author: Claude
+review: Needs Human Review
 ---
 This page collects the hands-on techniques used throughout the guide, from getting parts off a board without wrecking them to deciding which components are worth keeping.
 

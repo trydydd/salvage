@@ -1,6 +1,8 @@
 ---
 title: "Tools and Workspace"
 section: foundations
+author: Claude
+review: Needs Human Review
 ---
 This page maps a workspace from the kitchen-table minimum up to a better-equipped bench, with the emphasis on what each tier of gear actually lets you salvage rather than on a shopping list.
 

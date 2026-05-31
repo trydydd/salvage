@@ -1,6 +1,8 @@
 ---
 title: "Why Salvage"
 section: foundations
+author: Claude
+review: Needs Human Review
 ---
 This page covers why component salvage is worth the time, what a realistic haul actually looks like, and how the rest of the guide fits together so you can find what you need.
 

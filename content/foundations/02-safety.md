@@ -2,6 +2,8 @@
 title: "Safety"
 section: foundations
 hazard: null
+author: Claude
+review: Needs Human Review
 ---
 Most of what you'll salvage runs at voltages that can't hurt you. A handful of devices can, and a few can kill you minutes or hours after they're unplugged. This page sorts those apart so you know when a job is routine and when it needs a procedure before you pick up a tool.
 

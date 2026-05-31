@@ -3,6 +3,8 @@ title: "Battery Devices"
 section: donor-guides
 hazard: 1
 hazard_summary: "Low voltage, no stored energy concerns."
+author: Claude
+review: Needs Human Review
 ---
 
 Small battery-powered gadgets are the easiest donors to start on: toys, remotes, battery lights, handheld tools, and similar low-voltage devices with simple boards and modest parts yields. There's no stored energy to worry about and nothing inside runs above a few volts, so you can open one with a screwdriver and learn the basics without any of the hazards that come with mains gear.
