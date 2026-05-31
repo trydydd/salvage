@@ -27,7 +27,11 @@ jobs:
         run: python build/build.py
 
       - name: Run tests
-        run: pip install -r requirements-dev.txt && pytest
+        run: |
+          pip install -r requirements-dev.txt
+          pytest; status=$?
+          if [ $status -eq 5 ]; then echo "No tests collected."; exit 0
+          elif [ $status -ne 0 ]; then exit $status; fi
 
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4

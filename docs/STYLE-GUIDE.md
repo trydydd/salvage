@@ -65,7 +65,7 @@ Theory links always use absolute Open Circuits paths:
 
 - `/open-circuits/DC/DC_5.html`
 - `/open-circuits/Semi/SEMI_6.html`
-- `/open-circuits/Exper/EXPER_1.html`
+- `/open-circuits/Exper/EXP_1.html`
 
 Format them as short inline links, never footnotes.
 
