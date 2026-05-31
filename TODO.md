@@ -23,6 +23,7 @@ Pages drafted by Claude (`author: Claude`, `review: Needs Human Review` in front
 - [ ] `content/donor-guides/04-printers.md`
 - [ ] `content/donor-guides/05-desktop-computers.md`
 - [ ] `content/donor-guides/09-led-bulbs.md`
+- [ ] `content/donor-guides/08-audio-equipment.md`
 
 Also touched this session (corrected, not authored — no frontmatter flag):
 
