@@ -33,6 +33,8 @@ Powered speakers and modern class-D units compress all of this. The transformer 
 
 The discharge habit is the same one from the foundations safety page. Treat every large can as charged until your meter says otherwise.
 
+> ⚠️ **FACT-CHECK 1** — "4700 to 22000 microfarads" upper bound. 22000 µF is at the top end for salvage amps; most run 6800–15000 µF per rail. Confirm the upper figure isn't overstated for common gear.
+
 ## What to Target
 
 | Component | Where | Specs | Worth-it |
