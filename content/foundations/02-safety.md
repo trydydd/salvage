@@ -7,7 +7,7 @@ Most of what you'll salvage runs at voltages that can't hurt you. A handful of d
 
 ## Electricity and the body
 
-What hurts you is current through your body, not voltage on its own. Voltage matters because it pushes current through whatever resistance your skin offers. Dry skin runs something like 50–100 kΩ across two hands, and at that resistance a 9 V battery or a 12 V rail can't push enough current to register. Wet, sweaty, or broken skin drops to a few kΩ, and the same contact pushes far more.
+What hurts you is current through your body, not voltage on its own. Voltage matters because it pushes current through whatever resistance your skin offers. Dry skin runs something like 50–100 kΩ across two hands, and at that resistance a 9 V battery or a 12 V rail can't push enough current to register. Wet, sweaty, or broken skin drops to a few kΩ, and the same contact pushes far more. Open Circuits covers the shock-current side of this in its [Electrical Safety](/open-circuits/DC/DC_3.html) chapter.
 
 The numbers worth carrying in your head are small. Around 1 mA is the threshold you can feel. By 10–20 mA your muscles clamp and you can't let go of the conductor you're holding. Somewhere past 50 mA across the chest, the heart can drop into fibrillation. Mains at 120–230 V through damp skin clears that range easily, which is why mains and stored high voltage sit in a different category from everything else here.
 
