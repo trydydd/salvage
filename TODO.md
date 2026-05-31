@@ -19,6 +19,7 @@ Pages drafted by Claude (`author: Claude`, `review: Needs Human Review` in front
 - [ ] `content/foundations/04-core-techniques.md`
 - [ ] `content/donor-guides/01-battery-devices.md`
 - [ ] `content/donor-guides/02-wall-chargers.md`
+- [ ] `content/donor-guides/03-routers-modems.md`
 
 Also touched this session (corrected, not authored — no frontmatter flag):
 
