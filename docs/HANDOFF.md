@@ -95,20 +95,24 @@ wc -l "$f"; tail -1 "$f"
   `HEARTH-INTEGRATION.md`.
 - **Milestone 1 (Foundations) complete:** `01-why-salvage`, `02-safety`,
   `03-tools-and-workspace`, `04-core-techniques` — all authored + flagged.
-- **Milestone 2 (Donor guides): 5 of 10 done:**
+- **Milestone 2 (Donor guides): COMPLETE — all 10 stubs authored + flagged:**
   `01-battery-devices`, `02-wall-chargers`, `03-routers-modems`,
-  `04-printers`, `05-desktop-computers` — all authored + flagged.
+  `04-printers`, `05-desktop-computers`, `08-audio-equipment`,
+  `09-led-bulbs`, `10-microwave-ovens`, `11-crt-monitors`, `12-ups-units`.
+  (`06-laptops`, `07-atx-power-supplies`, `13-solar-fence-chargers` were
+  already-complete exemplars.) The three hazard-4 guides (microwave, CRT,
+  UPS) each lead with an explicit discharge/isolation procedure consistent
+  with `foundations/02-safety.md`.
 - Updated all four authoring skills to auto-add `author`/`review` frontmatter.
 
-**Remaining donor-guide stubs (author next, low hazard → high):**
-- [ ] `09-led-bulbs` (hazard 2)
-- [ ] `08-audio-equipment` (hazard 3)
-- [ ] `10-microwave-ovens` (hazard 4 — HV cap, lethal; extra care)
-- [ ] `11-crt-monitors` (hazard 4 — anode charge, lethal; extra care)
-- [ ] `12-ups-units` (hazard 4 — live batteries, high short-circuit current)
+**Remaining donor-guide stubs:** none. All donor guides are authored.
 
 **Exemplars to match for depth/voice (~2000 words, already complete):**
 `06-laptops.md`, `07-atx-power-supplies.md`, `13-solar-fence-chargers.md`.
+
+**Next per ROADMAP:** Milestone 3 = author the 6 project stubs in
+`content/projects/` with `write-project` (one per turn). Then M4
+technical/QA review, M5 images, M6 accessibility/print audit, M7 release.
 
 **After donor guides (per ROADMAP):** Milestone 3 = 6 project stubs in
 `content/projects/` (`write-project`); then M4 technical/QA review, M5 images,

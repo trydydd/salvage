@@ -26,6 +26,7 @@ Pages drafted by Claude (`author: Claude`, `review: Needs Human Review` in front
 - [ ] `content/donor-guides/08-audio-equipment.md`
 - [ ] `content/donor-guides/10-microwave-ovens.md` — safety-critical (lethal HV cap); review first.
 - [ ] `content/donor-guides/11-crt-monitors.md` — safety-critical (anode charge, implosion); review first.
+- [ ] `content/donor-guides/12-ups-units.md` — safety-critical (live battery short-circuit current, acid); review first.
 
 Also touched this session (corrected, not authored — no frontmatter flag):
 
