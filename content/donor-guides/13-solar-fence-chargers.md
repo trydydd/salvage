@@ -2,14 +2,14 @@
 title: "Solar Electric Fence Chargers"
 section: donor-guides
 hazard: 3
-hazard_summary: "Storage cap holds a few hundred volts and the output pulses to several kV; discharge before reaching in."
+hazard_summary: "Storage cap holds a stored charge and the output pulses to several kV; measure and discharge before reaching in."
 ---
 
 ## What's Inside
 
 Four Phillips screws on the back or base (usually with a rubber gasket seal underneath), and you're looking at a battery compartment and a single PCB. The battery is a sealed lead-acid (SLA/AGM) pack, typically 6V or 12V at 4–12Ah depending on the model, sitting in a foam-lined cavity or held by a strap. The solar panel is either built into the top face of the case or attached externally by a short cable through a grommet.
 
-The PCB sits above the battery and splits into two zones separated by the transformer. On the drive side: a blocking diode from the solar input, a basic charge controller (sometimes just a voltage comparator and switching transistor, sometimes a dedicated PWM IC), the oscillator (usually a 555 timer or a small 8-pin microcontroller), and the storage capacitor. An inverter charges that capacitor to a few hundred volts, then a switch in the primary dumps it into the transformer, which steps the pulse up to the 2–10 kV that reaches the fence. The capacitor runs small, typically 1–10µF, and is rated just above its working voltage: a Gallagher S17 uses a 2µF 250V part charged to around 200V, and larger units sit higher. It's usually a pulse-rated film capacitor, sometimes an electrolytic on cheaper units, and it's the part that holds charge after the battery is disconnected. A fast-recovery or HV rectifier diode sits on the output side by the terminal block.
+The PCB sits above the battery and splits into two zones separated by the transformer. On the drive side: a blocking diode from the solar input, a basic charge controller (sometimes just a voltage comparator and switching transistor, sometimes a dedicated PWM IC), the oscillator (usually a 555 timer or a small 8-pin microcontroller), and the storage capacitor. An inverter charges that capacitor up, then a switch in the primary dumps it into the transformer, which steps the pulse up to the 2–10 kV that reaches the fence. The capacitor runs small, typically 1–10µF, and is rated for the working voltage the inverter charges it to. The only model we've measured is a Gallagher S17, which uses a 2µF 250V part charged to around 200V. Treat that as the one confirmed data point rather than a universal figure, and read the rating off the body of the unit in front of you. It's usually a pulse-rated film capacitor, sometimes an electrolytic on cheaper units, and it's the part that holds charge after the battery is disconnected. A fast-recovery or HV rectifier diode sits on the output side by the terminal block.
 
 Cheaper units use a relay driven by the oscillator; you can hear it clicking during operation. Better units use a solid-state switch, an IGBT or power MOSFET, in the primary circuit. The relay is worth noting because it's the most common failure point in these chargers, and a unit where the relay has failed is otherwise often fine.
 
@@ -30,7 +30,7 @@ The battery is the only energy source once the solar panel is disconnected. Afte
 |-----------|-------|-------|----------|
 | Solar panel | Top face of enclosure or external via cable | 5–20W; 6–24V open-circuit; monocrystalline or polycrystalline; test Voc with a multimeter in daylight | ★★★ |
 | Sealed lead-acid battery | Lower compartment, below PCB | 6V or 12V; 4–12Ah; check for firm case and resting voltage above 6V or 12.5V; swollen case means reject | ★★★ |
-| Storage capacitor | Drive side of PCB, near the transformer primary | 1–10µF; charged to a few hundred volts, rated just above (250–630V typical); pulse-rated film, sometimes electrolytic; rating printed on body | ★★☆ |
+| Storage capacitor | Drive side of PCB, near the transformer primary | 1–10µF; pulse-rated film, sometimes electrolytic; rating printed on body (measured: 2µF 250V on a Gallagher S17, the only model tested) | ★★☆ |
 | HV rectifier diode | Output side of PCB, after the transformer secondary | DO-27 or similar axial package; 1–10kV rating; 1–3A; sometimes two diodes stacked in series | ★★☆ |
 | Step-up transformer | Centre of PCB, separating the LV and HV zones | Ferrite EI or EE core; open-bobbin or epoxy-encapsulated; high turns ratio | ★★☆ |
 | Power MOSFET or IGBT | LV side of PCB, near transformer primary | TO-220 or D-PAK; N-channel; 100–400V, 5–20A typical | ★★☆ |
@@ -51,7 +51,7 @@ If the unit uses a relay rather than a MOSFET, the relay is worth pulling only i
 
 ## Watch Out For
 
-- The storage capacitor holds a few hundred volts after the battery is disconnected, enough for a sharp jolt. Measure across its terminals before reaching into the circuit, and bleed it through a resistor if it reads above 30 V. The transformer steps that pulse up to the 2–10 kV on the fence output, so treat the secondary and the output terminals as the high-voltage zone.
+- The storage capacitor holds a charge after the battery is disconnected, enough for a sharp jolt (the one unit we measured, a Gallagher S17, charges its cap to around 200V). Measure across its terminals before reaching into the circuit, and bleed it through a resistor if it reads above 30 V. The transformer steps that pulse up to the 2–10 kV on the fence output, so treat the secondary and the output terminals as the high-voltage zone.
 - SLA batteries can deliver hundreds of amps into a short circuit. Don't rest a tool across the terminals and don't carry the battery loose in a bag with other metal. A swollen or bulging case means the battery has failed internally; don't attempt to recharge or store it.
 - These units live outdoors, often in wet and dirty conditions. Battery terminals are frequently corroded and some units will have moisture or mould inside the case. Wear nitrile gloves when handling corroded terminals and work with ventilation if there's any visible mould growth.
 - Disconnect the fence and earth leads before disconnecting the battery, not after. A long fence line has distributed capacitance and may carry a small residual charge even when the charger is off.
