@@ -20,6 +20,7 @@ Pages drafted by Claude (`author: Claude`, `review: Needs Human Review` in front
 - [ ] `content/donor-guides/01-battery-devices.md`
 - [ ] `content/donor-guides/02-wall-chargers.md`
 - [ ] `content/donor-guides/03-routers-modems.md`
+- [ ] `content/donor-guides/04-printers.md`
 
 Also touched this session (corrected, not authored — no frontmatter flag):
 
