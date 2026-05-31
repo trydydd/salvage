@@ -18,8 +18,3 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Claim: "24 V DC; encoder strip alongside; 2-pin motor lead plus 2-pin encoder"  
   Source: Service-manual rail voltages for a few Epson/Canon/HP inkjets; measure the carriage-motor supply on the main board. Carriage motors run off the printhead drive rail, commonly ~21–42 V; 24 V is presented as universal.  
   File: content/donor-guides/04-printers.md
-
-- [ ] **Laptops** · What to Target · FACT-CHECK 1: blower fan voltage "5V or 12V"  
-  Claim: "5V or 12V; 2-pin, 3-pin, or 4-pin connector" (also in intro)  
-  Source: Fan-label voltages on salvaged laptop blowers; EC fan-rail measurement. Laptop blowers are predominantly 5 V (some 3.3 V); 12 V is a desktop figure, uncommon in laptops.  
-  File: content/donor-guides/06-laptops.md

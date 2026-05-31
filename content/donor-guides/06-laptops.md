@@ -9,7 +9,7 @@ hazard_summary: "Remove battery first; lithium cells can be hazardous."
 
 Laptops have more distinct subassemblies packed into a smaller footprint than most consumer electronics. The main PCB (mainboard or logic board) runs across the middle of the lower shell and carries the CPU, GPU if there is one, memory (almost always soldered on machines made after 2015), and storage connectors. A flat lithium battery pack, either removable or glued under the bottom cover, occupies a large portion of the remaining space.
 
-The cooling assembly is worth noting separately. A copper heatpipe routes from the CPU or GPU die to a fin stack, with a thin centrifugal (blower) fan pushing air through and out a side grille. On older machines the pipe terminates at a small flat heatsink. On modern slim designs it can span the full width of the board. The fan is a specific shape you won't find in standard fan assortments: squirrel-cage, 5V or 12V, often less than 5mm thick.
+The cooling assembly is worth noting separately. A copper heatpipe routes from the CPU or GPU die to a fin stack, with a thin centrifugal (blower) fan pushing air through and out a side grille. On older machines the pipe terminates at a small flat heatsink. On modern slim designs it can span the full width of the board. The fan is a specific shape you won't find in standard fan assortments: squirrel-cage, usually 5V (12V on some high-performance and gaming machines), often less than 5mm thick.
 
 Daughterboards handle I/O. USB ports, audio jack, SD card reader, and the DC jack or USB-C charging port typically live on small boards along the side or front edges, each connected to the mainboard via a flat-flex cable or short wiring harness. The display assembly hinges at the rear and contains the LCD panel, LED backlight strip, webcam module, and two thin WiFi antenna coax leads running through the hinge channels.
 
@@ -27,15 +27,13 @@ The speakers and blower fans are the most consistently useful salvage from lapto
 | Component | Where | Specs | Worth-it |
 |-----------|-------|-------|----------|
 | Laptop speakers | Lower shell corners or front edge | 4–8 Ω; small sealed enclosure with attached cable; connector style varies by brand | ★★★ |
-| Blower (centrifugal) fan | Cooling assembly, above or beside fin stack | 5V or 12V; 2-pin, 3-pin, or 4-pin connector; blade diameter 50–80mm; measure thickness before pulling | ★★★ |
+| Blower (centrifugal) fan | Cooling assembly, above or beside fin stack | 5V on most machines, 12V on high-performance and gaming rigs; 2-pin, 3-pin, or 4-pin connector; blade diameter 50–80mm; measure thickness before pulling | ★★★ |
 | WiFi/BT card | M.2 slot on mainboard; mini-PCIe on older machines | M.2 2230 or 2242 footprint; two coax antenna leads attached; 802.11ac or ax visible on label | ★★☆ |
 | DC jack or USB-C charge board | Side or front daughterboard | Board-mount or chassis-mount connector; short flex harness or wire loom to mainboard | ★★☆ |
 | Heat pipe and fin stack | Cooling assembly above mainboard | One to four copper pipes; fin stack roughly 40–70mm wide; keep with the fan if storage allows | ★★☆ |
 | Flat-flex (FFC) cables | Keyboard, touchpad, display connections | 0.5mm or 1.0mm pitch; cable width 10–40mm; ZIF locking connector at each end | ★★☆ |
 | Webcam and mic module | Display bezel, top centre | Small PCB on short USB cable; USB 2.0; usually 720p or 1080p marked on board or cable | ★☆☆ |
 | Display backlight LED strip | Bottom or side edge of LCD panel | Thin flex PCB with LED array; 3V; only worth pulling if you need the strip length. Older CCFL tubes aren't worth it. | ★☆☆ |
-
-> ⚠️ **FACT-CHECK 1** — Blower fan voltage given as "5V or 12V" (also in the intro). Laptop blowers are predominantly 5 V (some 3.3 V); 12 V is a desktop figure and uncommon in laptops. Confirm before a reader over-volts a 5 V fan.
 
 ## How to Get Them Out
 
