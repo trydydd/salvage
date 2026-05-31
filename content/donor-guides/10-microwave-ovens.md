@@ -36,6 +36,8 @@ The high-voltage capacitor is the hazard that defines this donor. Follow this in
 
 The resistor-first step is gentler on the capacitor and on you than a bare short, which throws a large spark at this energy level. The meter reading is the only proof you have. A capacitor that looks identical to a safe one can still be holding 2000 V.
 
+> ⚠️ **FACT-CHECK 1** — "around 2000 V" is the transformer secondary RMS; the capacitor charges to the peak (~2.8 kV) and the cap+diode voltage doubler drives the magnetron to roughly -4 kV. Verify the figure or reword so readers don't take 2000 V as the worst-case stored voltage.
+
 ## What to Target
 
 | Component | Where | Specs | Worth-it |
