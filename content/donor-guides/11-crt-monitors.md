@@ -61,7 +61,7 @@ The main board slides out after you unplug its connectors, including the neck bo
 
 The degaussing coil is just looped around the tube face and taped or clipped in place. Free the clips and lift it off, keeping the series thermistor with it.
 
-The deflection yoke clamps to the neck of the tube behind the gun. It's held by a clamp screw and often a dab of glue or wax. Loosen the clamp, then gently work the yoke back off the neck. Take real care here. The neck is the most fragile part of the tube, and snapping it lets air in and can cause the tube to implode. Support the tube and ease the yoke straight back, never twist hard against the neck. If you only want the copper and don't need the yoke whole, this is the one part where forcing it isn't worth the risk to the neck.
+The deflection yoke clamps to the neck of the tube behind the gun. It's held by a clamp screw and often a dab of glue or wax. Loosen the clamp, then gently work the yoke back off the neck, which is the most fragile part of the tube. Snapping it lets air in and can cause the tube to implode, so support the tube and ease the yoke straight back rather than twisting hard against the neck. If you only want the copper and don't need the yoke whole, this is the one part where forcing it isn't worth the risk to the neck.
 
 Leave the tube itself intact. There's little salvage value in the glass, and the safe move is to keep the envelope whole and dispose of it through proper e-waste or glass recycling. If you must move it, carry it by the strong front face with both hands, never by the neck.
 

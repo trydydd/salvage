@@ -17,7 +17,7 @@ Pull the diffuser off a standard A19-style bulb and the layout is almost always 
 
 The LED board is the part worth the most attention. The LEDs sit in a series string, sometimes two strings in parallel, mounted on a metal-core PCB (MCPCB) that spreads heat into the slug behind it. Count the packages and you can usually work out the string voltage later. Cheaper bulbs use a single string of many small LEDs run at low current. Better ones use fewer, larger emitters.
 
-The driver is the smallest and least rewarding part. In a budget bulb it's a capacitive-dropper design: a film cap, a bridge rectifier, a couple of resistors, and a small electrolytic. No transformer, no isolation. In a better bulb it's a small switching driver with a tiny inductor or transformer and a driver IC. The switching type is safer to reuse and holds more interesting parts, but both are cramped and the components are small.
+The driver is the smallest and least rewarding part. In a budget bulb it's a capacitive-dropper design: a film cap, a bridge rectifier, a couple of resistors, and a small electrolytic, with no transformer and no isolation from the mains. In a better bulb it's a small switching driver with a tiny inductor or transformer and a driver IC. The switching type is safer to reuse and holds more interesting parts, but both are cramped and the components are small.
 
 The aluminum shell and the diffuser are the easy wins. The shell is real machined or cast aluminum, useful as a heat sink for a future build. The diffuser is a ready-made light-spreading dome that fits a round board nicely. Think of LED bulbs as a source of enclosures and LED panels first, components second.
 
