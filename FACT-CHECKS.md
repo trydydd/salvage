@@ -14,3 +14,18 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
   Source: Service manuals / cap markings on mid-power receivers (NAD, Marantz, Pioneer). Voltage range and lower bound are right; 22000 µF is at the top end, with most salvage amps at 6800–15000 µF per rail. Confirm the upper bound isn't overstated.  
   File: content/donor-guides/08-audio-equipment.md
 
+- [ ] **Printers** · What to Target · FACT-CHECK 1: carriage DC motor stated as flat 24 V  
+  Claim: "24 V DC; encoder strip alongside; 2-pin motor lead plus 2-pin encoder"  
+  Source: Service-manual rail voltages for a few Epson/Canon/HP inkjets; measure the carriage-motor supply on the main board. Carriage motors run off the printhead drive rail, commonly ~21–42 V; 24 V is presented as universal.  
+  File: content/donor-guides/04-printers.md
+
+- [ ] **Laptops** · What to Target · FACT-CHECK 1: blower fan voltage "5V or 12V"  
+  Claim: "5V or 12V; 2-pin, 3-pin, or 4-pin connector" (also in intro)  
+  Source: Fan-label voltages on salvaged laptop blowers; EC fan-rail measurement. Laptop blowers are predominantly 5 V (some 3.3 V); 12 V is a desktop figure, uncommon in laptops.  
+  File: content/donor-guides/06-laptops.md
+
+- [ ] **Solar Electric Fence Chargers** · What's Inside / Watch Out For · FACT-CHECK 1: storage-cap rating contradicts stated stored voltage  
+  Claim: table "HV output capacitor ... 1–10µF; 400–2000V" radial/axial electrolytic vs. hazard_summary + Watch Out For "holds 2–10 kV"  
+  Source: Schematic/teardown of a CD-type energiser; measure storage-cap voltage and fence-output pulse separately. A 400–2000 V cap can't hold kV (electrolytics top out ~550 V); the 2–10 kV is the fence-output pulse across the transformer secondary, the storage cap sits at hundreds of V to ~2 kV. Energy math (1–10 J from 1–10 µF) agrees with hundreds of V.  
+  File: content/donor-guides/13-solar-fence-chargers.md
+

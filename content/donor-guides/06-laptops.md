@@ -35,6 +35,8 @@ The speakers and blower fans are the most consistently useful salvage from lapto
 | Webcam and mic module | Display bezel, top centre | Small PCB on short USB cable; USB 2.0; usually 720p or 1080p marked on board or cable | ★☆☆ |
 | Display backlight LED strip | Bottom or side edge of LCD panel | Thin flex PCB with LED array; 3V; only worth pulling if you need the strip length. Older CCFL tubes aren't worth it. | ★☆☆ |
 
+> ⚠️ **FACT-CHECK 1** — Blower fan voltage given as "5V or 12V" (also in the intro). Laptop blowers are predominantly 5 V (some 3.3 V); 12 V is a desktop figure and uncommon in laptops. Confirm before a reader over-volts a 5 V fan.
+
 ## How to Get Them Out
 
 Most of what's worth pulling from a laptop comes out without a soldering iron. The order matters more than it does in most donors: back cover, battery disconnect, fans and heatsink, daughterboards, then speakers. Go for the heatsink before disconnecting the battery and you'll find screws buried under cables that don't have enough slack to move.

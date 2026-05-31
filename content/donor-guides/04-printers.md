@@ -40,6 +40,8 @@ For an inkjet, once cartridges are out and the power is disconnected, there's no
 | Power connectors | PSU and board harnesses | Locking style, pin count, wire gauge | ★★☆ |
 | Small fans | Laser printer power or fuser area | Voltage marking, size, bearing noise | ★☆☆ |
 
+> ⚠️ **FACT-CHECK 1** — Carriage DC motor listed as "24 V DC". Inkjet carriage motors run off the printhead drive rail, which varies by maker (commonly ~21–42 V). Confirm or reword so 24 V isn't read as universal.
+
 ## How to Get Them Out
 
 Most of the yield here comes out with a screwdriver. Printers are designed for field service, so mechanical assemblies separate at screws and snap clips rather than adhesive or heat stakes. Pull the paper tray out first, because it often hides a screw or a clip that keeps the bottom shell from releasing. On Canon and Epson inkjets there are usually one or two screws under stickers on the underside of the case, so run your thumb over every sticker before you start levering seams.

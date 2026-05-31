@@ -13,6 +13,8 @@ The PCB sits above the battery and splits into two zones separated by the transf
 
 Cheaper units use a relay driven by the oscillator; you can hear it clicking during operation. Better units use a solid-state switch, an IGBT or power MOSFET, in the primary circuit. The relay is worth noting because it's the most common failure point in these chargers, and a unit where the relay has failed is otherwise often fine.
 
+> ⚠️ **FACT-CHECK 1** — The page describes the output storage cap as "1–10µF ... 400–2000V" electrolytic, but the hazard summary and Watch Out For say it "holds 2–10 kV". A 400–2000 V cap can't hold kV, and electrolytics top out near 550 V. The 2–10 kV is the fence-output pulse across the transformer secondary; the storage cap itself sits at hundreds of V to ~2 kV. Reconcile the cap rating, the stored-voltage figure, and the dielectric type (the discharge procedure is sound either way).
+
 The solar panel is the main reason to pull one of these. Most units in the 1–10 joule output range carry a 5–20W monocrystalline or polycrystalline panel that's worth considerably more as salvage than any single component on the PCB.
 
 ## Before You Open It
