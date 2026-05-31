@@ -4,7 +4,5 @@ Items flagged for human verification by the `review-technical` skill. Delete eac
 
 ---
 
-
-
-
+_No open items._
 
