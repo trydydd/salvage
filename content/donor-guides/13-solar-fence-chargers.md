@@ -2,18 +2,16 @@
 title: "Solar Electric Fence Chargers"
 section: donor-guides
 hazard: 3
-hazard_summary: "Output capacitors hold 2–10 kV; discharge before reaching into the circuit."
+hazard_summary: "Storage cap holds a few hundred volts and the output pulses to several kV; discharge before reaching in."
 ---
 
 ## What's Inside
 
 Four Phillips screws on the back or base (usually with a rubber gasket seal underneath), and you're looking at a battery compartment and a single PCB. The battery is a sealed lead-acid (SLA/AGM) pack, typically 6V or 12V at 4–12Ah depending on the model, sitting in a foam-lined cavity or held by a strap. The solar panel is either built into the top face of the case or attached externally by a short cable through a grommet.
 
-The PCB sits above the battery and splits into two zones separated by the transformer. On the low-voltage side: a blocking diode from the solar input, a basic charge controller (sometimes just a voltage comparator and switching transistor, sometimes a dedicated PWM IC), and the oscillator circuit, usually a 555 timer or a small 8-pin microcontroller. On the high-voltage side: the transformer secondary, a fast-recovery or HV rectifier diode, and the output storage capacitor. That capacitor is a radial or axial electrolytic, typically 1–10µF rated at 400–2000V. It's the part that holds charge after the battery is disconnected.
+The PCB sits above the battery and splits into two zones separated by the transformer. On the drive side: a blocking diode from the solar input, a basic charge controller (sometimes just a voltage comparator and switching transistor, sometimes a dedicated PWM IC), the oscillator (usually a 555 timer or a small 8-pin microcontroller), and the storage capacitor. An inverter charges that capacitor to a few hundred volts, then a switch in the primary dumps it into the transformer, which steps the pulse up to the 2–10 kV that reaches the fence. The capacitor runs small, typically 1–10µF, and is rated just above its working voltage: a Gallagher S17 uses a 2µF 250V part charged to around 200V, and larger units sit higher. It's usually a pulse-rated film capacitor, sometimes an electrolytic on cheaper units, and it's the part that holds charge after the battery is disconnected. A fast-recovery or HV rectifier diode sits on the output side by the terminal block.
 
 Cheaper units use a relay driven by the oscillator; you can hear it clicking during operation. Better units use a solid-state switch, an IGBT or power MOSFET, in the primary circuit. The relay is worth noting because it's the most common failure point in these chargers, and a unit where the relay has failed is otherwise often fine.
-
-> ⚠️ **FACT-CHECK 1** — The page describes the output storage cap as "1–10µF ... 400–2000V" electrolytic, but the hazard summary and Watch Out For say it "holds 2–10 kV". A 400–2000 V cap can't hold kV, and electrolytics top out near 550 V. The 2–10 kV is the fence-output pulse across the transformer secondary; the storage cap itself sits at hundreds of V to ~2 kV. Reconcile the cap rating, the stored-voltage figure, and the dielectric type (the discharge procedure is sound either way).
 
 The solar panel is the main reason to pull one of these. Most units in the 1–10 joule output range carry a 5–20W monocrystalline or polycrystalline panel that's worth considerably more as salvage than any single component on the PCB.
 
@@ -22,7 +20,7 @@ The solar panel is the main reason to pull one of these. Most units in the 1–1
 1. Disconnect the fence lead and earth lead from the output terminals first. If the unit was running before it came to you, the fence line may still have charge sitting on it.
 2. Disconnect the solar panel lead from the input connector or terminal block.
 3. Disconnect or remove the battery. SLA batteries with spade terminals lift out once the leads are off. Some cheaper units solder the leads directly to the battery posts; in that case, cut the leads close to the PCB, not close to the battery, so the leads stay with the board.
-4. Wait five minutes, then measure across the output storage capacitor terminals with a multimeter on DC voltage before touching anything on the high-voltage side. If you read above 30V, clip a 10kΩ 1W resistor across the capacitor terminals and recheck every couple of minutes until it reads below 5V.
+4. Wait five minutes, then measure across the storage capacitor terminals with a multimeter on DC voltage before reaching into the circuit. If you read above 30V, clip a 10kΩ 1W resistor across the capacitor terminals and recheck every couple of minutes until it reads below 5V.
 
 The battery is the only energy source once the solar panel is disconnected. After removing it, the capacitor discharges through the circuit's own internal resistance, but on units without an explicit bleeder resistor this can take longer than you'd expect. Measuring before touching is not optional.
 
@@ -32,8 +30,8 @@ The battery is the only energy source once the solar panel is disconnected. Afte
 |-----------|-------|-------|----------|
 | Solar panel | Top face of enclosure or external via cable | 5–20W; 6–24V open-circuit; monocrystalline or polycrystalline; test Voc with a multimeter in daylight | ★★★ |
 | Sealed lead-acid battery | Lower compartment, below PCB | 6V or 12V; 4–12Ah; check for firm case and resting voltage above 6V or 12.5V; swollen case means reject | ★★★ |
-| HV output capacitor | HV side of PCB, near output terminal block | 1–10µF; 400–2000V; radial or axial electrolytic; voltage rating printed on body | ★★☆ |
-| HV rectifier diode | HV side of PCB, between transformer secondary and capacitor | DO-27 or similar axial package; 1–10kV rating; 1–3A; sometimes two diodes stacked in series | ★★☆ |
+| Storage capacitor | Drive side of PCB, near the transformer primary | 1–10µF; charged to a few hundred volts, rated just above (250–630V typical); pulse-rated film, sometimes electrolytic; rating printed on body | ★★☆ |
+| HV rectifier diode | Output side of PCB, after the transformer secondary | DO-27 or similar axial package; 1–10kV rating; 1–3A; sometimes two diodes stacked in series | ★★☆ |
 | Step-up transformer | Centre of PCB, separating the LV and HV zones | Ferrite EI or EE core; open-bobbin or epoxy-encapsulated; high turns ratio | ★★☆ |
 | Power MOSFET or IGBT | LV side of PCB, near transformer primary | TO-220 or D-PAK; N-channel; 100–400V, 5–20A typical | ★★☆ |
 | Weatherproof enclosure | The outer case | IP65 or better; polycarbonate or ABS; screw-mount tabs on exterior | ★★☆ |
@@ -45,7 +43,7 @@ Start with the solar panel and battery. If the panel is external, it unplugs fro
 
 The battery comes out after disconnecting the leads. SLA spade terminals pull off with a side-to-side wiggle. If the leads are soldered to the battery posts, cut them 20–30mm from the battery rather than from the PCB, so you keep the leads on the board side for identification later.
 
-On the PCB, the HV capacitor and rectifier diode are the main through-hole targets. Confirm the capacitor has discharged by measuring it first, then heat from the underside while rocking and wick or pump from below. The diode is axial; note its orientation before desoldering since the polarity markings on the board may be worn or obscured by flux. The step-up transformer has four mounting pins in most units. Wick all four before trying to lift it, since a partially desoldered transformer will take a trace with it. If it's epoxy-encapsulated it'll come out intact as a unit regardless.
+On the PCB, the storage capacitor and rectifier diode are the main through-hole targets. Confirm the capacitor has discharged by measuring it first, then heat from the underside while rocking and wick or pump from below. The diode is axial; note its orientation before desoldering since the polarity markings on the board may be worn or obscured by flux. The step-up transformer has four mounting pins in most units. Wick all four before trying to lift it, since a partially desoldered transformer will take a trace with it. If it's epoxy-encapsulated it'll come out intact as a unit regardless.
 
 The power MOSFET or IGBT is through-hole in most units, sometimes with a small bolt-on heatsink tab. Remove the heatsink mounting screw before picking up the iron. Heat from below and wiggle, or pump if you have one.
 
@@ -53,7 +51,7 @@ If the unit uses a relay rather than a MOSFET, the relay is worth pulling only i
 
 ## Watch Out For
 
-- The HV output capacitor holds 2–10kV even after the battery is disconnected. Measure across the capacitor terminals before touching anything on the high-voltage side. The boundary is the transformer: everything between the transformer secondary and the output terminals is HV territory.
+- The storage capacitor holds a few hundred volts after the battery is disconnected, enough for a sharp jolt. Measure across its terminals before reaching into the circuit, and bleed it through a resistor if it reads above 30 V. The transformer steps that pulse up to the 2–10 kV on the fence output, so treat the secondary and the output terminals as the high-voltage zone.
 - SLA batteries can deliver hundreds of amps into a short circuit. Don't rest a tool across the terminals and don't carry the battery loose in a bag with other metal. A swollen or bulging case means the battery has failed internally; don't attempt to recharge or store it.
 - These units live outdoors, often in wet and dirty conditions. Battery terminals are frequently corroded and some units will have moisture or mould inside the case. Wear nitrile gloves when handling corroded terminals and work with ventilation if there's any visible mould growth.
 - Disconnect the fence and earth leads before disconnecting the battery, not after. A long fence line has distributed capacitance and may carry a small residual charge even when the charger is off.
