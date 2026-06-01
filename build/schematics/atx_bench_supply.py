@@ -55,27 +55,26 @@ def main() -> None:
         d.add(elm.Ground())
 
         # +12 V binding post
-        d.add(elm.Line().at(psu["+12 V"]).right(2).label("+12 V post", loc="right"))
+        d.add(elm.Line().at(psu["+12 V"]).right(1).label("+12 V post", loc="right"))
 
-        # +5 V rail — junction at 3 units out (past all other leads at 2 units)
-        # so the dummy load drops down to the right of the IC block, not between pins
+        # +5 V rail — junction at 3.5 units, past the shortened +12 V label
         five_v_start = psu["+5 V"]
-        d.add(elm.Line().at(five_v_start).right(5))
+        d.add(elm.Line().at(five_v_start).right(3.5))
         five_v_node = d.add(elm.Dot())
         d.add(elm.Line().right(1).label("+5 V post", loc="right"))
         d.add(elm.Resistor().at(five_v_node.end).down().label("10–47 Ω / 10 W", loc="right"))
         d.add(elm.Ground())
 
         # +3.3 V binding post
-        d.add(elm.Line().at(psu["+3.3 V"]).right(2).label("+3.3 V post", loc="right"))
+        d.add(elm.Line().at(psu["+3.3 V"]).right(1).label("+3.3 V post", loc="right"))
 
         # −12 V binding post
-        d.add(elm.Line().at(psu["−12 V"]).right(2).label("−12 V post", loc="right"))
+        d.add(elm.Line().at(psu["−12 V"]).right(1).label("−12 V post", loc="right"))
 
         # GND binding post
-        d.add(elm.Line().at(psu["GND"]).right(1))
+        d.add(elm.Line().at(psu["GND"]).right(0.75))
         gnd_node = d.add(elm.Dot())
-        d.add(elm.Line().right(1).label("GND posts", loc="right"))
+        d.add(elm.Line().right(0.75).label("GND posts", loc="right"))
         d.add(elm.Ground().at(gnd_node.end))
 
         # PWR_OK indicator LED with 470 Ω series resistor
