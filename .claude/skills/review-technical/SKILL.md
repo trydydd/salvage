@@ -63,6 +63,7 @@ What to examine in every page:
 | Relay inductive kickback | can exceed 300 V without flyback protection; flag any claim stating < 100 V as an understatement | ✓ bench/circuit analysis |
 | Relay contact derating (resistive) | 75% of rated current | ✓ Agilent relay lifespan guide |
 | Relay contact derating (inductive) | 40% of resistive load rating | ✓ Agilent relay lifespan guide |
+| 78xx series dropout voltage | 2 V minimum input-to-output differential required for regulation; claims of "2–3 V" overstate the floor | ✓ TI LM340/LM7805 datasheet (2.0 V max dropout at 1 A) |
 | Redundant qualifier pattern | "minimum Vf", "minimum threshold voltage", "maximum breakdown voltage" = critical error (qualifier restates the term's definition) | — |
 
 ### Step 2 — Present the report
