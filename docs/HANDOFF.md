@@ -117,6 +117,14 @@ wc -l "$f"; tail -1 "$f"
   NPN transistor test LED polarity, LED strip group count, reversed-polarity claim).
   1 fact-check resolved with maintainer confirmation (+12 V ATX floor = 11.4 V per
   ATX12V V2.2 Design Guide, Section 3.2.1 / Table 2). `FACT-CHECKS.md` is empty.
+- **`review-technical` skill improved:** 7 issues fixed — electrolytic derating
+  rule was backwards ("less than" → "more than"), duplicate resolve-mode step
+  removed, FACT-CHECK numbering now restarts per file, scope description updated
+  to cover foundations and projects, directory mode documented. Two additional
+  calibration rows added with maintainer-confirmed sources: 78xx dropout voltage
+  (2 V floor per TI LM340 datasheet; fixed in `06-voltage-regulators.md`) and
+  BJT base-emitter vs base-collector Vf direction (Vbe > Vbc due to heavier emitter
+  doping; fixed in `04-transistors-bjt.md`). `FACT-CHECKS.md` is empty.
 
 **Remaining content:** none — no `## TODO` stubs anywhere in `content/`.
 
