@@ -60,7 +60,7 @@ def main() -> None:
         # +5 V rail — junction at 3 units out (past all other leads at 2 units)
         # so the dummy load drops down to the right of the IC block, not between pins
         five_v_start = psu["+5 V"]
-        d.add(elm.Line().at(five_v_start).right(3))
+        d.add(elm.Line().at(five_v_start).right(5))
         five_v_node = d.add(elm.Dot())
         d.add(elm.Line().right(1).label("+5 V post", loc="right"))
         d.add(elm.Resistor().at(five_v_node.end).down().label("10–47 Ω / 10 W", loc="right"))
