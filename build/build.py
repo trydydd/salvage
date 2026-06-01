@@ -178,6 +178,13 @@ def copy_tree(source: Path, destination: Path) -> None:
     shutil.copytree(source, destination, dirs_exist_ok=True)
 
 
+def copy_images() -> None:
+    """Copy content/images/ to output/html/images/ if the directory exists."""
+    images_src = CONTENT_DIR / "images"
+    if images_src.is_dir():
+        copy_tree(images_src, OUTPUT_DIR / "images")
+
+
 def copy_static_assets() -> None:
     """Copy shared and salvage-specific assets into output/html/."""
     copy_tree(SHARED_DIR / "css", OUTPUT_DIR / "css")
@@ -259,6 +266,7 @@ def main() -> None:
 
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         copy_static_assets()
+        copy_images()
         rendered_count = render_pages()
     except Exception as exc:
         print(f"Build failed: {exc}", file=sys.stderr)

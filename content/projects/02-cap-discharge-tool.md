@@ -37,6 +37,11 @@ For the heat-shrink: every exposed conductor junction on this tool gets covered 
 
 The circuit: the 1 kΩ 10 W power resistor connects across both probe leads, positive to negative. The indicator branch (LED anode to cathode, then 10 kΩ in series) also connects positive to negative, in parallel with the power resistor. When the cap is charged, both branches carry current. The power resistor does the discharge work. The LED shows the state.
 
+<figure>
+  <img src="../images/cap-discharge.svg" alt="Two parallel branches between Probe+ and Probe−. Top branch: 1 kΩ 10 W power resistor for discharge. Bottom branch: LED in series with a 10 kΩ 1 W resistor for the indicator.">
+  <figcaption>Cap discharge tool circuit: 1 kΩ / 10 W power resistor provides the discharge path, with LED and 10 kΩ resistor in series forming the indicator branch in parallel.</figcaption>
+</figure>
+
 Before building, measure the wirewound resistor with your meter. Large wirewound resistors often have colour bands obscured by lacquer, and body markings can be missing entirely. If your meter reads 900 Ω–1.1 kΩ, it's the right part. The 10 kΩ indicator resistor needs to be at least 1 W rated. A standard ¼ W part will get hot at 80 V.
 
 1. Cut two lengths of heavy-gauge wire, each at least 600 mm. Mark one with red tape or permanent marker (positive). These are the probe leads.
