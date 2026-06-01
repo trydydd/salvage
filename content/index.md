@@ -4,6 +4,8 @@ title: "Salvage Electronics"
 
 A practical guide to pulling useful parts from discarded consumer devices — no stocked workshop required. Covers what to open, what to look for, how to test what you find, and what to build with it.
 
+> **⚠️ Safety & disclaimer.** Salvaging electronics means working with devices that can hold lethal energy long after they're unplugged — charged capacitors, mains voltage, and toxic materials among them. This guide describes hazards as accurately as it can, but it cannot account for the device in front of you or the conditions you work in. **You use it entirely at your own risk**, for educational purposes only, with no warranty and no liability for injury, death, or damage resulting from its use. If you are not confident you can do a procedure safely, don't. Read [Foundations → Safety](foundations/02-safety.html) before you start.
+
 ### Foundations
 
 Before touching a donor, four short chapters cover the basics: why salvage is worth doing, how to work safely, what tools matter and which ones you can skip, and the core techniques you'll use on every teardown.

@@ -7,6 +7,8 @@ review: Needs Human Review
 ---
 Most of what you'll salvage runs at voltages that can't hurt you. A handful of devices can, and a few can kill you minutes or hours after they're unplugged. This page sorts those apart so you know when a job is routine and when it needs a procedure before you pick up a tool.
 
+This guide is offered for educational purposes only, and you follow it at your own risk. It describes hazards as accurately as it can, but it can't see the device in front of you. If you're not confident you can do a procedure safely, don't.
+
 ## Electricity and the body
 
 What hurts you is current through your body, not voltage on its own. Voltage matters because it pushes current through whatever resistance your skin offers. Dry skin runs something like 50–100 kΩ across two hands, and at that resistance a 9 V battery or a 12 V rail can't push enough current to register. Wet, sweaty, or broken skin drops to a few kΩ, and the same contact pushes far more. Open Circuits covers the shock-current side of this in its [Electrical Safety](/open-circuits/DC/DC_3.html) chapter.
