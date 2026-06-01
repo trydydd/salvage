@@ -131,9 +131,24 @@ The ROADMAP lists four concrete deliverables:
    - `content/projects/01-continuity-tester.md`
    - `content/projects/02-cap-discharge-tool.md`
    - `content/projects/03-atx-bench-supply.md`
-   Produce clean, minimal SVG schematics (component symbols + node labels;
-   no decorative elements). Embed them in the relevant project pages using a
-   relative `<img>` tag with an `alt` description and a `<figcaption>`.
+
+   Use **schemdraw** (pip install `schemdraw`) with its hand-drawn style. The
+   hand-drawn rendering fits the site's workshop/zine aesthetic better than
+   clean geometric lines, and it's a single flag in the API:
+   `with schemdraw.Drawing(canvas='svg') as d: d.push()` ... then call
+   `d.draw(handdrawn=True)` before saving. See the style gallery at
+   https://schemdraw.readthedocs.io/en/latest/gallery/styles.html#hand-drawn
+
+   Write a separate generation script for each schematic:
+   - `build/schematics/continuity_tester.py`
+   - `build/schematics/cap_discharge.py`
+   - `build/schematics/atx_bench_supply.py`
+
+   Each script should write its output SVG to `content/images/` and be
+   runnable standalone (`python build/schematics/continuity_tester.py`).
+   Add `schemdraw` to `requirements.txt` (or equivalent). Embed the generated
+   SVGs in the project pages using a `<figure>` / `<img>` / `<figcaption>`
+   block with a descriptive `alt` attribute.
 
 4. **Offline-first check** — confirm no image references point to external URLs.
    The existing test infrastructure should cover this if you add a test for it;
