@@ -17,7 +17,7 @@ The simplest version of this lamp is three parts: a length of 12 V LED strip, so
 
 The discrete-LED version requires a resistor calculation for each LED or string. That calculation is covered in the layout section with a worked example. It's the right choice when you have a bag of individual LEDs from PCB salvage and no strip.
 
-Current capacity and brightness are set by the supply. A 12 V 1 A wall-wart can power about 450 mm of typical 5050-type strip (three groups of 3 LEDs each drawing 60 mA, about ten groups per 300 mm = 600 mA). Don't exceed the supply's rated current by adding more strip than the label allows.
+Current capacity and brightness are set by the supply. A 12 V 1 A wall-wart can power about 450 mm of typical 5050-type strip (three groups of 3 LEDs each drawing 60 mA, about six groups per 300 mm = 360 mA). Don't exceed the supply's rated current by adding more strip than the label allows.
 
 ## Parts to salvage
 
@@ -73,7 +73,7 @@ Feel the heat sink after running the lamp for ten minutes. Comfortably warm (aro
 
 ## Testing and use
 
-1. Before connecting the supply, check polarity at the LED connections: + to strip positive (or LED anodes), − to strip negative (or LED cathodes). Reversed polarity won't damage LEDs because they simply block reverse current, but it confirms your wiring before powering up.
+1. Before connecting the supply, check polarity at the LED connections: + to strip positive (or LED anodes), − to strip negative (or LED cathodes). On the discrete build, a reversed 12 V supply puts the full voltage in reverse across each LED. Most LEDs have a reverse breakdown voltage around 5 V, so the check matters. On the strip build, three LEDs in series raise the combined breakdown threshold close to 12 V, so the risk is lower, but check before connecting either way.
 2. Connect the supply and switch on. All sections of the strip should light uniformly. A dark segment in a 12 V strip means that three-LED group is open (usually a failed LED or a cold solder joint at the pad). A dark individual LED in the discrete build means that branch is open.
 3. If nothing lights: measure the supply output at the switch (12 V expected), then measure across the LED connections with the switch on. Zero voltage there means the switch or a wire is open. Correct polarity but no light means check the LED orientation.
 4. After ten minutes, run the heat check as described above.

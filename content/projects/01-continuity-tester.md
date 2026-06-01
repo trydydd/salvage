@@ -40,7 +40,7 @@ The circuit is a series loop: battery positive runs through an optional switch, 
 
 Before soldering anything permanent, lay the circuit out on a breadboard.
 
-1. Push the LED into the breadboard with the longer lead (anode) where you'll connect the resistor. If you're unsure which lead is the anode, check it with your multimeter on diode mode: the meter will show a forward voltage (typically 1.8–2.2 V) with the red lead on the anode.
+1. Push the LED into the breadboard with the longer lead (anode) where you'll connect the resistor. If you're unsure which lead is the anode, check it with your multimeter on diode mode: the meter will show a forward voltage with the red lead on the anode (typically around 2.0 V for red or yellow LEDs, 2.2 V for green, or 3.2 V for blue or white).
 2. Connect the resistor between the anode row and the positive supply row.
 3. Run a wire from the LED cathode (shorter lead) to the negative supply row.
 4. Clip the battery holder positive lead to the positive rail and the negative lead to the negative rail.

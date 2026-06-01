@@ -13,7 +13,7 @@ The version described here covers capacitors in the 5–80 V range: audio amplif
 
 ## Purpose and limits
 
-A capacitor stores charge proportional to its capacitance and the voltage across it. Large audio filter caps, typically 4700–22000 µF at 35–80 V, hold 3–20 joules at full charge. That's not lethal in the way a microwave HV cap is, but it's enough to fuse a screwdriver tip, throw your hand, and destroy whatever the cap was connected to. The discharge tool turns that energy into heat in a resistor over several seconds while you watch.
+A capacitor stores charge proportional to its capacitance and the voltage across it. Large audio filter caps, typically 4700–22000 µF at 35–80 V, hold 3–70 joules at full charge. That's not lethal in the way a microwave HV cap is, but it's enough to fuse a screwdriver tip, throw your hand, and destroy whatever the cap was connected to. The discharge tool turns that energy into heat in a resistor over several seconds while you watch.
 
 The indicator LED connects in parallel with the power resistor, with a 10 kΩ series resistor in the indicator branch to limit current. At full cap voltage the LED is bright. As the cap drains, the voltage across both branches falls, current through the LED drops, and the indicator dims and goes out.
 
@@ -67,4 +67,4 @@ For voltage, resistance, and current during discharge, see [DC measurements](/op
 
 For capacitor charge and discharge curves and the maths behind why the LED dims gradually rather than snapping off, the [DC circuit experiments](/open-circuits/Exper/EXP_3.html) cover RC timing and decay in detail.
 
-To extend the tool's range to handle ATX primary caps (200–400 V), replace the 1 kΩ power resistor with a 10 kΩ 5 W wirewound unit and scale the LED indicator resistor to 47 kΩ. At that resistance the discharge takes several minutes rather than seconds, which is normal. Add a small piezo buzzer in parallel with the LED so you get an audible tone while the cap is still charged and can step away while waiting.
+To extend the tool's range to handle ATX primary caps (200–400 V), replace the 1 kΩ power resistor with a 10 kΩ 25 W wirewound unit and scale the LED indicator resistor to 47 kΩ. At that resistance the discharge takes several minutes rather than seconds, which is normal. Add a small piezo buzzer in parallel with the LED so you get an audible tone while the cap is still charged and can step away while waiting.

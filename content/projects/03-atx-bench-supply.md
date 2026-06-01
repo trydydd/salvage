@@ -41,6 +41,8 @@ Start with the paperclip test. This confirms the supply works before you invest 
 2. Find the 20/24-pin ATX main connector and identify the green PS_ON wire and any adjacent black COM wire.
 3. Plug the supply into mains. Bridge the green PS_ON wire to the black COM wire with an insulated paperclip or a folded piece of tape-covered wire. The fan should spin within a second.
 4. Set your multimeter to DC volts. Measure yellow to black: you should read 11.5–12.6 V. Measure red to black: 4.75–5.25 V. Measure orange to black: 3.1–3.4 V.
+
+> ⚠️ **FACT-CHECK 7** — ATX spec allows +12 V as low as 11.4 V (±5%); the 11.5 V lower bound here is slightly more conservative than the standard. Verify against ATX Power Supply Design Guide revision 2.2, Section 4.
 5. If any rail reads outside those tolerances, don't use this PSU. The regulator is failing and the conversion won't fix it.
 6. Unplug from mains, wait 30 seconds, then remove the paperclip.
 
@@ -64,6 +66,8 @@ Before connecting anything to the binding posts, work through these checks in or
 1. With the supply still unconnected from mains, inspect every wire junction. Check that no bare conductor is touching adjacent posts or the case steel. If any are close, add a piece of tape or heat-shrink.
 2. Plug into mains and flip the PS_ON switch. The fan should spin. The power-good LED (if fitted) should light within two seconds.
 3. Measure across each binding post pair with your multimeter. Read: +12 V post to COM (expect 11.5–12.6 V), +5 V to COM (expect 4.75–5.25 V), +3.3 V to COM (expect 3.1–3.4 V), −12 V to COM (expect −10.8 to −12.6 V). Write down the actual readings.
+
+> ⚠️ **FACT-CHECK 7** — see above; the +12 V lower bound of 11.5 V appears here too.
 4. If any rail reads significantly out of range, switch off, unplug, and investigate before connecting anything. Common causes: a bundled wire with a break close to the cut connector, a terminal not fully seated on its post, or the supply itself being marginal.
 5. Label each post before first use. Mark the voltage and a conservative current limit based on the PSU's label rating, rounded down 10–20%. If the PSU label says 18 A on the 12 V rail, write 15 A on the post. The −12 V post should say 0.5 A or whatever the label specifies, because that's a real limit that catches people out.
 
