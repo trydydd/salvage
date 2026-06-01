@@ -19,7 +19,7 @@ Desolder the relay for clean testing, or test in-circuit on a powered-down board
 
 **Identifying coil and contact pins**
 
-Set your meter to resistance (ohms) mode. Probe between each pair of pins until you find two that read a consistent resistance of 50–1000Ω. Those are the coil pins. For 5V relays, coil resistance runs 50–150Ω. For 12V, expect 200–400Ω. For 24V, 600–1200Ω. Higher voltage means higher resistance for a similar coil power draw.
+Set your meter to resistance (ohms) mode. Probe between each pair of pins until you find two that read a consistent resistance of 50–1500Ω for PCB relay coils. Those are the coil pins. For 5V relays, coil resistance runs 50–150Ω. For 12V, expect 200–400Ω. For 24V, 600–1200Ω. Higher voltage means higher resistance for a similar coil power draw.
 
 **Normally open and normally closed contacts**
 
