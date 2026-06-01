@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate SVG schematic for the continuity tester project page.
+"""Generate hand-drawn SVG schematic for the continuity tester project page.
 
 Run standalone:  python build/schematics/continuity_tester.py
 Output:          content/images/continuity-tester.svg
@@ -7,6 +7,9 @@ Output:          content/images/continuity-tester.svg
 
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import schemdraw
 import schemdraw.elements as elm
 
@@ -18,8 +21,11 @@ OUTPUT = (
 def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
-    with schemdraw.Drawing(canvas="svg") as d:
-        d.config(fontsize=11)
+    plt.xkcd()
+    schemdraw.use("matplotlib")
+
+    with schemdraw.Drawing() as d:
+        d.config(fontsize=12)
 
         # Top rail: battery → switch → resistor → LED → Probe A
         batt = d.add(elm.Battery().right().label("3 V (2×AA)", loc="left", ofst=0.2))
@@ -36,7 +42,9 @@ def main() -> None:
         d.add(elm.Label().at(probe_b.end).label("Probe B", loc="left"))
         d.add(elm.Line().up().toy(batt.start))
 
-    d.save(str(OUTPUT))
+        d.save(str(OUTPUT))
+
+    plt.close("all")
     print(f"Saved {OUTPUT}")
 
 

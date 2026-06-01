@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate SVG schematic for the capacitor discharge tool project page.
+"""Generate hand-drawn SVG schematic for the capacitor discharge tool project page.
 
 Run standalone:  python build/schematics/cap_discharge.py
 Output:          content/images/cap-discharge.svg
@@ -11,6 +11,9 @@ Circuit: two parallel branches between Probe+ and Probe−
 
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import schemdraw
 import schemdraw.elements as elm
 
@@ -22,8 +25,11 @@ OUTPUT = (
 def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
-    with schemdraw.Drawing(canvas="svg") as d:
-        d.config(fontsize=11)
+    plt.xkcd()
+    schemdraw.use("matplotlib")
+
+    with schemdraw.Drawing() as d:
+        d.config(fontsize=12)
 
         # Left input lead labelled Probe+
         left = d.add(elm.Line().right(1.5).label("Probe +", loc="left"))
@@ -44,7 +50,9 @@ def main() -> None:
         d.add(elm.Resistor().right().label("10 kΩ / 1 W", loc="bottom"))
         d.add(elm.Line().up().toy(right_pos))
 
-    d.save(str(OUTPUT))
+        d.save(str(OUTPUT))
+
+    plt.close("all")
     print(f"Saved {OUTPUT}")
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate SVG schematic for the ATX bench supply project page.
+"""Generate hand-drawn SVG schematic for the ATX bench supply project page.
 
 Run standalone:  python build/schematics/atx_bench_supply.py
 Output:          content/images/atx-bench-supply.svg
@@ -10,6 +10,9 @@ resistor on +5 V, and PWR_OK indicator LED.
 
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import schemdraw
 import schemdraw.elements as elm
 
@@ -24,7 +27,10 @@ OUTPUT = (
 def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
-    with schemdraw.Drawing(canvas="svg") as d:
+    plt.xkcd()
+    schemdraw.use("matplotlib")
+
+    with schemdraw.Drawing() as d:
         d.config(fontsize=10)
 
         # ATX PSU block
@@ -48,16 +54,14 @@ def main() -> None:
         d.add(elm.Switch().at(psu.PS_ON).left().label("toggle SW", loc="top"))
         d.add(elm.Ground())
 
-        # +12 V binding post — direct wire to post label
+        # +12 V binding post
         d.add(elm.Line().at(psu["+12 V"]).right(2).label("+12 V post", loc="right"))
 
-        # +5 V rail — wire, then dummy load to GND, wire continues to post
+        # +5 V rail with dummy load to GND
         five_v_start = psu["+5 V"]
         d.add(elm.Line().at(five_v_start).right(1))
         five_v_node = d.add(elm.Dot())
         d.add(elm.Line().right(1).label("+5 V post", loc="right"))
-
-        # Dummy load from +5 V node down to ground
         d.add(elm.Resistor().at(five_v_node.end).down().label("10–47 Ω\n10 W", loc="right"))
         d.add(elm.Ground())
 
@@ -79,7 +83,9 @@ def main() -> None:
         d.add(elm.Line().down())
         d.add(elm.Ground())
 
-    d.save(str(OUTPUT))
+        d.save(str(OUTPUT))
+
+    plt.close("all")
     print(f"Saved {OUTPUT}")
 
 
