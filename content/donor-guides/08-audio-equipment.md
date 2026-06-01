@@ -26,14 +26,12 @@ Powered speakers and modern class-D units compress all of this. The transformer 
 ## Before You Open It
 
 1. Unplug from mains and leave it unplugged. Don't work on audio gear that's still connected, even switched off.
-2. Wait at least 10 minutes before reaching in. The main filter caps in a linear amplifier are large, often 4700 microfarads to 22000 microfarads, and rated 35 V to 80 V or more. They bleed down slowly, and some hold a meaningful charge for many minutes.
+2. Wait at least 10 minutes before reaching in. The main filter caps in a linear amplifier are large, often 4700 microfarads to 15000 microfarads per rail, with high-power receivers going to 22000 microfarads or beyond, and rated 35 V to 80 V or more. They bleed down slowly, and some hold a meaningful charge for many minutes.
 3. Measure before you touch. Set a multimeter to DC volts and read across the terminals of each large filter cap. The terminals are usually the two solder lugs or the screw posts on top of the can. Anything above 30 V means wait longer.
 4. If a cap is still above 30 V after 15 minutes, discharge it deliberately. Clip a 100 ohm to 1 kilohm resistor rated at least 5 W across the cap terminals using insulated leads, leave it for 30 seconds, then recheck with the meter. Repeat until you read below 5 V. Don't short the terminals with a bare screwdriver. That damages the cap and throws a spark.
 5. Confirm zero before you commit. The meter reading across the caps is the only proof the supply is safe. When every large cap reads near zero, you can work.
 
 The discharge habit is the same one from the foundations safety page. Treat every large can as charged until your meter says otherwise.
-
-> ⚠️ **FACT-CHECK 1** — "4700 to 22000 microfarads" upper bound. 22000 µF is at the top end for salvage amps; most run 6800–15000 µF per rail. Confirm the upper figure isn't overstated for common gear.
 
 ## What to Target
 
