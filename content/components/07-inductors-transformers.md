@@ -7,9 +7,7 @@ Coils and transformers span a wide range of sizes and purposes in salvage, from 
 
 ## Identify what kind of coil it is
 
-Fixed inductors come in several forms. Through-hole axial inductors look like large resistors: a cylindrical body with leads from each end, sometimes with color bands, sometimes with a printed value. Radial inductors stand upright off the board on two leads from the same face. Toroidal inductors are the donut-shaped parts wound with wire on a ferrite or powdered-iron ring: you'll find them in power supplies and audio crossovers. SMD inductors are shielded rectangular blocks in sizes from about 4mm square (2020 footprint) down to 2mm (1210 footprint), and they often carry a code on the top face.
-
-> ⚠️ **FACT-CHECK 1** — Verify that the stated mm sizes match the 2020 and 1210 footprint codes under the convention used for shielded SMD inductors
+Fixed inductors come in several forms. Through-hole axial inductors look like large resistors: a cylindrical body with leads from each end, sometimes with color bands, sometimes with a printed value. Radial inductors stand upright off the board on two leads from the same face. Toroidal inductors are the donut-shaped parts wound with wire on a ferrite or powdered-iron ring: you'll find them in power supplies and audio crossovers. SMD inductors are shielded rectangular blocks in sizes from about 5mm square (2020 footprint) down to about 3mm (1210 footprint), and they often carry a code on the top face.
 
 Common-mode chokes look like transformers: two windings on a shared ferrite core, usually an E-core or toroid with a flat plastic housing. They appear near AC inputs, USB connectors, and Ethernet ports to suppress conducted interference. Ferrite beads are the SMD parts that look like 0402 or 0805 resistors but read very low DC resistance (under 0.5Ω) and are rated by impedance at 100MHz rather than inductance. Both are worth pulling if you can identify them.
 
