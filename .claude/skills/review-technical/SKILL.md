@@ -53,6 +53,7 @@ What to examine in every page:
 | MOSFET body diode Vf | 0.4–0.65 V | — |
 | MOSFET body diode direction | N-ch: anode=source, cathode=drain; P-ch: reversed | — |
 | BJT base-emitter Vf | 0.55–0.75 V | — |
+| BJT base-emitter vs base-collector Vf direction | Base-emitter reads slightly higher than base-collector (heavier emitter doping); claims that Vbe < Vbc are backwards | ✓ Toshiba BJT FAQ; confirmed by bench measurement |
 | 5 V relay coil resistance | 50–150 Ω | — |
 | 12 V relay coil resistance | 150–500 Ω | — |
 | 24 V relay coil resistance | 500–1500 Ω | — |
