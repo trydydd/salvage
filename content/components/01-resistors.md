@@ -11,7 +11,7 @@ Through-hole resistors come in two forms you'll see constantly. The first is axi
 
 Color bands give you the value. Four-band parts use three digit bands plus a tolerance band at one end; five-band parts use four digit bands plus tolerance. Read from the end where the bands cluster closest together. The tolerance band is usually gold (5%) or silver (10%) and sits at the far end of the cluster. Black, brown, red, orange, yellow, green, blue, violet, grey, white map to 0–9; any mnemonic that gets you there works.
 
-SMD resistors print the code on the flat top face. Three-digit codes: 104 means 10 followed by four zeros, so 100kΩ. 472 means 4.7kΩ. Four-digit codes work the same way with one more digit before the multiplier. EIA-96 codes show up on 1% 0402 and 0603 parts: two digits plus a letter (01C = 100Ω, 68A = 487Ω). These need a reference table; don't try to decode them from memory.
+SMD resistors print the code on the flat top face. Three-digit codes: 104 means 10 followed by four zeros, so 100kΩ. 472 means 4.7kΩ. Four-digit codes work the same way with one more digit before the multiplier. EIA-96 codes show up on 1% 0402 and 0603 parts: two digits plus a letter (01A = 100Ω, 68A = 487Ω). These need a reference table; don't try to decode them from memory.
 
 Two things that look like resistors but aren't: current-sense shunts sit in series with a load, usually near the power transistors, and measure in the 0.005–0.5Ω range. Fusible resistors look like ordinary carbon film but are designed to open cleanly when overloaded; they show up near AC input stages in older Japanese consumer gear. Both are worth pulling if you label them correctly.
 
