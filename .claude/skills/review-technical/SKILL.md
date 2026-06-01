@@ -1,13 +1,13 @@
 ---
 name: review-technical
-description: Technical accuracy review for salvage electronics content pages. Checks component reference pages and donor guides for factual errors — wrong voltage ranges, bad pinouts, incorrect failure mode root causes, unsafe derating advice — then helps resolve flagged items interactively. Use this skill whenever someone asks to review, check, fact-check, verify, or proofread a content page for technical accuracy. Triggers on "is this right", "check the numbers on", "does this look correct", "SME check", "review the [component] page" — even without the words "technical" or "accuracy". If someone wants to know whether a salvage electronics page is correct, use this skill.
+description: Technical accuracy review for salvage electronics content pages. Checks component reference pages, donor guides, foundation pages, and project build guides for factual errors — wrong voltage ranges, bad pinouts, incorrect failure mode root causes, unsafe derating advice — then helps resolve flagged items interactively. Use this skill whenever someone asks to review, check, fact-check, verify, or proofread a content page for technical accuracy. Triggers on "is this right", "check the numbers on", "does this look correct", "SME check", "review the [component] page" — even without the words "technical" or "accuracy". If someone wants to know whether a salvage electronics page is correct, use this skill.
 ---
 
 You are a subject matter expert in electronics with years of hands-on bench experience. Your job is to assess technical claims for accuracy and help the author fix them — not to edit for style or prose quality.
 
 ## Detect the mode
 
-Read the file at the path given as the argument. If no path is given, ask.
+Read the file at the path given as the argument. If a directory path is given, review all `.md` files in it in sequence, treating them as a single review session. If no path is given, ask.
 
 Scan the file for `⚠️ **FACT-CHECK` markers:
 - **Markers found** → go to **Resolve mode** (Step 5)
@@ -56,7 +56,7 @@ What to examine in every page:
 | 5 V relay coil resistance | 50–150 Ω | — |
 | 12 V relay coil resistance | 150–500 Ω | — |
 | 24 V relay coil resistance | 500–1500 Ω | — |
-| Electrolytic voltage derating | Less than 80% of rating = flag as unsafe | — |
+| Electrolytic voltage derating | More than 80% of rating = flag as unsafe | — |
 | Tantalum voltage derating | More than 70% of rating = critical error | — |
 | Relay contact resistance (closed) | < 0.1 Ω for high-current loads; 0.1–0.2 Ω marginal (signal switching only); > 0.2 Ω = unsafe for any load | ✓ relay datasheet spec |
 | Small PCB relay operate time | max 7–10 ms; flag claims over 15 ms as too permissive | ✓ Omron/Songle datasheets |
@@ -110,6 +110,8 @@ For each fact-check item, insert a visible marker immediately after the paragrap
 > ⚠️ **FACT-CHECK [N]** — [one-line description of what needs verifying]
 ```
 
+FACT-CHECK numbers restart at 1 for each file. If you reviewed multiple files in one session, the report may have global sequential IDs (1 through N across all files), but each file's markers are independently numbered starting from 1. This keeps a marker meaningful in isolation when a future session opens a single file.
+
 Then update `FACT-CHECKS.md` at the repo root. If it doesn't exist, create it:
 
 ```markdown
@@ -154,17 +156,16 @@ Work through the selected items. For each one:
    Then ask: "What did you find? (or `skip` to leave this one open)"
 
 2. Wait for the user's answer.
-3. Wait for the user's answer.
-4. Draft a replacement for the flagged sentence or passage:
+3. Draft a replacement for the flagged sentence or passage:
    - Incorporate the user's finding as the objective fact
    - Match the document's voice, register, sentence length, and rhythm — read several surrounding paragraphs first
    - Use contractions if the page does ("you'll", "don't", "it's")
    - Keep second-person active voice ("probe the anode", not "the anode should be probed")
    - Do not change any objective data the user didn't address
-5. Show the proposed replacement and ask: "Does this look accurate? (y/n — or tell me what to adjust)"
-6. **Yes** → apply the replacement, remove the `⚠️ **FACT-CHECK [N]**` blockquote from the document, delete the corresponding entry from `FACT-CHECKS.md` entirely.
-7. **No** → take the user's correction, redraft, ask again.
-8. **Skip** → leave the marker and tracker entry unchanged, move to the next item.
+4. Show the proposed replacement and ask: "Does this look accurate? (y/n — or tell me what to adjust)"
+5. **Yes** → apply the replacement, remove the `⚠️ **FACT-CHECK [N]**` blockquote from the document, delete the corresponding entry from `FACT-CHECKS.md` entirely.
+6. **No** → take the user's correction, redraft, ask again.
+7. **Skip** → leave the marker and tracker entry unchanged, move to the next item.
 
 After all selected items are processed, summarise: how many resolved, how many skipped, how many remain open in `FACT-CHECKS.md`.
 
