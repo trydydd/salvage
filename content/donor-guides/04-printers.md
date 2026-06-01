@@ -34,13 +34,11 @@ For an inkjet, once cartridges are out and the power is disconnected, there's no
 |-----------|-------|-------|----------|
 | Stepper motors | Paper feed and carriage assemblies | Coil count, connector style, shaft length | ★★★ |
 | Optointerrupters | Paper path and lid sensors | Slot width, package style, emitter-detector pairing | ★★★ |
-| DC carriage motor | Inkjet carriage drive, attached to belt pulley | 24 V DC; encoder strip alongside; 2-pin motor lead plus 2-pin encoder; confirm free rotation | ★★★ |
+| DC carriage motor | Inkjet carriage drive, attached to belt pulley | 12–24 V DC; desktop inkjets typically 12 V, larger commercial models 24 V; encoder strip alongside; 2-pin motor lead plus 2-pin encoder; confirm free rotation | ★★★ |
 | Carriage steel rod | Inkjet carriage, spanning full print width | 6–8 mm diameter; 200–300 mm length; hardened steel; check for rust or scoring along bearing surface | ★★★ |
 | Belts, gears, and rails | Carriage and feed mechanisms | Pitch, length, bearing surfaces, straightness | ★★☆ |
 | Power connectors | PSU and board harnesses | Locking style, pin count, wire gauge | ★★☆ |
 | Small fans | Laser printer power or fuser area | Voltage marking, size, bearing noise | ★☆☆ |
-
-> ⚠️ **FACT-CHECK 1** — Carriage DC motor listed as "24 V DC". Inkjet carriage motors run off the printhead drive rail, which varies by maker (commonly ~21–42 V). Confirm or reword so 24 V isn't read as universal.
 
 ## How to Get Them Out
 
