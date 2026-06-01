@@ -21,9 +21,7 @@ Desolder the MOSFET before testing. In-circuit measurements on power MOSFETs are
 
 **Finding the body diode**
 
-Set your meter to diode mode. On an N-channel MOSFET, the body diode runs from source to drain with the anode at the source. To find it: probe each combination of the three pins until one pair reads a forward voltage of 0.45–0.65V with the red probe on one pin and the black probe on the other. That forward-biased reading is the body diode. The pin with the red probe is the source; the pin with the black probe is the drain. The remaining pin is the gate.
-
-> ⚠️ **FACT-CHECK 5** — Verify whether the 0.45 V lower bound is correct, or whether healthy power MOSFETs can read as low as 0.40 V in diode mode.
+Set your meter to diode mode. On an N-channel MOSFET, the body diode runs from source to drain with the anode at the source. To find it: probe each combination of the three pins until one pair reads a forward voltage of 0.40–0.65V with the red probe on one pin and the black probe on the other. That forward-biased reading is the body diode. The pin with the red probe is the source; the pin with the black probe is the drain. The remaining pin is the gate.
 
 Swap the probes on the same two pins and check that the meter reads OL. If you get a voltage reading in both directions on any pair of pins, the MOSFET is shorted between those terminals.
 
@@ -63,13 +61,9 @@ TO-220 MOSFETs bolted to chassis sometimes get the tab ripped off the body if th
 
 ## Reuse notes
 
-N-channel TO-220 MOSFETs are the most useful things to pull from switching supplies and motor boards. IRF3205 (55V, 110A), IRF540 (100V, 28A), and STP75NF75 (75V, 75A) are all worth having in stock if you can confirm the part number. Even an unknown N-channel TO-220 with a body diode that tests healthy is useful for low-voltage switching experiments, provided you derate it: treat the current rating as 60% of whatever the package suggests, and stay well below the drain voltage rating.
+N-channel TO-220 MOSFETs are the most useful things to pull from switching supplies and motor boards. IRF3205 (55V, 110A), IRF540 (100V, 28A), and STP75NF75 (75V, 80A) are all worth having in stock if you can confirm the part number. Even an unknown N-channel TO-220 with a body diode that tests healthy is useful for low-voltage switching experiments, provided you derate it: treat the current rating as 60% of whatever the package suggests, and stay well below the drain voltage rating.
 
-> ⚠️ **FACT-CHECK 6** — Confirm STP75NF75 voltage and current ratings (75 V, 75 A) against the STMicroelectronics datasheet.
-
-For P-channel parts, the stock value is lower because N-channel is usually preferred in low-side switching, but IRF9540 (100V, 19A) and similar parts appear often enough that they're worth pulling when labeled.
-
-> ⚠️ **FACT-CHECK 7** — Confirm whether 19 A is the correct continuous current rating for the IRF9540, or whether the more common IRF9540N is rated 23 A and should be cited instead.
+For P-channel parts, the stock value is lower because N-channel is usually preferred in low-side switching, but the IRF9540 (100V, 19A) and its newer, more common IRF9540N variant (100V, 23A) appear often enough that they're worth pulling when labeled.
 
 D-PAK and SO-8 parts are worth pulling only if you're specifically doing SMD work. The time cost of desoldering and the handling precautions for SO-8 packages make them not worth stockpiling unless you have a project in mind.
 

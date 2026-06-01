@@ -96,6 +96,7 @@ Salvage Electronics links into Open Circuits with absolute `/open-circuits/...` 
 
 | Salvage topic | Open Circuits chapter URL | Used for |
 |---------------|---------------------------|----------|
+| Electrical shock, current paths, electrical safety | `/open-circuits/DC/DC_3.html` | the foundations safety page |
 | DC measurements, continuity, polarity, discharge verification | `/open-circuits/DC/DC_5.html` | donor guides, most component pages, and every project stub that depends on bench measurements |
 | Semiconductors, rectifiers, MOSFETs, regulators, inverter devices | `/open-circuits/Semi/SEMI_6.html` | power-focused donor guides, active-device component pages, and PSU / charger projects |
 | Basic bench concepts, meter usage, LED/resistor test circuits | `/open-circuits/Exper/EXP_2.html` | battery-device and low-voltage donor guides, passive component pages, LED/lamp/switch projects |

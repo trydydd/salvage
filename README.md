@@ -8,6 +8,25 @@ Hearth reference library.
 
 ---
 
+> ## ⚠️ Safety & Disclaimer
+>
+> Salvaging electronics means working with devices that can hold lethal
+> energy long after they're unplugged — charged capacitors, mains voltage,
+> and toxic materials among them. This guide describes hazards as accurately
+> as it can, but it cannot account for the specific device in front of you
+> or the conditions you work in.
+>
+> **You use this guide entirely at your own risk.** The authors and
+> contributors provide it for educational purposes only, with no warranty of
+> any kind, and accept no liability for injury, death, or damage resulting
+> from its use. If you are not confident you can do a procedure safely, don't.
+>
+> Hazard ratings and safety banners throughout the guide flag the most
+> dangerous donors. Read [Foundations → Safety](content/foundations/02-safety.md)
+> before you start.
+
+---
+
 ## What's here
 
 | Section | Focus |
