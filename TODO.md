@@ -49,6 +49,15 @@ Note: all 6 project pages received a `review-technical` pass (6 critical errors
 corrected, 1 fact-check resolved with maintainer confirmation). They still need
 the full SME content/safety review that clears the `review:` field.
 
+## Milestone 5 — Images & diagrams (next)
+
+- [ ] Define image conventions in `docs/STYLE-GUIDE.md` (SVG for schematics, compressed raster for photos).
+- [ ] Add image-copy step to `build/build.py`; confirm output lands in `output/html/`.
+- [ ] Add test that no image `src` references point to external URLs.
+- [ ] `content/projects/01-continuity-tester.md` — add schematic SVG.
+- [ ] `content/projects/02-cap-discharge-tool.md` — add schematic SVG.
+- [ ] `content/projects/03-atx-bench-supply.md` — add schematic SVG.
+
 ## Done
 
 - [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
@@ -57,6 +66,9 @@ the full SME content/safety review that clears the `review:` field.
 - [x] Milestone 3 complete: all 6 project pages authored + `review-technical`
       pass done (markers cleared, ATX +12V floor corrected to 11.4V per ATX12V
       V2.2 Design Guide).
+- [x] Milestone 4 complete: `review-technical` run over all 10 component pages
+      and all 4 foundation pages. All critical fixes applied; `FACT-CHECKS.md`
+      is empty; 179 tests pass.
 
 ## Milestone 3 — Project pages
 

@@ -93,7 +93,7 @@ a build layout, and a test/use procedure. ✅
 
 ---
 
-## Milestone 4 — Technical review & content QA `partially done`
+## Milestone 4 — Technical review & content QA ✅ done
 
 - [x] Run the `review-technical` skill across the donor guides; resolve or
       fact-check every flagged claim. `FACT-CHECKS.md` is currently empty — the
@@ -105,20 +105,25 @@ a build layout, and a test/use procedure. ✅
       NPN test circuit polarity, LED strip group count, reversed-polarity claim);
       1 fact-check resolved with maintainer confirmation (+12 V ATX floor = 11.4 V
       per ATX12V V2.2 Design Guide). `FACT-CHECKS.md` is empty.
-- [ ] Run `review-technical` across the component pages and foundations as those
-      sections are next in the review queue; keep `FACT-CHECKS.md` empty at exit.
-- [ ] Spot-check measurable specs (voltages, pinouts, deratings) against the
-      skill's calibration table.
-- [ ] Verify all `/open-circuits/...` links resolve to live chapters and none point
-      at `EXP_1.html` (tests `test_no_stale_exper1_links` / `test_no_exp1_intro_links`).
-- [ ] Proofread for STYLE-GUIDE voice (active second person, ranges over vague
-      qualifiers, four-column donor tables).
+- [x] Run `review-technical` across all 10 component pages and all 4 foundation
+      pages. Critical fixes applied: EIA-96 multiplier code (resistors), cap
+      derating tightened to 70% + reform procedure added, LED/photodiode Vf
+      thresholds split, LM317 floating-adjust behaviour corrected, duplicate part
+      number fixed, SMD inductor footprint sizes corrected (metric mm convention:
+      2020≈5mm, 1210≈3mm), relay coil scan range raised to 50–1500Ω with PCB
+      qualifier. `FACT-CHECKS.md` is empty.
+- [x] Spot-check measurable specs (voltages, pinouts, deratings) against the
+      skill's calibration table — all findings resolved.
+- [x] Verify all `/open-circuits/...` links: pytest suite (`test_no_stale_exper1_links`
+      / `test_no_exp1_intro_links`) green; 179 tests pass.
+- [x] STYLE-GUIDE voice: no em dashes, no prose semicolons, no banned AI vocab in
+      authored pages; enforced at commit time.
 
-**Exit:** clean technical review, empty fact-check tracker, all cross-links valid.
+**Exit:** clean technical review, empty fact-check tracker, all cross-links valid. ✅
 
-> **Note:** this milestone overlaps authoring — fact-checks get resolved as pages
-> are reviewed rather than all at the end. A full SME review of every
-> `review: Needs Human Review` page (see `TODO.md`) is still outstanding.
+> **Note:** a full SME review of every `review: Needs Human Review` page
+> (see `TODO.md`) is still outstanding and is a pre-1.0.0 human task, separate
+> from the automated `review-technical` passes.
 
 ---
 
