@@ -63,9 +63,9 @@ TO-220 regulators without heatsinks in high-dissipation positions often show a y
 
 ## Reuse notes
 
-The 78xx and 79xx series are worth pulling in any readable condition. 7805, 7812, and 7805 equivalents appear in thousands of designs and are always useful. Pull them with the decoupling capacitors if you can, since the caps stay with the circuit role anyway.
+The 78xx and 79xx series are worth pulling in any readable condition. 7805, 7812, and 7815 equivalents appear in thousands of designs and are always useful. Pull them with the decoupling capacitors if you can, since the caps stay with the circuit role anyway.
 
-LM317 parts are worth keeping because they're adjustable and handle up to 1.5A. Label the bag with the part number and the fact that output voltage requires external resistors; a bare LM317 without resistors will output its minimum adjustment voltage (1.25V) if the adjust pin is left floating, which can confuse testing.
+LM317 parts are worth keeping because they're adjustable and handle up to 1.5A. Label the bag with the part number and the fact that output voltage requires external resistors. A bare LM317 with the adjust pin floating pulls its output up toward input voltage, not down to 1.25V. Ground the adjust pin directly to force the minimum 1.25V output when bench-testing a desoldered part.
 
 AMS1117 and similar SOT-89 LDOs are worth pulling if they're from a working board. They're fragile to ESD and to reversed input voltage, and there's no way to know the stress history of a part from a failed device. From working boards, pull and label them with the output voltage from the suffix.
 
