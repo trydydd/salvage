@@ -7,7 +7,7 @@ components). Read this whole file, then continue from "Your task" below.
 ## Repo & branch
 
 - Repo root: `/home/user/salvage` (git repo for `trydydd/salvage`).
-- **Work only on branch `claude/project-evaluation-next-steps-gBojG`.** Create it
+- **Work only on branch `feature/projects`.** Create it
   locally if missing; never push to `main` without explicit permission.
 - At handoff time HEAD is `ee4a72e` ("Add safety/liability disclaimer to
   README, home page, and safety page"), working tree clean, branch pushed and
