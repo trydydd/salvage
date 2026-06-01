@@ -7,7 +7,7 @@ Voltage regulators are among the easiest active components to identify and test 
 
 ## Common families
 
-The 78xx series covers positive linear regulators in TO-220 packages: 7805 outputs 5V, 7808 outputs 8V, 7809 outputs 9V, 7812 outputs 12V, 7815 outputs 15V. The input must be at least 2–3V above the rated output to regulate correctly. Rated current is 1A in the standard TO-220 package. The 79xx series is the negative-voltage counterpart: 7905 outputs -5V, 7912 outputs -12V. These use the same package but the pinout is mirrored, which trips people up when they're testing or wiring a part they haven't identified yet.
+The 78xx series covers positive linear regulators in TO-220 packages: 7805 outputs 5V, 7808 outputs 8V, 7809 outputs 9V, 7812 outputs 12V, 7815 outputs 15V. The input must be at least 2 V above the rated output to regulate correctly. Rated current is 1A in the standard TO-220 package. The 79xx series is the negative-voltage counterpart: 7905 outputs -5V, 7912 outputs -12V. These use the same package but the pinout is mirrored, which trips people up when they're testing or wiring a part they haven't identified yet.
 
 The LM317 and LM337 are adjustable versions of the same idea. The LM317 sets its output using two resistors between the output and adjust pins: output ranges from 1.25V to around 37V, current up to 1.5A in TO-220. The LM337 does the same for negative voltages. You'll recognize these by the part number on the body. Without knowing the surrounding resistor values, you can't predict the output voltage from the part number alone, which matters when you're testing a desoldered LM317 without the resistors attached.
 

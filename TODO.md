@@ -38,9 +38,31 @@ Earlier sessions also corrected (not authored — no frontmatter flag):
 
 - [ ] `content/components/05-mosfets.md` — FACT-CHECK 5/6/7 resolved (body-diode Vf, STP75NF75, IRF9540N).
 - [ ] `content/components/08-relays.md` — FACT-CHECK 5 resolved (contact-resistance threshold).
+- [ ] `content/projects/01-continuity-tester.md`
+- [ ] `content/projects/02-cap-discharge-tool.md`
+- [ ] `content/projects/03-atx-bench-supply.md`
+- [ ] `content/projects/04-component-tester-jig.md`
+- [ ] `content/projects/05-usb-charger.md`
+- [ ] `content/projects/06-led-lamp.md`
+
+Note: all 6 project pages received a `review-technical` pass (6 critical errors
+corrected, 1 fact-check resolved with maintainer confirmation). They still need
+the full SME content/safety review that clears the `review:` field.
 
 ## Done
 
 - [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
 - [x] Safety/liability disclaimer added to `README.md`, the site home page
       (`content/index.md`), and `content/foundations/02-safety.md`.
+- [x] Milestone 3 complete: all 6 project pages authored + `review-technical`
+      pass done (markers cleared, ATX +12V floor corrected to 11.4V per ATX12V
+      V2.2 Design Guide).
+
+## Milestone 3 — Project pages
+
+- [x] `content/projects/01-continuity-tester.md`
+- [x] `content/projects/02-cap-discharge-tool.md`
+- [x] `content/projects/03-atx-bench-supply.md`
+- [x] `content/projects/04-component-tester-jig.md`
+- [x] `content/projects/05-usb-charger.md`
+- [x] `content/projects/06-led-lamp.md`

@@ -37,7 +37,7 @@ Once you have the base confirmed, the emitter-collector pair should read OL in b
 
 **Emitter vs. collector**
 
-With a TO-92 part in hand, check the datasheet for the pinout. If you don't have access, the base-emitter junction typically reads a slightly lower forward voltage than the base-collector junction (0.60–0.65V vs 0.65–0.70V for many small-signal parts), but this difference is small enough to be unreliable with a budget meter. When in doubt, look up the part number.
+With a TO-92 part in hand, check the datasheet for the pinout. If you don't have access, the base-emitter junction typically reads a slightly higher forward voltage than the base-collector junction (0.65–0.70 V vs 0.60–0.65 V for many small-signal parts) due to heavier emitter doping, but this difference is small enough to be unreliable with a budget meter. When in doubt, look up the part number.
 
 **Component tester**
 

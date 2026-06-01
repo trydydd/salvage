@@ -22,7 +22,7 @@ each one has an explicit **exit criteria** that gates the next.
 | Components — 10 pages | ✅ Authored & fact-checked |
 | Donor guides — 13 pages | ✅ All 13 authored; fact-check pass done (markers cleared) |
 | Foundations — 4 pages | ✅ All 4 authored (pending human review) |
-| Projects — 6 pages | 🔴 All stubs |
+| Projects — 6 pages | ✅ All 6 authored; `review-technical` pass done (markers cleared) |
 | Content images / schematics | 🔴 Strategy undefined |
 
 The infrastructure is production-grade; **1.0.0 is gated on authoring the 6
@@ -78,18 +78,18 @@ confirmation (see Milestone 4).
 
 ---
 
-## Milestone 3 — Projects
+## Milestone 3 — Projects ✅ authored
 
 Author the 6 build guides with the `write-project` skill. These depend on M1
 (safety) and M2 (where parts come from), so they come after.
 
-- [ ] `01-continuity-tester` · `02-cap-discharge-tool` · `03-atx-bench-supply`
-- [ ] `04-component-tester-jig` · `05-usb-charger` · `06-led-lamp`
-- [ ] The cap-discharge tool and ATX bench supply are safety-adjacent — link them
+- [x] `01-continuity-tester` · `02-cap-discharge-tool` · `03-atx-bench-supply`
+- [x] `04-component-tester-jig` · `05-usb-charger` · `06-led-lamp`
+- [x] The cap-discharge tool and ATX bench supply are safety-adjacent — link them
       tightly to `02-safety.md` and the relevant donor guide.
 
 **Exit:** no `TODO` in `content/projects/`; each project lists salvageable parts,
-a build layout, and a test/use procedure.
+a build layout, and a test/use procedure. ✅
 
 ---
 
@@ -100,8 +100,13 @@ a build layout, and a test/use procedure.
       six items flagged (microwave HV cap, audio filter caps, printer carriage
       motor, laptop blower fan, two solar-charger cap items) were all resolved
       with maintainer confirmation.
-- [ ] Run `review-technical` across the component pages and foundations/projects
-      as those are finalized; keep `FACT-CHECKS.md` empty at exit.
+- [x] Run `review-technical` across the project pages (Milestone 3); 6 critical
+      errors corrected (LED Vf range, cap energy bounds, discharge resistor wattage,
+      NPN test circuit polarity, LED strip group count, reversed-polarity claim);
+      1 fact-check resolved with maintainer confirmation (+12 V ATX floor = 11.4 V
+      per ATX12V V2.2 Design Guide). `FACT-CHECKS.md` is empty.
+- [ ] Run `review-technical` across the component pages and foundations as those
+      sections are next in the review queue; keep `FACT-CHECKS.md` empty at exit.
 - [ ] Spot-check measurable specs (voltages, pinouts, deratings) against the
       skill's calibration table.
 - [ ] Verify all `/open-circuits/...` links resolve to live chapters and none point
