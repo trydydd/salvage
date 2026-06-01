@@ -38,9 +38,19 @@ Earlier sessions also corrected (not authored — no frontmatter flag):
 
 - [ ] `content/components/05-mosfets.md` — FACT-CHECK 5/6/7 resolved (body-diode Vf, STP75NF75, IRF9540N).
 - [ ] `content/components/08-relays.md` — FACT-CHECK 5 resolved (contact-resistance threshold).
+- [ ] `content/projects/01-continuity-tester.md`
 
 ## Done
 
 - [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
 - [x] Safety/liability disclaimer added to `README.md`, the site home page
       (`content/index.md`), and `content/foundations/02-safety.md`.
+
+## Milestone 3 — Project pages
+
+- [x] `content/projects/01-continuity-tester.md`
+- [ ] `content/projects/02-cap-discharge-tool.md`
+- [ ] `content/projects/03-atx-bench-supply.md`
+- [ ] `content/projects/04-component-tester-jig.md`
+- [ ] `content/projects/05-usb-charger.md`
+- [ ] `content/projects/06-led-lamp.md`
