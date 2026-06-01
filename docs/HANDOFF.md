@@ -9,8 +9,9 @@ components). Read this whole file, then continue from "Your task" below.
 - Repo root: `/home/user/salvage` (git repo for `trydydd/salvage`).
 - **Work only on branch `claude/project-evaluation-next-steps-gBojG`.** Create it
   locally if missing; never push to `main` without explicit permission.
-- At handoff time HEAD is `1f6efb0` ("Author desktop-computers donor guide
-  (Milestone 2)"), working tree clean, branch pushed and in sync with origin.
+- At handoff time HEAD is `ee4a72e` ("Add safety/liability disclaimer to
+  README, home page, and safety page"), working tree clean, branch pushed and
+  in sync with origin.
 - Push with `git push -u origin claude/project-evaluation-next-steps-gBojG`,
   retrying with backoff on network errors. Do NOT open a PR unless asked.
 - End commit messages with the session link footer if your harness uses one.
@@ -88,50 +89,55 @@ wc -l "$f"; tail -1 "$f"
 
 ## Status — what's done vs. remaining
 
-**Done across both sessions (all pushed):**
+**Done (all pushed):**
 - Milestone 0: resolved 4 `FACT-CHECK` markers in `05-mosfets.md` /
   `08-relays.md`; `FACT-CHECKS.md` emptied.
 - Added `docs/ROADMAP.md`; added safety→`DC_3.html` link + map row in
   `HEARTH-INTEGRATION.md`.
 - **Milestone 1 (Foundations) complete:** `01-why-salvage`, `02-safety`,
   `03-tools-and-workspace`, `04-core-techniques` — all authored + flagged.
-- **Milestone 2 (Donor guides): COMPLETE — all 10 stubs authored + flagged:**
-  `01-battery-devices`, `02-wall-chargers`, `03-routers-modems`,
-  `04-printers`, `05-desktop-computers`, `08-audio-equipment`,
-  `09-led-bulbs`, `10-microwave-ovens`, `11-crt-monitors`, `12-ups-units`.
-  (`06-laptops`, `07-atx-power-supplies`, `13-solar-fence-chargers` were
-  already-complete exemplars.) The three hazard-4 guides (microwave, CRT,
-  UPS) each lead with an explicit discharge/isolation procedure consistent
-  with `foundations/02-safety.md`.
+- **Milestone 2 (Donor guides) complete:** all 13 authored. The 10 stubs
+  (`01-battery-devices`, `02-wall-chargers`, `03-routers-modems`, `04-printers`,
+  `05-desktop-computers`, `08-audio-equipment`, `09-led-bulbs`,
+  `10-microwave-ovens`, `11-crt-monitors`, `12-ups-units`) were authored +
+  flagged; `06-laptops`, `07-atx-power-supplies`, `13-solar-fence-chargers`
+  were already-complete exemplars. The three hazard-4 guides (microwave, CRT,
+  UPS) each lead with an explicit discharge/isolation procedure.
 - Updated all four authoring skills to auto-add `author`/`review` frontmatter.
+- **Fact-check pass over the donor guides (this session):** resolved six
+  `review-technical` findings with maintainer confirmation — microwave stored-cap
+  voltage (~2.8 kV peak, not 2000 V RMS), audio filter-cap range, printer
+  carriage-motor voltage (12–24 V + bench-test note), laptop blower fan
+  (5 V norm / 12 V gaming), and two solar-charger storage-cap items.
+  `FACT-CHECKS.md` is empty.
+- **Safety/liability disclaimer added** to `README.md`, the site home page
+  (`content/index.md`), and `content/foundations/02-safety.md`.
 
-**Remaining donor-guide stubs:** none. All donor guides are authored.
+**Remaining content:** the 6 project stubs in `content/projects/` are still
+`## TODO:` scaffolds (~21 lines each). Everything else is authored.
 
-**Exemplars to match for depth/voice (~2000 words, already complete):**
+**Outstanding review:** every authored page still carries
+`review: Needs Human Review` (see `TODO.md`) — a human SME pass is owed over all
+foundations + donor guides before 1.0.0, separate from the fact-check pass.
+
+**Exemplars to match for depth/voice (~2000 words):**
 `06-laptops.md`, `07-atx-power-supplies.md`, `13-solar-fence-chargers.md`.
 
 **Next per ROADMAP:** Milestone 3 = author the 6 project stubs in
-`content/projects/` with `write-project` (one per turn). Then M4
-technical/QA review, M5 images, M6 accessibility/print audit, M7 release.
-
-**After donor guides (per ROADMAP):** Milestone 3 = 6 project stubs in
-`content/projects/` (`write-project`); then M4 technical/QA review, M5 images,
-M6 accessibility/print audit, M7 release + tag 1.0.0.
+`content/projects/` with `write-project` (one per turn). Then M4 technical/QA
+review, M5 images, M6 accessibility/print audit, M7 release + tag 1.0.0.
 
 ## Your task
 
-Continue Milestone 2: author the remaining donor guides one per turn, in the
-order listed, using `write-donor-guide`. For each: read the stub, invoke the
-skill, lint (em dashes are the most common survivor), run `make build` +
-pytest, update `TODO.md`, then commit and push.
+Start Milestone 3: author the 6 project build guides one per turn, using
+`write-project`. Order: `01-continuity-tester`, `02-cap-discharge-tool`,
+`03-atx-bench-supply`, `04-component-tester-jig`, `05-usb-charger`, `06-led-lamp`.
+For each: read the stub, invoke the skill, lint (em dashes are the most common
+survivor), run `make build` + pytest, update `TODO.md`, then commit and push.
 
-Pay particular attention to the hazard-4 guides (microwave, CRT, UPS): every
-stored-energy or live-source hazard must be paired with a specific discharge or
-handling procedure, consistent with `content/foundations/02-safety.md`. The
-microwave HV cap can hold a lethal charge for days; the CRT anode can hold
-several kilovolts; UPS batteries can deliver very high short-circuit current.
-None of these hazards should be softened or left without a step-by-step
-mitigation.
+The cap-discharge tool and the ATX bench supply are safety-adjacent: link them
+tightly to `content/foundations/02-safety.md` and the relevant donor guide, and
+pair every stored-energy or mains hazard with a concrete procedure.
 
 Start by reading `docs/STYLE-GUIDE.md` and an exemplar
-(`07-atx-power-supplies.md`), then begin with `09-led-bulbs.md`.
+(`07-atx-power-supplies.md`), then begin with `01-continuity-tester.md`.

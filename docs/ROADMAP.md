@@ -20,60 +20,61 @@ each one has an explicit **exit criteria** that gates the next.
 | Test suite + CI workflows (`build`, `pages`, `release`) | ✅ Done |
 | Docs (building, style, hazard, integration) + authoring skills | ✅ Done |
 | Components — 10 pages | ✅ Authored & fact-checked |
-| Donor guides — 13 pages | 🟡 3 of 13 done (laptops, ATX PSU, solar fence charger) |
-| Foundations — 4 pages | 🔴 All stubs (incl. safety) |
+| Donor guides — 13 pages | ✅ All 13 authored; fact-check pass done (markers cleared) |
+| Foundations — 4 pages | ✅ All 4 authored (pending human review) |
 | Projects — 6 pages | 🔴 All stubs |
 | Content images / schematics | 🔴 Strategy undefined |
 
-The infrastructure is production-grade; **1.0.0 is gated almost entirely on
-content authoring plus a final QA/release pass.**
+The infrastructure is production-grade; **1.0.0 is gated on authoring the 6
+project pages, a human review pass over authored content, then QA/release.**
 
 ---
 
-## Milestone 0 — Clear loose ends `in progress`
+## Milestone 0 — Clear loose ends ✅ done
 
 - [x] Resolve the 4 open `⚠️ FACT-CHECK` markers in `05-mosfets.md` and `08-relays.md`.
-- [ ] Confirm `grep -rn "FACT-CHECK" content/` returns nothing and `FACT-CHECKS.md` is empty.
-- [ ] `make test` green.
-- [ ] Commit + push to the working branch.
+- [x] Confirm `grep -rn "FACT-CHECK" content/` returns nothing and `FACT-CHECKS.md` is empty.
+- [x] `make test` green.
+- [x] Commit + push to the working branch.
 
-**Exit:** no fact-check markers anywhere, tests pass.
+**Exit:** no fact-check markers anywhere, tests pass. ✅
 
 ---
 
-## Milestone 1 — Foundations (the spine)
+## Milestone 1 — Foundations (the spine) ✅ authored
 
 The conceptual base that every hazardous donor guide and project links back to.
-Author with the `write-foundation` skill, in this order (safety first — it is
-referenced site-wide):
+Authored with the `write-foundation` skill (safety first — it is referenced
+site-wide). All four carry `review: Needs Human Review` pending SME sign-off.
 
-- [ ] `content/foundations/02-safety.md` — electricity & the body, capacitor
+- [x] `content/foundations/02-safety.md` — electricity & the body, capacitor
       discharge, mains awareness, CRT/HV, batteries, solder/fumes, sharps.
-- [ ] `content/foundations/01-why-salvage.md`
-- [ ] `content/foundations/03-tools-and-workspace.md`
-- [ ] `content/foundations/04-core-techniques.md` (finish the sections beyond the
-      already-written wall-wart note).
-- [ ] Cross-link each to the correct `/open-circuits/...` chapter (see the
+- [x] `content/foundations/01-why-salvage.md`
+- [x] `content/foundations/03-tools-and-workspace.md`
+- [x] `content/foundations/04-core-techniques.md`
+- [x] Cross-link each to the correct `/open-circuits/...` chapter (see the
       cross-reference map in `HEARTH-INTEGRATION.md`); never link `EXP_1.html`.
 
 **Exit:** no `TODO` in `content/foundations/`; `make build` renders all four;
-safety page is the canonical target for hazard-banner "see safety" references.
+safety page is the canonical target for hazard-banner "see safety" references. ✅
 
 ---
 
-## Milestone 2 — Donor guides
+## Milestone 2 — Donor guides ✅ authored
 
-Fill the 10 remaining stubs. Each already has a finished component table; the
-prose sections are scaffolded. Use the `write-donor-guide` skill and the three
-completed exemplars (`06`, `07`, `13`) as the depth/voice target (~2,000 words).
+All 13 donor guides are authored (the 10 stubs filled with `write-donor-guide`;
+`06`, `07`, `13` were already-complete exemplars). The 10 authored pages carry
+`review: Needs Human Review`. A `review-technical` fact-check pass has since run
+over the guides and every `⚠️ FACT-CHECK` marker has been resolved with maintainer
+confirmation (see Milestone 4).
 
-- [ ] `01-battery-devices` · `02-wall-chargers` · `03-routers-modems` · `04-printers` · `05-desktop-computers`
-- [ ] `08-audio-equipment` · `09-led-bulbs` · `10-microwave-ovens` · `11-crt-monitors` · `12-ups-units`
-- [ ] Confirm each `hazard` / `hazard_summary` matches the actual worst-case (the
+- [x] `01-battery-devices` · `02-wall-chargers` · `03-routers-modems` · `04-printers` · `05-desktop-computers`
+- [x] `08-audio-equipment` · `09-led-bulbs` · `10-microwave-ovens` · `11-crt-monitors` · `12-ups-units`
+- [x] Confirm each `hazard` / `hazard_summary` matches the actual worst-case (the
       4-tier guides — microwave, CRT, UPS — get the most scrutiny).
-- [ ] Verify every named hazard is paired with a discharge/handling procedure.
+- [x] Verify every named hazard is paired with a discharge/handling procedure.
 
-**Exit:** no `TODO` in `content/donor-guides/`; hazard banners correct on every page.
+**Exit:** no `TODO` in `content/donor-guides/`; hazard banners correct on every page. ✅
 
 ---
 
@@ -92,10 +93,15 @@ a build layout, and a test/use procedure.
 
 ---
 
-## Milestone 4 — Technical review & content QA
+## Milestone 4 — Technical review & content QA `partially done`
 
-- [ ] Run the `review-technical` skill across every component page and donor guide;
-      resolve or fact-check every flagged claim. `FACT-CHECKS.md` ends empty.
+- [x] Run the `review-technical` skill across the donor guides; resolve or
+      fact-check every flagged claim. `FACT-CHECKS.md` is currently empty — the
+      six items flagged (microwave HV cap, audio filter caps, printer carriage
+      motor, laptop blower fan, two solar-charger cap items) were all resolved
+      with maintainer confirmation.
+- [ ] Run `review-technical` across the component pages and foundations/projects
+      as those are finalized; keep `FACT-CHECKS.md` empty at exit.
 - [ ] Spot-check measurable specs (voltages, pinouts, deratings) against the
       skill's calibration table.
 - [ ] Verify all `/open-circuits/...` links resolve to live chapters and none point
@@ -104,6 +110,10 @@ a build layout, and a test/use procedure.
       qualifiers, four-column donor tables).
 
 **Exit:** clean technical review, empty fact-check tracker, all cross-links valid.
+
+> **Note:** this milestone overlaps authoring — fact-checks get resolved as pages
+> are reviewed rather than all at the end. A full SME review of every
+> `review: Needs Human Review` page (see `TODO.md`) is still outstanding.
 
 ---
 

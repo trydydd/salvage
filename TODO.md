@@ -28,7 +28,19 @@ Pages drafted by Claude (`author: Claude`, `review: Needs Human Review` in front
 - [ ] `content/donor-guides/11-crt-monitors.md` — safety-critical (anode charge, implosion); review first.
 - [ ] `content/donor-guides/12-ups-units.md` — safety-critical (live battery short-circuit current, acid); review first.
 
-Also touched this session (corrected, not authored — no frontmatter flag):
+Note: the donor-guide pages above were corrected during a `review-technical`
+fact-check pass (microwave HV-cap voltage, audio filter-cap range, printer
+carriage-motor voltage, laptop blower-fan voltage, solar-charger storage cap).
+Those corrections are technically confirmed, but the pages still need the full
+SME content/safety review that clears the `review:` field.
+
+Earlier sessions also corrected (not authored — no frontmatter flag):
 
 - [ ] `content/components/05-mosfets.md` — FACT-CHECK 5/6/7 resolved (body-diode Vf, STP75NF75, IRF9540N).
 - [ ] `content/components/08-relays.md` — FACT-CHECK 5 resolved (contact-resistance threshold).
+
+## Done
+
+- [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
+- [x] Safety/liability disclaimer added to `README.md`, the site home page
+      (`content/index.md`), and `content/foundations/02-safety.md`.
