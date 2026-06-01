@@ -34,7 +34,7 @@ For an inkjet, once cartridges are out and the power is disconnected, there's no
 |-----------|-------|-------|----------|
 | Stepper motors | Paper feed and carriage assemblies | Coil count, connector style, shaft length | ★★★ |
 | Optointerrupters | Paper path and lid sensors | Slot width, package style, emitter-detector pairing | ★★★ |
-| DC carriage motor | Inkjet carriage drive, attached to belt pulley | 12–24 V DC; desktop inkjets typically 12 V, larger commercial models 24 V; encoder strip alongside; 2-pin motor lead plus 2-pin encoder; confirm free rotation | ★★★ |
+| DC carriage motor | Inkjet carriage drive, attached to belt pulley | 12–24 V DC (usually unmarked; desktop inkjets run ~12 V, larger commercial models 24 V); encoder strip alongside; 2-pin motor lead plus 2-pin encoder; confirm free rotation | ★★★ |
 | Carriage steel rod | Inkjet carriage, spanning full print width | 6–8 mm diameter; 200–300 mm length; hardened steel; check for rust or scoring along bearing surface | ★★★ |
 | Belts, gears, and rails | Carriage and feed mechanisms | Pitch, length, bearing surfaces, straightness | ★★☆ |
 | Power connectors | PSU and board harnesses | Locking style, pin count, wire gauge | ★★☆ |
@@ -53,6 +53,8 @@ The paper-feed stepper unbolts from the main frame with two or three screws and 
 Optointerrupters are through-hole on most units, soldered to the main board or to a small carrier board near each sensor position. Heat from beneath, wick or pump, and rock the body gently until each leg comes free. Don't lever against the body while any pin is still soldered, or the housing cracks. If the optointerrupter spans a slot with the emitter and detector on opposite sides, keep them as a matched pair rather than pulling one and leaving the other.
 
 The laser scanner assembly (polygon mirror, BLDC motor, and laser diode module) is four screws and one ribbon cable. The BLDC motor is occasionally worth extracting if you have a specific use for it, but the polygon mirror itself won't survive being spun outside the original housing. Only pull the scanner assembly if you need the motor.
+
+The carriage and feed DC motors rarely carry a voltage marking, so you'll usually have to find their working voltage by hand. Start a bench supply at around 5 V and raise it slowly, watching that the motor doesn't stall, draw hard, or warm up, until it runs cleanly. Mark the working voltage on the motor with a label or a paint pen once you know it, so it goes back in the bin tested rather than waiting to be checked again later.
 
 Hot air adds almost nothing here. There's very little surface-mount work worth doing on a printer board.
 
