@@ -33,7 +33,7 @@ def main() -> None:
     with schemdraw.Drawing() as d:
         d.config(fontsize=10)
 
-        # ATX PSU block
+        # ATX PSU block — label at top to avoid collision with PS_ON pin name
         psu = d.add(
             elm.Ic(
                 pins=[
@@ -47,7 +47,7 @@ def main() -> None:
                 ],
                 pinspacing=1.5,
                 edgepadH=0.5,
-            ).label("ATX PSU", loc="center")
+            ).label("ATX PSU", loc="top")
         )
 
         # PS_ON toggle switch from PS_ON pin to ground
@@ -57,12 +57,13 @@ def main() -> None:
         # +12 V binding post
         d.add(elm.Line().at(psu["+12 V"]).right(2).label("+12 V post", loc="right"))
 
-        # +5 V rail with dummy load to GND
+        # +5 V rail — junction at 3 units out (past all other leads at 2 units)
+        # so the dummy load drops down to the right of the IC block, not between pins
         five_v_start = psu["+5 V"]
-        d.add(elm.Line().at(five_v_start).right(1))
+        d.add(elm.Line().at(five_v_start).right(3))
         five_v_node = d.add(elm.Dot())
         d.add(elm.Line().right(1).label("+5 V post", loc="right"))
-        d.add(elm.Resistor().at(five_v_node.end).down().label("10–47 Ω\n10 W", loc="right"))
+        d.add(elm.Resistor().at(five_v_node.end).down().label("10–47 Ω / 10 W", loc="right"))
         d.add(elm.Ground())
 
         # +3.3 V binding post
