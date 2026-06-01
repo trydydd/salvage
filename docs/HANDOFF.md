@@ -7,9 +7,10 @@ components). Read this whole file, then continue from "Your task" below.
 ## Repo & branch
 
 - Repo root: `/home/user/salvage` (git repo for `trydydd/salvage`).
-- **Work only on branch `claude/project-handoff-continuation-C67bD`.** Create it
-  locally if missing; never push to `main` without explicit permission.
-- Push with `git push -u origin claude/project-handoff-continuation-C67bD`,
+- **Work only on branch `claude/m4-review-technical`.** Create it locally from
+  the current HEAD of `claude/project-handoff-continuation-C67bD` if missing;
+  never push to `main` without explicit permission.
+- Push with `git push -u origin claude/m4-review-technical`,
   retrying with backoff on network errors. Do NOT open a PR unless asked.
 - End commit messages with the session link footer if your harness uses one.
   Do not put any model identifier in commits, code, or content.
