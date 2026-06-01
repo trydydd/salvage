@@ -45,11 +45,18 @@ Earlier sessions also corrected (not authored — no frontmatter flag):
 - [ ] `content/projects/05-usb-charger.md`
 - [ ] `content/projects/06-led-lamp.md`
 
+Note: all 6 project pages received a `review-technical` pass (6 critical errors
+corrected, 1 fact-check resolved with maintainer confirmation). They still need
+the full SME content/safety review that clears the `review:` field.
+
 ## Done
 
 - [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
 - [x] Safety/liability disclaimer added to `README.md`, the site home page
       (`content/index.md`), and `content/foundations/02-safety.md`.
+- [x] Milestone 3 complete: all 6 project pages authored + `review-technical`
+      pass done (markers cleared, ATX +12V floor corrected to 11.4V per ATX12V
+      V2.2 Design Guide).
 
 ## Milestone 3 — Project pages
 
