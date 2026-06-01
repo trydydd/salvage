@@ -61,7 +61,11 @@ An old or heat-stressed electrolytic can lose electrolyte slowly through the sea
 
 ## Voltage derating
 
-Derate electrolytic capacitors to 80% of their marked voltage in any new build. A 25V cap becomes an 18V cap in practice. This accounts for age, for production variation, and for the short voltage spikes that appear in real circuits. Tantalums need more conservative derating: treat a marked 35V tantalum as a 20V part. Film and ceramic capacitors derate less aggressively, but staying 20% below the marked voltage is still the sensible choice for anything running near AC mains.
+Derate electrolytic capacitors to no more than 70% of their marked voltage when reusing salvaged parts. A 25V cap becomes a 17V cap in practice. The extra headroom accounts for age, unknown stress history, production variation, and the voltage spikes that appear in real circuits.
+
+Before putting a salvaged electrolytic into a working circuit, reform it first. Connect it in series with a 1 kΩ to 10 kΩ current-limiting resistor, apply the intended working voltage through the combination, and leave it for 30–60 minutes. This slowly rebuilds the oxide layer that degrades during long storage. Skipping this on an old cap risks sudden insulation breakdown and catastrophic failure under load.
+
+Test each part with an equivalent series resistance (ESR) meter and check for DC leakage current before installing. High ESR for the cap's value and voltage rating means discard it. Tantalums need more conservative derating: treat a marked 35V tantalum as a 20V part. Film and ceramic capacitors derate less aggressively, but staying 20% below the marked voltage is still the sensible choice for anything running near AC mains.
 
 Capacitors from the hot side of a switching supply have typically seen voltage stress every time the supply was loaded. The caps running on the primary side of a mains switching supply (often rated 400V or 450V) are under stress every time the supply runs. Even if they measure fine at the bench, the stress history is unknown. For low-risk general-purpose builds, pull them anyway and mark the bag with the rated voltage; for anything where the cap failure has consequences, use new parts at that voltage.
 
