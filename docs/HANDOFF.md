@@ -10,7 +10,7 @@ components). Read this whole file, then continue from "Your task" below.
 - **Branch `feature/image-pipeline` is complete and unmerged.** If it has not
   yet been merged to `main`, open a PR or merge it first before starting
   Milestone 6 work.
-- For Milestone 6, create `feature/m6-design-audit` from the HEAD of
+- For Milestone 6, create `feature/design-audit` from the HEAD of
   `feature/image-pipeline` (or `main` if it has already been merged).
 - Push with `git push -u origin <branch>`, retrying with backoff on network
   errors. Do NOT open a PR unless asked.
