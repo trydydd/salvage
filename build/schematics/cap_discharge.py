@@ -26,6 +26,8 @@ def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
     plt.xkcd()
+    plt.rcParams["figure.facecolor"] = "none"
+    plt.rcParams["axes.facecolor"] = "none"
     schemdraw.use("matplotlib")
 
     with schemdraw.Drawing() as d:
@@ -54,7 +56,7 @@ def main() -> None:
         d.add(elm.Resistor().right().label("10 kΩ / 1 W", loc="bottom"))
         d.add(elm.Line().up().toy(right_pos))
 
-        d.save(str(OUTPUT))
+        d.save(str(OUTPUT), transparent=True)
 
     plt.close("all")
     print(f"Saved {OUTPUT}")
