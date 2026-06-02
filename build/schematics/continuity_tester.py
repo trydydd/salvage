@@ -28,7 +28,13 @@ def main() -> None:
         d.config(fontsize=12)
 
         # Top rail: battery → switch → resistor → LED → Probe A
-        batt = d.add(elm.Battery().right().label("3 V (2×AA)", loc="left", ofst=0.2))
+        # Battery going right: start = left = negative, end = right = positive
+        batt = d.add(
+            elm.Battery().right()
+            .label("3 V (2×AA)", loc="top")
+            .label("−", loc="start", ofst=0.12)
+            .label("+", loc="end", ofst=0.12)
+        )
         d.add(elm.Switch().right().label("SW (opt.)", loc="top"))
         d.add(elm.Resistor().right().label("100–220 Ω", loc="top"))
         led = d.add(elm.LED().right().label("LED", loc="top"))
