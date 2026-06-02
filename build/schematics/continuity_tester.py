@@ -31,7 +31,7 @@ def main() -> None:
         # Battery going right: start = left = negative, end = right = positive
         batt = d.add(elm.Battery().right().label("3 V (2×AA)", loc="top"))
         # istart and iend are at the battery plates themselves (leads excluded)
-        d.add(elm.Label().at(batt.istart).label("−", ofst=0.2))
+        d.add(elm.Label().at((batt.istart.x - 0.25, batt.istart.y)).label("−", ofst=0.2))
         d.add(elm.Label().at(batt.iend).label("+", ofst=0.2))
         d.add(elm.Switch().right().label("SW (opt.)", loc="top"))
         d.add(elm.Resistor().right().label("100–220 Ω", loc="top"))
