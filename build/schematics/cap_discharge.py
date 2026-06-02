@@ -28,36 +28,39 @@ def main() -> None:
     plt.xkcd()
     plt.rcParams["figure.facecolor"] = "none"
     plt.rcParams["axes.facecolor"] = "none"
+    plt.rcParams["path.effects"] = []  # remove white halo stroke from all paths/text
     schemdraw.use("matplotlib")
 
-    with schemdraw.Drawing() as d:
-        d.config(fontsize=12)
+    d = schemdraw.Drawing()
+    d.config(fontsize=12)
 
-        # Left input lead labelled Probe+
-        left = d.add(elm.Line().right(1.5).label("Probe +", loc="left"))
-        left_jxn = d.add(elm.Dot())
-        left_pos = left_jxn.end
+    # Left input lead labelled Probe+
+    left = d.add(elm.Line().right(1.5).label("Probe +", loc="left"))
+    left_jxn = d.add(elm.Dot())
+    left_pos = left_jxn.end
 
-        # Top branch: 1.5-unit bridge + power resistor + 1.5-unit bridge = 6 units total,
-        # matching the bottom branch (LED 3 + 10 kΩ 3 = 6) so the closing line meets the
-        # right junction cleanly and Probe − reads as an open terminal.
-        d.add(elm.Line().right(1.5))
-        d.add(elm.Resistor().right().label("1 kΩ / 10 W", loc="top"))
-        d.add(elm.Line().right(1.5))
-        right_jxn = d.add(elm.Dot())
-        right_pos = right_jxn.end
+    # Top branch: 1.5-unit bridge + power resistor + 1.5-unit bridge = 6 units total,
+    # matching the bottom branch (LED 3 + 10 kΩ 3 = 6) so the closing line meets the
+    # right junction cleanly and Probe − reads as an open terminal.
+    d.add(elm.Line().right(1.5))
+    d.add(elm.Resistor().right().label("1 kΩ / 10 W", loc="top"))
+    d.add(elm.Line().right(1.5))
+    right_jxn = d.add(elm.Dot())
+    right_pos = right_jxn.end
 
-        # Right output lead labelled Probe−
-        d.add(elm.Line().right(1.5).label("Probe −", loc="right"))
+    # Right output lead labelled Probe−
+    d.add(elm.Line().right(1.5).label("Probe −", loc="right"))
 
-        # Bottom branch from left junction: LED then indicator resistor
-        d.add(elm.Line().at(left_pos).down())
-        d.add(elm.LED().right().label("LED", loc="bottom"))
-        d.add(elm.Resistor().right().label("10 kΩ / 1 W", loc="bottom"))
-        d.add(elm.Line().up().toy(right_pos))
+    # Bottom branch from left junction: LED then indicator resistor
+    d.add(elm.Line().at(left_pos).down())
+    d.add(elm.LED().right().label("LED", loc="bottom"))
+    d.add(elm.Resistor().right().label("10 kΩ / 1 W", loc="bottom"))
+    d.add(elm.Line().up().toy(right_pos))
 
-        d.save(str(OUTPUT), transparent=True)
-
+    # Draw, remove border box, save transparent
+    d.draw(show=False)
+    d.fig.ax.set_axis_off()
+    d.save(str(OUTPUT), transparent=True)
     plt.close("all")
     print(f"Saved {OUTPUT}")
 

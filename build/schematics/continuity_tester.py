@@ -24,32 +24,35 @@ def main() -> None:
     plt.xkcd()
     plt.rcParams["figure.facecolor"] = "none"
     plt.rcParams["axes.facecolor"] = "none"
+    plt.rcParams["path.effects"] = []  # remove white halo stroke from all paths/text
     schemdraw.use("matplotlib")
 
-    with schemdraw.Drawing() as d:
-        d.config(fontsize=12)
+    d = schemdraw.Drawing()
+    d.config(fontsize=12)
 
-        # Top rail: battery → switch → resistor → LED → Probe A
-        # Battery going right: start = left = negative, end = right = positive
-        batt = d.add(elm.Battery().right().label("3 V (2×AA)", loc="top"))
-        # istart and iend are at the battery plates themselves (leads excluded)
-        d.add(elm.Label().at((batt.istart.x - 0.75, batt.istart.y)).label("−", ofst=0.2))
-        d.add(elm.Label().at(batt.iend).label("+", ofst=0.2))
-        d.add(elm.Switch().right().label("SW (opt.)", loc="top"))
-        d.add(elm.Resistor().right().label("100–220 Ω", loc="top"))
-        led = d.add(elm.LED().right().label("LED", loc="top"))
-        d.add(elm.Dot())
-        d.add(elm.Label().at(led.end).label("Probe A", loc="right"))
+    # Top rail: battery → switch → resistor → LED → Probe A
+    # Battery going right: start = left = negative, end = right = positive
+    batt = d.add(elm.Battery().right().label("3 V (2×AA)", loc="top"))
+    # istart and iend are at the battery plates themselves (leads excluded)
+    d.add(elm.Label().at((batt.istart.x - 0.75, batt.istart.y)).label("−", ofst=0.2))
+    d.add(elm.Label().at(batt.iend).label("+", ofst=0.2))
+    d.add(elm.Switch().right().label("SW (opt.)", loc="top"))
+    d.add(elm.Resistor().right().label("100–220 Ω", loc="top"))
+    led = d.add(elm.LED().right().label("LED", loc="top"))
+    d.add(elm.Dot())
+    d.add(elm.Label().at(led.end).label("Probe A", loc="right"))
 
-        # Close the loop: down, left, up
-        d.add(elm.Line().down())
-        d.add(elm.Line().left().tox(batt.start))
-        probe_b = d.add(elm.Dot())
-        d.add(elm.Label().at(probe_b.end).label("Probe B", loc="left"))
-        d.add(elm.Line().up().toy(batt.start))
+    # Close the loop: down, left, up
+    d.add(elm.Line().down())
+    d.add(elm.Line().left().tox(batt.start))
+    probe_b = d.add(elm.Dot())
+    d.add(elm.Label().at(probe_b.end).label("Probe B", loc="left"))
+    d.add(elm.Line().up().toy(batt.start))
 
-        d.save(str(OUTPUT), transparent=True)
-
+    # Draw, remove border box, save transparent
+    d.draw(show=False)
+    d.fig.ax.set_axis_off()
+    d.save(str(OUTPUT), transparent=True)
     plt.close("all")
     print(f"Saved {OUTPUT}")
 
