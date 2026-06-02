@@ -38,6 +38,11 @@ Through-hole resistors from desktop computer motherboards or 1990s–2000s consu
 
 The circuit is a series loop: battery positive runs through an optional switch, then through the resistor, through the LED (anode to cathode), to probe A. Battery negative goes to probe B. When both probes touch a conductive path, the loop closes and the LED lights.
 
+<figure>
+  <img src="../images/continuity-tester.svg" alt="Series circuit: 3 V battery, optional switch, 100–220 Ω resistor, and LED wired in a loop with Probe A at the LED output and Probe B at the battery negative terminal.">
+  <figcaption>Continuity tester circuit: battery, series resistor, and LED in a loop. Touch Probe A and Probe B to the path under test to complete the circuit.</figcaption>
+</figure>
+
 Before soldering anything permanent, lay the circuit out on a breadboard.
 
 1. Push the LED into the breadboard with the longer lead (anode) where you'll connect the resistor. If you're unsure which lead is the anode, check it with your multimeter on diode mode: the meter will show a forward voltage with the red lead on the anode (typically around 2.0 V for red or yellow LEDs, 2.2 V for green, or 3.2 V for blue or white).

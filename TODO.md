@@ -7,7 +7,7 @@ Future work explicitly deferred from Section 12 of `salvage-electronics-plan.md`
 - [ ] Implement ZIM packaging support, including a future `build/build_zim.py`.
 - [ ] Add GitHub Actions workflows after the local build pipeline is stable.
 - [ ] Add site-wide search as a Phase 2 feature.
-- [ ] Define and implement a content image strategy for schematics and photos, with SVG preferred for schematics and aggressive compression for offline-friendly photos.
+- [x] Define and implement a content image strategy for schematics and photos, with SVG preferred for schematics and aggressive compression for offline-friendly photos.
 
 ## Needs Human Review
 
@@ -49,17 +49,13 @@ Note: all 6 project pages received a `review-technical` pass (6 critical errors
 corrected, 1 fact-check resolved with maintainer confirmation). They still need
 the full SME content/safety review that clears the `review:` field.
 
-## Milestone 5 — Images & diagrams (next)
-
-- [ ] Define image conventions in `docs/STYLE-GUIDE.md` (SVG for schematics, compressed raster for photos).
-- [ ] Add image-copy step to `build/build.py`; confirm output lands in `output/html/`.
-- [ ] Add test that no image `src` references point to external URLs.
-- [ ] `content/projects/01-continuity-tester.md` — add schematic SVG.
-- [ ] `content/projects/02-cap-discharge-tool.md` — add schematic SVG.
-- [ ] `content/projects/03-atx-bench-supply.md` — add schematic SVG.
-
 ## Done
 
+- [x] Milestone 5 complete: image/diagram pipeline implemented. Conventions in
+      `docs/STYLE-GUIDE.md`; `build/build.py` copies `content/images/` to output;
+      hand-drawn schemdraw schematics for continuity tester, cap discharge tool,
+      and ATX bench supply embedded in project pages; offline-first test added.
+      216 tests pass. Branch `feature/image-pipeline` ready to merge.
 - [x] All fact-check markers resolved; `FACT-CHECKS.md` is empty.
 - [x] Safety/liability disclaimer added to `README.md`, the site home page
       (`content/index.md`), and `content/foundations/02-safety.md`.

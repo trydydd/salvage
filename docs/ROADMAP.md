@@ -23,7 +23,7 @@ each one has an explicit **exit criteria** that gates the next.
 | Donor guides — 13 pages | ✅ All 13 authored; fact-check pass done (markers cleared) |
 | Foundations — 4 pages | ✅ All 4 authored (pending human review) |
 | Projects — 6 pages | ✅ All 6 authored; `review-technical` pass done (markers cleared) |
-| Content images / schematics | 🔴 Strategy undefined |
+| Content images / schematics | ✅ Done (branch `feature/image-pipeline`) |
 
 The infrastructure is production-grade; **1.0.0 is gated on authoring the 6
 project pages, a human review pass over authored content, then QA/release.**
@@ -127,19 +127,22 @@ a build layout, and a test/use procedure. ✅
 
 ---
 
-## Milestone 5 — Images & diagrams
+## Milestone 5 — Images & diagrams ✅ done
 
-Decide and implement the deferred image strategy (TODO.md item).
+- [x] `docs/STYLE-GUIDE.md` `## Images` section added: SVG for schematics,
+      WebP/JPEG ≤ 100 kB for photos, `<figure>`/`<img>`/`<figcaption>` pattern,
+      no external URLs, schemdraw API snippet.
+- [x] `build/build.py`: `copy_images()` step copies `content/images/` →
+      `output/html/images/` alongside the existing asset copy.
+- [x] `requirements.txt`: `schemdraw>=0.19` and `matplotlib>=3.7` added.
+- [x] Three hand-drawn schemdraw schematics generated and embedded:
+      `continuity_tester.py`, `cap_discharge.py`, `atx_bench_supply.py`
+      (standalone scripts under `build/schematics/`; SVGs in `content/images/`).
+- [x] `tests/test_content.py`: `test_no_external_image_urls` added (offline-first
+      check — fails on any `<img src="http...">` in content).
+- All work on branch `feature/image-pipeline` (ready to merge). 216 tests pass.
 
-- [ ] Define conventions: SVG for schematics/pinouts, aggressively compressed
-      raster for photos; document in `STYLE-GUIDE.md`.
-- [ ] Add build-pipeline handling for an image directory (copy + relative-path
-      rewrite alongside existing asset copying in `build/build.py`).
-- [ ] Add the schematics/diagrams the projects need to be buildable from the page
-      alone (at minimum: continuity tester, cap-discharge tool, ATX bench supply).
-- [ ] Confirm images ship in the build output (no CDN refs — offline-first).
-
-**Exit:** projects are buildable from the page; all images are local and sized for offline.
+**Exit:** projects are buildable from the page; all images are local and sized for offline. ✅
 
 ---
 

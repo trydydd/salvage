@@ -7,11 +7,13 @@ components). Read this whole file, then continue from "Your task" below.
 ## Repo & branch
 
 - Repo root: `/home/user/salvage` (git repo for `trydydd/salvage`).
-- **Work only on branch `feature/image-pipeline`.** Create it locally from
-  the current HEAD of `claude/m4-review-technical` if missing;
-  never push to `main` without explicit permission.
-- Push with `git push -u origin feature/image-pipeline`,
-  retrying with backoff on network errors. Do NOT open a PR unless asked.
+- **Branch `feature/image-pipeline` is complete and unmerged.** If it has not
+  yet been merged to `main`, open a PR or merge it first before starting
+  Milestone 6 work.
+- For Milestone 6, create `feature/design-audit` from the HEAD of
+  `feature/image-pipeline` (or `main` if it has already been merged).
+- Push with `git push -u origin <branch>`, retrying with backoff on network
+  errors. Do NOT open a PR unless asked.
 - End commit messages with the session link footer if your harness uses one.
   Do not put any model identifier in commits, code, or content.
 
@@ -21,7 +23,8 @@ components). Read this whole file, then continue from "Your task" below.
   theory links are hyperlinks only, hazard banner colors).
 - `docs/STYLE-GUIDE.md` — voice (active second person, workshop register, no
   exclamation marks, specs as ranges, four-column donor tables, pair every
-  hazard with a procedure).
+  hazard with a procedure). Also contains the `## Images` section added in
+  Milestone 5 (SVG for schematics, WebP/JPEG ≤ 100 kB for photos).
 - `docs/ROADMAP.md` — the milestone plan to 1.0.0. This is the source of truth
   for what's next.
 - `docs/HEARTH-INTEGRATION.md` — the Open Circuits cross-reference map (which
@@ -37,6 +40,7 @@ Invoke the matching one with the target file path as the argument:
 - `write-foundation`, `write-donor-guide`, `write-project`, `write-component`
 - `review-technical` — fact-checks a page; has a "Resolve mode" for existing
   `⚠️ FACT-CHECK` markers and writes flagged items to `FACT-CHECKS.md`.
+- `i-audit` — design/accessibility audit; use for Milestone 6.
 
 The donor-guide stubs already contain a finished component **table** and theory
 links — preserve those exactly. You may add rows to the table if genuinely
@@ -67,11 +71,43 @@ Still add the page to the "Needs Human Review" list in `TODO.md` after writing.
    - Em dashes occasionally survive the first write despite the skill's rules.
      The lint step always catches them — fix before committing.
 
+## Schematic generation (Milestone 5 conventions)
+
+Schematics live in `build/schematics/` and write SVGs to `content/images/`.
+Each script is standalone: `python build/schematics/continuity_tester.py`.
+
+Hand-drawn style uses matplotlib's xkcd renderer — NOT a schemdraw flag:
+
+```python
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import schemdraw
+schemdraw.use("matplotlib")
+
+plt.xkcd()
+with schemdraw.Drawing() as d:
+    # add elements
+    d.save("output.svg")
+plt.close("all")
+```
+
+The `canvas='svg'` / `handdrawn=True` API mentioned in older docs does not
+exist in schemdraw 0.23. Use the pattern above.
+
+Battery polarity: place `−` at `batt.istart` and `+` at `batt.iend` (these
+are the plate anchors, not the wire endpoints). Offset 0.2 upward with `ofst`.
+For the `−` label, shift left by 0.75 units: `(batt.istart.x - 0.75, batt.istart.y)`.
+
+Parallel circuits: ensure both branches span the same horizontal width between
+junctions, otherwise the closing vertical wire won't align and the probe
+terminals won't read as open ends.
+
 ## Build / test / verify commands
 
 ```sh
 make build                     # render content/ -> output/html/ (37 pages)
-.venv/bin/pytest -q            # 179 tests; or `make test`
+.venv/bin/pytest -q            # 216 tests; or `make test`
 ```
 
 `.venv` is present. Shared assets may need re-fetching at the start of a new
@@ -88,19 +124,28 @@ wc -l "$f"; tail -1 "$f"
 ## Status — what's done vs. remaining
 
 **Done:**
-- Milestones 0–4 complete (all pushed through `claude/m4-review-technical`).
+- Milestones 0–5 complete.
 - Milestone 0: resolved 4 `FACT-CHECK` markers; `FACT-CHECKS.md` emptied.
 - Milestone 1 (Foundations): all 4 pages authored + fact-checked.
 - Milestone 2 (Donor guides): all 13 authored; six `review-technical` findings
   resolved with maintainer confirmation.
 - Milestone 3 (Projects): all 6 authored; `review-technical` pass cleared 6
   critical errors + 1 fact-check item.
-- **Milestone 4 (Technical QA) complete:** `review-technical` run over all 10
-  component pages and all 4 foundation pages. Fixes: EIA-96 multiplier code,
-  cap derating tightened to 70% + reform procedure added, LED/photodiode Vf
-  thresholds split, LM317 floating-adjust corrected, duplicate part number fixed,
-  SMD inductor footprint sizes corrected (2020≈5mm, 1210≈3mm), relay coil scan
-  range raised to 50–1500Ω. `FACT-CHECKS.md` is empty. 179 tests pass.
+- Milestone 4 (Technical QA): `review-technical` run over all 10 component
+  pages and all 4 foundation pages. Fixes: EIA-96 multiplier code, cap
+  derating tightened to 70% + reform procedure added, LED/photodiode Vf
+  thresholds split, LM317 floating-adjust corrected, duplicate part number
+  fixed, SMD inductor footprint sizes corrected (2020≈5mm, 1210≈3mm), relay
+  coil scan range raised to 50–1500Ω. `FACT-CHECKS.md` is empty.
+- **Milestone 5 (Images & diagrams) complete** on branch `feature/image-pipeline`:
+  - `docs/STYLE-GUIDE.md` `## Images` section added.
+  - `build/build.py` `copy_images()` step added.
+  - `schemdraw>=0.19` and `matplotlib>=3.7` added to `requirements.txt`.
+  - Three hand-drawn schematics: continuity tester, cap discharge tool, ATX
+    bench supply. Scripts in `build/schematics/`; SVGs in `content/images/`;
+    embedded in project pages with `<figure>`/`<img>`/`<figcaption>`.
+  - `test_no_external_image_urls` added to `tests/test_content.py`.
+  - **216 tests pass.**
 
 **Remaining content:** none — no `## TODO` stubs anywhere in `content/`.
 
@@ -108,54 +153,32 @@ wc -l "$f"; tail -1 "$f"
 `review: Needs Human Review` (see `TODO.md`) — a human SME pass is owed before
 1.0.0, separate from the automated fact-check passes.
 
-**Next per ROADMAP:** Milestone 5 = images and diagrams.
+**Next per ROADMAP:** Milestone 6 = design, accessibility & print pass.
 
 ## Your task
 
-Begin Milestone 5: define and implement the image/diagram pipeline.
+Begin Milestone 6: design, accessibility, and print pass.
 
 The ROADMAP lists four concrete deliverables:
 
-1. **Define conventions** — SVG for schematics and pinouts; aggressively
-   compressed raster (JPEG ≤ 100 kB, WebP preferred) for photos. Document
-   the rules in a new `## Images` section in `docs/STYLE-GUIDE.md`.
+1. **Run `i-audit`** — triage all P0 and P1 findings. Fix what can be fixed
+   programmatically (CSS, template, overlay). Log anything requiring human
+   design decisions as comments in the relevant file or a new `DESIGN-NOTES.md`.
 
-2. **Build-pipeline support** — `build/build.py` currently copies only shared
-   assets. Add a step that copies `content/images/` (or a `content/` subdirectory
-   of your choice) into `output/html/` alongside the rendered pages, so
-   `<img src="../images/foo.svg">` links work without CDN deps. Confirm the copy
-   lands in the right place with `make build` and update `make test` as needed.
+2. **Verify light/dark mode** — `prefers-color-scheme` dark mode should render
+   cleanly. Check that hazard banners use the standard safety palette (greens/
+   yellows/oranges/reds), not the Open Circuits accent colors.
 
-3. **Three minimum schematics** — the project pages that need a diagram to be
-   buildable from the page alone are:
-   - `content/projects/01-continuity-tester.md`
-   - `content/projects/02-cap-discharge-tool.md`
-   - `content/projects/03-atx-bench-supply.md`
+3. **Verify no-JS usability** — the site must be fully readable with JavaScript
+   disabled. Navigation collapse and any salvage-nav.js features should
+   degrade gracefully.
 
-   Use **schemdraw** (pip install `schemdraw`) with its hand-drawn style. The
-   hand-drawn rendering fits the site's workshop/zine aesthetic better than
-   clean geometric lines, and it's a single flag in the API:
-   `with schemdraw.Drawing(canvas='svg') as d: d.push()` ... then call
-   `d.draw(handdrawn=True)` before saving. See the style gallery at
-   https://schemdraw.readthedocs.io/en/latest/gallery/styles.html#hand-drawn
+4. **Verify print output** — hazard borders should be retained, banner box
+   shadows removed, type readable. Check with a browser print preview or
+   `@media print` inspection.
 
-   Write a separate generation script for each schematic:
-   - `build/schematics/continuity_tester.py`
-   - `build/schematics/cap_discharge.py`
-   - `build/schematics/atx_bench_supply.py`
-
-   Each script should write its output SVG to `content/images/` and be
-   runnable standalone (`python build/schematics/continuity_tester.py`).
-   Add `schemdraw` to `requirements.txt` (or equivalent). Embed the generated
-   SVGs in the project pages using a `<figure>` / `<img>` / `<figcaption>`
-   block with a descriptive `alt` attribute.
-
-4. **Offline-first check** — confirm no image references point to external URLs.
-   The existing test infrastructure should cover this if you add a test for it;
-   add one if it's missing.
-
-Work one deliverable at a time: code/write, build, test, commit, push before
-moving to the next. Branch: `feature/image-pipeline` off `claude/m4-review-technical`.
+Work one deliverable at a time: fix, build, test, commit, push before
+moving to the next.
 
 **Lint reminders:** no em dashes or prose semicolons in any new Markdown content;
 no banned AI vocab; check with `grep -c '—'` and `grep -n ';'` before committing.

@@ -35,6 +35,11 @@ Also buy a pack of ring or spade terminals if your binding posts won't accept bu
 
 ## Conversion plan
 
+<figure>
+  <img src="../images/atx-bench-supply.svg" alt="ATX PSU block with PS_ON toggle switch wired to ground, dummy load resistor on the +5 V rail, and output rails (+12 V, +5 V, +3.3 V, −12 V, GND) going to labeled binding posts. An optional 470 Ω resistor and LED show PWR_OK status.">
+  <figcaption>ATX bench supply wiring overview: PS_ON switch, dummy load on +5 V, and the four output rails brought out to binding posts.</figcaption>
+</figure>
+
 Start with the paperclip test. This confirms the supply works before you invest any time in modifying it.
 
 1. Place the PSU on your bench with the harness clear of anything conductive. Don't touch the harness while it's plugged in.
