@@ -36,8 +36,12 @@ def main() -> None:
         left_jxn = d.add(elm.Dot())
         left_pos = left_jxn.end
 
-        # Top branch: power discharge resistor
-        top_r = d.add(elm.Resistor().right().label("1 kΩ / 10 W", loc="top"))
+        # Top branch: 1.5-unit bridge + power resistor + 1.5-unit bridge = 6 units total,
+        # matching the bottom branch (LED 3 + 10 kΩ 3 = 6) so the closing line meets the
+        # right junction cleanly and Probe − reads as an open terminal.
+        d.add(elm.Line().right(1.5))
+        d.add(elm.Resistor().right().label("1 kΩ / 10 W", loc="top"))
+        d.add(elm.Line().right(1.5))
         right_jxn = d.add(elm.Dot())
         right_pos = right_jxn.end
 
