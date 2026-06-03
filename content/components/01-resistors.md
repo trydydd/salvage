@@ -9,9 +9,13 @@ Resistors are the most common part on any donor board, and pulling them costs al
 
 Through-hole resistors come in two forms you'll see constantly. The first is axial carbon film: a small cylinder, 4–9mm long depending on wattage, with colored stripes and a lead coming from each end. The second is metal film, which looks nearly identical but often has a blue or green body and five color bands instead of four. Size is the quickest wattage indicator: a 1/4W part is around 6mm long; 1/2W stretches to 9mm; a 1W or 2W part is noticeably chunkier, often cream or tan.
 
-Color bands give you the value. Four-band parts use three digit bands plus a tolerance band at one end; five-band parts use four digit bands plus tolerance. Read from the end where the bands cluster closest together. The tolerance band is usually gold (5%) or silver (10%) and sits at the far end of the cluster. Black, brown, red, orange, yellow, green, blue, violet, grey, white map to 0–9; any mnemonic that gets you there works.
+Color bands give you the value. Four-band parts have two significant-digit bands, one multiplier band, and a tolerance band. Five-band parts add a third significant-digit band before the multiplier. Read from the end where the bands cluster most tightly, with the tolerance band at the far end.
 
-SMD resistors print the code on the flat top face. Three-digit codes: 104 means 10 followed by four zeros, so 100kΩ. 472 means 4.7kΩ. Four-digit codes work the same way with one more digit before the multiplier. EIA-96 codes show up on 1% 0402 and 0603 parts: two digits plus a letter (01A = 100Ω, 68A = 487Ω). These need a reference table; don't try to decode them from memory.
+Black, brown, red, orange, yellow, green, blue, violet, grey, white map to 0–9. Any mnemonic that gets you there works. Gold tolerance means ±5%, silver means ±10%.
+
+One trap: gold and silver also appear as multiplier bands on low-value parts, not just as tolerance. A 4.7 Ω resistor reads yellow-violet-gold-gold, where the first gold is the ×0.1 multiplier. If you see two gold or two silver bands, you're looking at a sub-10 Ω part.
+
+SMD resistors print the code on the flat top face. Three-digit codes: 104 means 10 followed by four zeros, so 100kΩ. 472 means 4.7kΩ. Four-digit codes work the same way with one more digit before the multiplier. EIA-96 codes show up on 1% 0402 and 0603 parts: two digits plus a letter (01A = 100Ω, 67A = 487Ω). These need a reference table; don't try to decode them from memory.
 
 Two things that look like resistors but aren't: current-sense shunts sit in series with a load, usually near the power transistors, and measure in the 0.005–0.5Ω range. Fusible resistors look like ordinary carbon film but are designed to open cleanly when overloaded; they show up near AC input stages in older Japanese consumer gear. Both are worth pulling if you label them correctly.
 
