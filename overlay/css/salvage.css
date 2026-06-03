@@ -69,6 +69,13 @@
   background: var(--oc-surface);
 }
 
+/* Increase nav toggle from the shared 36×36px to the WCAG 2.5.5 minimum of
+   44×44px. Done here as a salvage.css override so the shared CSS stays unchanged. */
+.oc-nav-toggle {
+  width: 44px;
+  height: 44px;
+}
+
 /* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
    because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
    pages have exactly one H1 — the page title — so reset to normal heading. */
