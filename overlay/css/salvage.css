@@ -24,7 +24,13 @@
 
 .skip-link:focus {
   top: 0;
-  outline: none;
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 3px;
+}
+
+.noscript-nav a:focus-visible {
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 2px;
 }
 
 /* No-JS fallback section navigation. Only rendered by <noscript>; never
@@ -352,6 +358,32 @@ blockquote.tier {
    oranges/reds are preserved — color carries genuine safety meaning here
    (WCAG exception: "required for comprehension"). Boost border to 2px so
    the outline remains prominent regardless of system palette. */
+/* Users who prefer reduced motion: disable sliding/fading transitions.
+   Applies to elements Salvage owns directly plus overrides for shared CSS
+   transitions on body and .oc-sidebar that we cannot remove at source. */
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+
+  body {
+    transition: none !important;
+  }
+
+  .oc-sidebar {
+    transition: none !important;
+  }
+
+  .oc-nav-toggle,
+  .oc-vol-nav a,
+  .noscript-nav a,
+  .oc-toc__link,
+  .oc-chnav__arrow,
+  .oc-bottomnav a {
+    transition: none;
+  }
+}
+
 @media (forced-colors: active) {
   .haz {
     forced-color-adjust: none;

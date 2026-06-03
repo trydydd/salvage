@@ -248,6 +248,8 @@ def render_pages() -> int:
             "js_nav": f"{prefix}js/navigation.js",
             "js_salvage": f"{prefix}js/salvage-nav.js",
             "icons_path": f"{prefix}icons/",
+            "font_vollkorn": f"{prefix}fonts/vollkorn-latin.woff2",
+            "font_chivo": f"{prefix}fonts/chivo-latin.woff2",
             **navigation_context(prefix),
         }
 
