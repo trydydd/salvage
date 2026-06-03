@@ -229,9 +229,10 @@ h1:first-of-type {
   --haz-bg-current: var(--haz-4-bg);
   --haz-border-current: var(--haz-4-border);
   --haz-text-current: var(--haz-4-text);
+  /* Derive shadow from the active border token so it adapts to dark mode. */
   box-shadow:
-    0 1px 2px rgba(82, 9, 14, 0.14),
-    0 6px 16px rgba(156, 20, 20, 0.18);
+    0 1px 2px color-mix(in oklch, var(--haz-4-border) 14%, transparent),
+    0 6px 16px color-mix(in oklch, var(--haz-4-border) 18%, transparent);
 }
 
 .haz__icon {
@@ -329,9 +330,27 @@ blockquote.tier {
   white-space: nowrap;
 }
 
+/* Forced colors (Windows High Contrast mode).
+   Hazard level is always communicated through the text heading, so color is
+   supplementary. Opt out of forced-color on .haz so safety greens/yellows/
+   oranges/reds are preserved — color carries genuine safety meaning here
+   (WCAG exception: "required for comprehension"). Boost border to 2px so
+   the outline remains prominent regardless of system palette. */
+@media (forced-colors: active) {
+  .haz {
+    forced-color-adjust: none;
+    border-width: 2px;
+    box-shadow: none;
+  }
+}
+
 @media print {
   .haz {
     box-shadow: none;
     border-width: 2px;
+  }
+
+  .haz::before {
+    display: none;
   }
 }
