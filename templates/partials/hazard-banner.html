@@ -1,17 +1,11 @@
-<aside class="haz haz--level-{{ hazard }}" role="note" aria-label="Hazard warning">
+<aside class="haz haz--level-{{ hazard }}" role="note" aria-label="Hazard level {{ hazard }}: {{ hazard_label }}">
   <div class="haz__icon">
     <img src="{{ icons_path }}hazard-{{ hazard }}.svg"
-         alt="Hazard level {{ hazard }} of 4"
+         alt="Hazard level {{ hazard }} of 4 — {{ hazard_label }}"
          width="40" height="40">
   </div>
   <div class="haz__content">
-    <p class="haz__level">
-      {% if hazard == 1 %}Level 1 — Low Risk
-      {% elif hazard == 2 %}Level 2 — Moderate
-      {% elif hazard == 3 %}Level 3 — Significant
-      {% elif hazard == 4 %}Level 4 — Lethal Danger
-      {% endif %}
-    </p>
+    <p class="haz__level">Level {{ hazard }} — {{ hazard_label }}</p>
     {% if hazard_summary %}
       <p class="haz__summary">{{ hazard_summary }}</p>
     {% endif %}
