@@ -7,11 +7,13 @@ Diodes are everywhere on donor boards, and most come off cleanly with a quick di
 
 ## Identify the type
 
-The standard rectifier diode is an axial cylinder, about 5mm long, with a colored stripe at one end marking the cathode (negative end). The 1N400x series (1N4001 through 1N4007) is the type you'll see most: same gray glass or black plastic body, stripe at the cathode, rated 1A at various voltages from 50V to 1000V. Signal diodes like the 1N4148 use the same DO-35 package but smaller, about 3mm, usually with an orange-tinted glass body. The marking is printed on the body in tiny text and often faded; the stripe is still reliable.
+The standard rectifier diode is an axial cylinder, about 5mm long, with a colored stripe at one end marking the cathode (negative end). The 1N400x series (1N4001 through 1N4007) is the type you'll see most: same gray glass or black plastic body, stripe at the cathode, rated 1A at various voltages from 50V to 1000V. Signal diodes like the 1N4148 come in the smaller DO-35 package, about 3mm, usually with an orange-tinted glass body. The rectifier series is in the larger DO-41, which is visibly chunkier, about 5mm and 2.7mm diameter. The two look similar at a glance, so the size difference matters when you're sorting. The marking on a 1N4148 is printed on the body in tiny text and often faded; the stripe is still reliable.
 
 Schottky diodes look like any other DO-41 or DO-35 part on the outside. Common ones in salvage include the 1N5817, 1N5819, and BAT46. The only way to be sure you have a Schottky is by the part number or the forward voltage measurement. Schottky forward voltage (0.15–0.45V depending on current and temperature) is noticeably lower than silicon (0.55–0.8V), so diode mode on the meter will tell you quickly.
 
 Zener diodes use the same packages as signal diodes and are easy to confuse. The marking is the clue: a zener might be labeled BZX55C5V6 (a 5.6V zener) or 1N4733A (5.1V). The number after the type code is the zener voltage. In diode mode, a zener reads the same forward voltage as a regular silicon diode; you can't test the zener voltage with a standard meter without a separate circuit.
+
+Transient voltage suppressors (TVS diodes) look identical to zeners in DO-41 and DO-35 packages. You'll find them on nearly every modern board near motor outputs, relay coils, and power input rails. They test the same as a regular silicon diode in forward mode. The marking tells them apart: TVS parts use prefixes like P6KE, SMBJ, or 1.5KE followed by a voltage and letter (P6KE15A, SMBJ12CA), while zeners use BZX or 1N47xx codes. Bidirectional TVS parts (CA suffix) read like a silicon diode in both directions. Both are worth pulling and labeling by part number.
 
 Bridge rectifiers are the square or rectangular four-pin blocks, through-hole or SMD, with AC, +, and – terminals usually marked on the case. SMD diodes come in SOD-123 (about the size of a 0805 resistor with a band at the cathode end), SOD-323 (smaller), and the SOT-23 three-pin package (which is a diode plus a second function, or a dual diode). LEDs are the clear or colored dome parts you know already. In salvage they sometimes appear on boards with the dome removed for space reasons, leaving just a flat-top LED that looks almost like a tantalum cap until you probe it.
 
@@ -33,7 +35,7 @@ For a quick check on an otherwise healthy board, probing in-circuit is sometimes
 
 **LED forward voltage by color**
 
-LEDs in diode mode light faintly if the meter voltage is enough. Red LEDs read up to 2.5V (typ 2.0V). Infrared LEDs read 1.2–1.6V but won't glow visibly — the emission is outside the visible range. Yellow and orange read up to 2.5V (typ 2.1V). Green LEDs vary: standard green reads up to 2.5V (typ 2.2V), but high-brightness green reads up to 3.6V (typ 3.2V). Blue and white read up to 3.6V (typ 3.2V). A near-zero reading in both directions means the part is shorted internally. A reading of 0.5–0.8V means it's likely a photodiode — they have a lower forward voltage than any LED family because they're designed for light capture rather than emission.
+LEDs in diode mode light faintly if the meter voltage is enough. Red LEDs read 1.7–2.2V (typ 2.0V). Infrared LEDs read 1.2–1.6V but won't glow visibly — the emission is outside the visible range. Yellow and orange read up to 2.5V (typ 2.1V). Green LEDs vary: standard green reads up to 2.5V (typ 2.2V), but high-brightness green reads up to 3.6V (typ 3.2V). Blue and white read up to 3.6V (typ 3.2V). A near-zero reading in both directions means the part is shorted internally. A reading of 0.5–0.8V means it's likely a photodiode — they have a lower forward voltage than any LED family because they're designed for light capture rather than emission.
 
 ## Forward voltage by type
 
@@ -43,12 +45,14 @@ The forward voltage range is your best quick-sort tool when you're working throu
 - 0.20–0.35 V: germanium (old stock, glass body, often marked OA91 or AA119)
 - 0.55–0.80 V: standard silicon rectifier or signal diode
 - 1.2–1.6 V: infrared LED (won't glow visibly in diode mode)
-- typ 2.0 V, max 2.5 V: red LED
+- 1.7–2.2 V (typ 2.0 V): red LED
 - typ 2.1 V, max 2.5 V: yellow or amber LED
 - typ 2.2 V, max 2.5 V: standard green LED
 - typ 3.2 V, max 3.6 V: blue, white, or high-brightness green LED
 
 Zeners read a normal silicon forward voltage in diode mode. You can't identify the zener voltage without a test circuit that applies reverse voltage up to the breakdown point.
+
+The Schottky and germanium ranges overlap between 0.20–0.35V. A reading in that window doesn't tell you which family you have. Check the body: germanium is almost always translucent grey glass and genuinely old stock (OA91, AA119, and similar European markings). Any sub-0.45V part from equipment made after roughly 1980 is almost certainly Schottky.
 
 ## Common failure modes
 
@@ -70,7 +74,7 @@ Rectifier diodes in linear power supplies often run warm continuously. A diode t
 
 ## Reuse notes
 
-Standard rectifier diodes (1N4001–1N4007, 1N5400–1N5408) are worth pulling in quantity. They're used in almost every DC power circuit: rectifying AC, blocking reverse voltage, and clamping inductive spikes. Sort them by part number if you can read the markings; if not, a diode-mode reading will at least confirm it's silicon and give you the forward voltage range. Store them in labeled compartments by current rating (1A vs 3A vs higher) if you're pulling mixed types.
+Standard rectifier diodes (1N4001–1N4007, 1N5400–1N5408) are worth pulling in quantity. They're used in almost every DC power circuit: rectifying AC, blocking reverse voltage, and clamping inductive spikes. Sort them by part number if you can read the markings. Diode mode confirms it's silicon, but it can't distinguish 1N4001 from 1N4007 — every member of the series has the same forward voltage. The PIV rating lives only in the part number. If you can't read it, label the bag "1N400x, voltage unknown" and don't use those in high-voltage positions. Store them in labeled compartments by current rating (1A vs 3A vs higher) if you're pulling mixed types.
 
 1N4148 signal diodes are worth a dedicated small parts bag. They appear in audio, logic, and protection circuits, and a general stock of 50–100 costs less than one new component module. Keep them separate from rectifiers because the packages look identical.
 
