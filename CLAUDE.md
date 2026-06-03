@@ -19,6 +19,15 @@ assets (CSS, fonts, JS) that are pulled at build time under **CC BY 4.0**.
   paths; do not copy Open Circuits theory text into Salvage content.
 - **Hazard banners use standard safety colors** — they intentionally do not use
   the Open Circuits accent palette.
+- **Hazard banner markup and labels are off-limits to style skills** — the
+  `.haz` component, its level labels ("Low Risk / Moderate / Significant /
+  Lethal Danger"), `aria-label`, icon `alt` text, and the safety color tokens
+  (`--haz-*`) must never be altered by `/i-colorize`, `/i-distill`,
+  `/i-quieter`, `/i-bolder`, or any other aesthetic pass. Safety information
+  must stay correct, complete, and accessible regardless of design changes
+  elsewhere. If a style skill touches `templates/partials/hazard-banner.html`
+  or the `--haz-*` variables in `overlay/css/salvage.css`, that change must
+  be reverted before committing.
 
 ## Stack
 

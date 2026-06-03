@@ -61,6 +61,13 @@ SECTION_DIRS = {
     "projects": "projects",
 }
 
+HAZARD_LABELS = {
+    1: "Low Risk",
+    2: "Moderate",
+    3: "Significant",
+    4: "Lethal Danger",
+}
+
 
 def asset_prefix(depth: int) -> str:
     """Return the relative prefix needed to reach output/html/ assets."""
@@ -233,6 +240,7 @@ def render_pages() -> int:
             "title": title,
             "section": section,
             "hazard": hazard,
+            "hazard_label": HAZARD_LABELS.get(hazard, ""),
             "hazard_summary": hazard_summary,
             "body": MARKDOWN(body_text),
             "css_shared": f"{prefix}css/open-circuits.css",
@@ -240,6 +248,8 @@ def render_pages() -> int:
             "js_nav": f"{prefix}js/navigation.js",
             "js_salvage": f"{prefix}js/salvage-nav.js",
             "icons_path": f"{prefix}icons/",
+            "font_vollkorn": f"{prefix}fonts/vollkorn-latin.woff2",
+            "font_chivo": f"{prefix}fonts/chivo-latin.woff2",
             **navigation_context(prefix),
         }
 

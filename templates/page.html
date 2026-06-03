@@ -4,19 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Salvage Electronics — {{ title }}</title>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ font_vollkorn }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ font_chivo }}">
     <link rel="stylesheet" href="{{ css_shared }}">
     <link rel="stylesheet" href="{{ css_salvage }}">
     <script src="{{ js_nav }}" defer></script>
     <script src="{{ js_salvage }}" defer></script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <noscript><style>.oc-sidebar,.oc-nav-toggle{display:none!important}</style></noscript>
     <script>document.body.classList.add('sidebar-closed');</script>
     {% include "partials/header.html" %}
     <aside id="oc-sidebar" class="oc-sidebar" aria-label="Chapter navigation">
       <!-- populated by navigation.js -->
     </aside>
-    <main>
+    <main id="main-content">
+      <noscript>
+        <nav class="noscript-nav" aria-label="Section navigation">
+          <ul>
+            <li><a href="{{ foundations }}">Foundations</a></li>
+            <li><a href="{{ donor_guides }}">Donors</a></li>
+            <li><a href="{{ components }}">Components</a></li>
+            <li><a href="{{ projects }}">Projects</a></li>
+            <li><a href="/open-circuits/index.html">Theory</a></li>
+          </ul>
+        </nav>
+      </noscript>
       {% if hazard %}{% include "partials/hazard-banner.html" %}{% endif %}
       <article>
         <h1>{{ title }}</h1>

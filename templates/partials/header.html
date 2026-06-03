@@ -11,15 +11,15 @@
         <rect y="12" width="18" height="2" rx="1" fill="currentColor"/>
       </svg>
     </button>
-    <p class="oc-site-title">
+    <div class="oc-site-title">
       <a href="{{ home }}">Salvage Electronics</a>
-    </p>
+    </div>
     <nav aria-label="Section navigation">
       <ul class="oc-vol-nav">
-        <li><a href="{{ foundations }}" data-section="foundations"{% if section == 'foundations' %} class="is-active"{% endif %}>Foundations</a></li>
-        <li><a href="{{ donor_guides }}" data-section="donor-guides"{% if section == 'donor-guides' %} class="is-active"{% endif %}>Donors</a></li>
-        <li><a href="{{ components }}" data-section="components"{% if section == 'components' %} class="is-active"{% endif %}>Components</a></li>
-        <li><a href="{{ projects }}" data-section="projects"{% if section == 'projects' %} class="is-active"{% endif %}>Projects</a></li>
+        <li><a href="{{ foundations }}" data-section="foundations"{% if section == 'foundations' %} class="is-active" aria-current="page"{% endif %}>Foundations</a></li>
+        <li><a href="{{ donor_guides }}" data-section="donor-guides"{% if section == 'donor-guides' %} class="is-active" aria-current="page"{% endif %}>Donors</a></li>
+        <li><a href="{{ components }}" data-section="components"{% if section == 'components' %} class="is-active" aria-current="page"{% endif %}>Components</a></li>
+        <li><a href="{{ projects }}" data-section="projects"{% if section == 'projects' %} class="is-active" aria-current="page"{% endif %}>Projects</a></li>
         <li><a href="/open-circuits/index.html">Theory</a></li>
       </ul>
     </nav>

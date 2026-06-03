@@ -3,6 +3,109 @@
  * Self-contained: no external URLs, fonts, or remote assets.
  */
 
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0.6rem 1.2rem;
+  background: var(--oc-header-bg);
+  color: var(--oc-header-text);
+  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+  border: 2px solid var(--oc-accent);
+  border-top: none;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 3px;
+}
+
+.noscript-nav a:focus-visible {
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 2px;
+}
+
+/* No-JS fallback section navigation. Only rendered by <noscript>; never
+   shown when JS is active. Flows at the top of <main>, below the fixed header. */
+.noscript-nav {
+  margin: 0 0 1.5em;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--oc-border);
+}
+
+.noscript-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.noscript-nav li {
+  margin: 0;
+}
+
+.noscript-nav a {
+  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--oc-text-2);
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--oc-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.noscript-nav a:hover {
+  color: var(--oc-text);
+  border-color: var(--oc-border-strong);
+  background: var(--oc-surface);
+}
+
+/* Increase nav toggle from the shared 36×36px to the WCAG 2.5.5 minimum of
+   44×44px. Done here as a salvage.css override so the shared CSS stays unchanged. */
+.oc-nav-toggle {
+  width: 44px;
+  height: 44px;
+}
+
+/* At tablet widths (480–768px) the section nav is visible but shared CSS gives
+   links only ~27px height. Increase padding to meet the 44px touch-target
+   minimum at screen sizes where touch input is common. */
+@media (max-width: 768px) and (min-width: 481px) {
+  .oc-vol-nav {
+    display: flex;
+  }
+
+  .oc-vol-nav a {
+    padding: 0.7rem 0.7rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Explicit focus ring for header section nav links. The shared CSS provides
+   none; browser defaults vary across browsers and may be low-contrast on the
+   dark header background. */
+.oc-vol-nav a:focus-visible {
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 2px;
+}
+
 /* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
    because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
    pages have exactly one H1 — the page title — so reset to normal heading. */
@@ -156,9 +259,10 @@ h1:first-of-type {
   --haz-bg-current: var(--haz-4-bg);
   --haz-border-current: var(--haz-4-border);
   --haz-text-current: var(--haz-4-text);
+  /* Derive shadow from the active border token so it adapts to dark mode. */
   box-shadow:
-    0 1px 2px rgba(82, 9, 14, 0.14),
-    0 6px 16px rgba(156, 20, 20, 0.18);
+    0 1px 2px color-mix(in oklch, var(--haz-4-border) 14%, transparent),
+    0 6px 16px color-mix(in oklch, var(--haz-4-border) 18%, transparent);
 }
 
 .haz__icon {
@@ -211,26 +315,17 @@ h1:first-of-type {
 
 .tier {
   --tier-accent: var(--oc-accent);
-  position: relative;
   margin: 1.25em 0;
-  padding: 0.9em 1.1em 0.9em calc(1.1em + 5px);
-  border: 1px solid var(--oc-border);
+  padding: 0.9em 1.1em;
+  border: 1px solid color-mix(in oklch, var(--tier-accent) 45%, var(--oc-border) 55%);
   border-radius: var(--oc-radius);
-  background: color-mix(in oklch, var(--oc-surface) 72%, var(--oc-bg) 28%);
+  background: color-mix(in oklch, var(--tier-accent) 7%, var(--oc-surface) 93%);
   color: var(--oc-text);
   font-style: normal;
 }
 
-.tier::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: var(--tier-accent);
-}
-
 blockquote.tier {
-  border-left: 0;
+  border-left: 1px solid color-mix(in oklch, var(--tier-accent) 45%, var(--oc-border) 55%);
 }
 
 .tier > :first-child {
@@ -265,9 +360,53 @@ blockquote.tier {
   white-space: nowrap;
 }
 
+/* Forced colors (Windows High Contrast mode).
+   Hazard level is always communicated through the text heading, so color is
+   supplementary. Opt out of forced-color on .haz so safety greens/yellows/
+   oranges/reds are preserved — color carries genuine safety meaning here
+   (WCAG exception: "required for comprehension"). Boost border to 2px so
+   the outline remains prominent regardless of system palette. */
+/* Users who prefer reduced motion: disable sliding/fading transitions.
+   Applies to elements Salvage owns directly plus overrides for shared CSS
+   transitions on body and .oc-sidebar that we cannot remove at source. */
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+
+  body {
+    transition: none !important;
+  }
+
+  .oc-sidebar {
+    transition: none !important;
+  }
+
+  .oc-nav-toggle,
+  .oc-vol-nav a,
+  .noscript-nav a,
+  .oc-toc__link,
+  .oc-chnav__arrow,
+  .oc-bottomnav a {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .haz {
+    forced-color-adjust: none;
+    border-width: 2px;
+    box-shadow: none;
+  }
+}
+
 @media print {
   .haz {
     box-shadow: none;
     border-width: 2px;
+  }
+
+  .haz::before {
+    display: none;
   }
 }

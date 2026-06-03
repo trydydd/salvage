@@ -38,7 +38,7 @@ For the heat-shrink: every exposed conductor junction on this tool gets covered 
 The circuit: the 1 kΩ 10 W power resistor connects across both probe leads, positive to negative. The indicator branch (LED anode to cathode, then 10 kΩ in series) also connects positive to negative, in parallel with the power resistor. When the cap is charged, both branches carry current. The power resistor does the discharge work. The LED shows the state.
 
 <figure>
-  <img src="../images/cap-discharge.svg" alt="Two parallel branches between Probe+ and Probe−. Top branch: 1 kΩ 10 W power resistor for discharge. Bottom branch: LED in series with a 10 kΩ 1 W resistor for the indicator.">
+  <img src="../images/cap-discharge.svg" alt="Two parallel branches between Probe+ and Probe−. Top branch: 1 kΩ 10 W power resistor for discharge. Bottom branch: LED in series with a 10 kΩ 1 W resistor for the indicator." loading="lazy">
   <figcaption>Cap discharge tool circuit: 1 kΩ / 10 W power resistor provides the discharge path, with LED and 10 kΩ resistor in series forming the indicator branch in parallel.</figcaption>
 </figure>
 
