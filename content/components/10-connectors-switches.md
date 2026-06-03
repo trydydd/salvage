@@ -9,23 +9,23 @@ Connectors and switches are the parts that most people skip in salvage, and that
 
 Unlike active components, connectors and switches don't degrade in ways that are invisible. You can test them completely with a continuity check and a visual inspection. A 2.54mm pin header is a 2.54mm pin header regardless of where it came from, and the only thing that limits its usefulness is physical condition.
 
-Matched connector pairs are more valuable than singles. When a device has a wiring loom with a JST-XH or Molex connector on each end, pulling the pair plus the wiring gives you something immediately reusable: a ready-made cable with known terminations. A bare connector body without its mating half is still useful but requires more effort to deploy.
+Matched connector pairs are more valuable than singles. When a device has a wiring loom with a JST-XH or Molex connector on each end, pulling the pair plus the wiring gives you something immediately reusable: a ready-made cable with known terminations. A bare connector body without its mating half is still useful but requires more work to deploy.
 
 ## Identify the family
 
 **Headers and housings**
 
-2.54mm (0.1") pitch pin headers are the foundation of most hobby electronics wiring. They look like rows of square gold or silver pins on a black plastic strip. Male headers solder to boards; female housings accept the pins. You'll find both in every size from 2-pin to 40-pin. The pitch (pin-to-pin distance) matters: 2.0mm pitch connectors from phone and camera boards look almost identical but won't mate with 2.54mm parts.
+2.54mm (0.1") pitch pin headers are the foundation of most hobby electronics wiring. They look like rows of square gold or silver pins on a black plastic strip. Male headers solder to boards. Female housings accept the pins. You'll find both in every size from 2-pin to 40-pin. The pitch (pin-to-pin distance) matters: 2.0mm pitch connectors from phone and camera boards look almost identical but won't mate with 2.54mm parts.
 
-JST connectors are the small latching housings with molded plastic bodies. The JST-PH series uses 2.0mm pitch and is common in small lithium battery packs and compact PCB assemblies. JST-XH uses 2.5mm pitch and appears in RC equipment, 3D printer beds and extruders, and small consumer electronics. JST-SM uses the same 2.5mm pitch with a slightly different latch. The color and shape of the housing is not a reliable guide to family; measure or compare against a known part.
+JST connectors are the small latching housings with molded plastic bodies. The JST-PH series uses 2.0mm pitch and is common in small lithium battery packs and compact PCB assemblies. If you're pulling a JST-PH 2-pin from a LiPo or Li-ion cell, check the polarity with a meter before connecting it to anything: there's no consistent industry convention, and roughly half the packs on the market wire the connector with positive on one side while the other half do the opposite. Reversing polarity into a LiPo can cause fire or permanent cell damage. JST-XH uses 2.5mm pitch and appears in RC equipment, 3D printer beds and extruders, and small consumer electronics (it's also the standard balance connector on multi-cell LiPo packs). JST-SM uses the same 2.5mm pitch but is a wire-to-wire system with no PCB header, so you'll find it on LED strip connections and flying leads rather than board terminals. The color and shape of the housing is not a reliable guide to family. Measure the pitch or compare against a known part.
 
 **Barrel jacks and DC power connectors**
 
-Barrel jacks mount on boards and panels for DC power input. The most common sizes are 5.5mm outer diameter with either 2.1mm or 2.5mm inner pin. The difference matters: a 2.1mm plug in a 2.5mm jack makes intermittent contact; a 2.5mm plug won't seat in a 2.1mm jack. The center pin is nearly always positive, but confirm the polarity mark on the board or device before assuming. Smaller 3.5mm barrel jacks appear on some laptops and portable devices.
+Barrel jacks mount on boards and panels for DC power input. The most common sizes are 5.5mm outer diameter with either 2.1mm or 2.5mm inner pin. The difference matters: a 2.1mm plug in a 2.5mm jack makes intermittent contact, and a 2.5mm plug won't seat in a 2.1mm jack. The center pin is nearly always positive, but confirm the polarity mark on the board or device before assuming. Smaller barrel jacks with 3.5mm outer diameter and a 1.35mm inner pin show up on compact consumer devices and low-current DC supplies. They're a separate family from the 5.5mm series and the sizes don't cross-mate.
 
 **Switches**
 
-Tact switches are the 6mm×6mm or 12mm×12mm square pushbuttons with four legs. They're momentary, normally open, and the legs come in pairs: each pair is internally connected, so the two legs on one side connect to the button on one side, and the two legs on the other side connect to the other side of the button. Rocker switches are the large rectangular toggles used for mains or 12V power. They're usually SPST or DPDT, rated for 10–16A. Slide switches are smaller, with a physical sliding actuator, rated for 0.5–5A typically. DIP switches are multi-position rocker arrays on a narrow DIP-style body, used for configuration jumpers.
+Tact switches are the 6mm×6mm or 12mm×12mm square pushbuttons with four legs. They're momentary, normally open, and the legs come in pairs: each pair is internally connected, so the two legs on one side connect to the button on one side, and the two legs on the other side connect to the other side of the button. Rocker switches are the large rectangular toggles used for mains or 12V power. They come in SPST, DPST, and DPDT configurations. DPST is common in mains equipment where both live and neutral are switched together. The current rating printed on the case (typically 10A or 16A) is for resistive AC loads only. Inductive loads such as motors and transformers can require derating to 20–50% of that figure, so a switch marked 10A may only be safe at 2–5A when switching a motor. Slide switches are smaller, with a physical sliding actuator, rated for 0.5–5A typically. DIP switches are multi-position rocker arrays on a narrow DIP-style body, used for configuration jumpers.
 
 ## Test and inspect
 
@@ -33,7 +33,7 @@ Tact switches are the 6mm×6mm or 12mm×12mm square pushbuttons with four legs. 
 
 Set the meter to continuity mode. For a tact switch, probe one leg from each side (diagonally opposite legs work fine). Press the button: you should get continuity only when pressed, and OL when released. If continuity is present unpressed, the switch is stuck or failed closed. If pressing the button gives no continuity, the contacts are oxidized or the mechanism is broken.
 
-For a rocker switch, probe across the switched terminals in both positions. The switch should read continuity (under 0.5Ω) in the ON position and OL in the OFF position. Rocker switches with a lamp sometimes have separate terminals for the lamp; probe each set independently.
+For a rocker switch, probe across the switched terminals in both positions. The switch should read continuity (under 0.5Ω) in the ON position and OL in the OFF position. Rocker switches with a lamp sometimes have separate terminals for the lamp. Probe each set independently.
 
 **Continuity check on connectors**
 
@@ -61,15 +61,21 @@ Plastic connector housings crack from overtorqued screws, dropped parts, or exce
 
 **Worn tact switch contacts**
 
-Tact switches rated for 50,000–100,000 cycles wear out through use. The failure mode is usually increased contact resistance rather than a hard open: the switch reads continuity when pressed firmly but not when pressed lightly, or the click feel changes from crisp to mushy. On a bench test you'll catch a dead switch but may not catch a borderline one. Tact switches from heavily used controls (volume buttons, power buttons on devices that were on for years) are worth checking more carefully than ones from configuration panels.
+Tact switches are typically rated for 100,000 cycles, and wear out through use. The failure mode is usually increased contact resistance rather than a hard open: the switch reads continuity when pressed firmly but not when pressed lightly, or the click feel changes from crisp to mushy. On a bench test you'll catch a dead switch but may not catch a borderline one. Tact switches from heavily used controls (volume buttons, power buttons on devices that were on for years) are worth checking more carefully than ones from configuration panels.
+
+**Arc-damaged contacts on mains and motor switches**
+
+Rocker and toggle switches that have been used to switch inductive loads (motors, transformers, solenoids) often show arc erosion on the contacts. The arc fires every time the switch opens under load, and over time it pits and transfers contact material from one face to the other. The damage looks like a rough, blackened, or cratered contact surface rather than a smooth bright one. A badly arc-damaged switch may still pass a continuity test at low current but have high contact resistance under load, or it may weld shut under a high inrush current. Discard any mains switch with visibly pitted or blackened contacts.
 
 ## Harvesting strategy
 
-When a connector has a wiring harness attached, cutting the wires close to the board preserves more value than desoldering. You lose the board real estate, but you keep the crimp connections and wire lengths, which take time to re-create. Leave 100–150mm of wire if the loom allows it. If the connector is board-mounted with no loom, desolder it with the board face-up on a heat mat or with a hot-air station so you can see the pins; drag soldering these pins out one at a time risks pulling the housing out of square.
+When a connector has a wiring harness attached, cutting the wires close to the board preserves more value than desoldering. You lose the board real estate, but you keep the crimp connections and wire lengths, which take time to re-create. Leave 100–150mm of wire if the loom allows it. If the connector is board-mounted with no loom, desolder it with the board face-up on a heat mat or with a hot-air station so you can see the pins. Drag soldering these pins out one at a time risks pulling the housing out of square.
 
 Panel-mounted connectors (barrel jacks, rocker switches, toggle switches) are often attached to the case with a hex nut. Unscrew the nut before cutting any wires, and the connector and its panel cutout comes out as a single piece. That's more useful than a bare connector, because you can mount it in a new panel using the same thread.
 
-JST housings have a latch that engages a tab on the mating connector. When mating connectors are stuck, use a fine plastic tool or a toothpick to depress the latch before pulling; pulling without releasing the latch cracks the housing or bends the retention tab. The housings are thin and the latch is a single small feature; force always breaks something.
+Rocker and toggle switches salvaged from mains equipment carry safety certifications (UL, VDE, or CE marks) for their original use. Reusing one in a new mains-voltage application means that certification applies to the original device, not your new one. For a bench lamp or a low-stakes DC project, a salvaged switch is fine. For anything that plugs into mains and will be used by others, you need a switch with a current, traceable certification for that application. Check the markings on the switch body before assuming it's suitable.
+
+JST housings have a latch that engages a tab on the mating connector. When mating connectors are stuck, use a fine plastic tool or a toothpick to depress the latch before pulling. Pulling without releasing the latch cracks the housing or bends the retention tab. The housings are thin and the latch is a single small feature, so force always breaks something.
 
 Store connectors by family and pitch in small bags or compartments. Label with the connector type (JST-PH 2-pin, XH 4-pin, 2.54mm header 8-pin) because the families are harder to distinguish by eye when you're in a hurry. Rocker and toggle switches should be labeled with their switching configuration (SPST, DPDT) and current rating if it's printed on the case.
 

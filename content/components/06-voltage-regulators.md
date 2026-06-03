@@ -7,7 +7,7 @@ Voltage regulators are among the easiest active components to identify and test 
 
 ## Common families
 
-The 78xx series covers positive linear regulators in TO-220 packages: 7805 outputs 5V, 7808 outputs 8V, 7809 outputs 9V, 7812 outputs 12V, 7815 outputs 15V. The input must be at least 2 V above the rated output to regulate correctly. Rated current is 1A in the standard TO-220 package. The 79xx series is the negative-voltage counterpart: 7905 outputs -5V, 7912 outputs -12V. These use the same package but the pinout is mirrored, which trips people up when they're testing or wiring a part they haven't identified yet.
+The 78xx series covers positive linear regulators in TO-220 packages: 7805 outputs 5V, 7808 outputs 8V, 7809 outputs 9V, 7812 outputs 12V, 7815 outputs 15V. The input must be at least 2–2.5 V above the rated output to regulate correctly, and dropout creeps higher at full load current. Rated current is 1A in the standard TO-220 package. The 79xx series is the negative-voltage counterpart: 7905 outputs -5V, 7912 outputs -12V. These use the same package but the pinout is mirrored, which trips people up when they're testing or wiring a part they haven't identified yet.
 
 The LM317 and LM337 are adjustable versions of the same idea. The LM317 sets its output using two resistors between the output and adjust pins: output ranges from 1.25V to around 37V, current up to 1.5A in TO-220. The LM337 does the same for negative voltages. You'll recognize these by the part number on the body. Without knowing the surrounding resistor values, you can't predict the output voltage from the part number alone, which matters when you're testing a desoldered LM317 without the resistors attached.
 
@@ -29,13 +29,13 @@ If the part number is completely worn off a TO-220 regulator, the output voltage
 
 **Quick output voltage test**
 
-Desolder the regulator or test it in circuit on a powered-down board with an external supply applied at the input. For a 7805, apply 8–12V to the input pin (pin 1 in the standard TO-220 orientation), connect ground to pin 2, and measure pin 3 against ground. A healthy 7805 reads 4.92–5.08V. A 7812 should read 11.8–12.2V. The tab on a 78xx TO-220 is connected to the ground pin, so if you're using the tab as a ground reference it'll read correctly.
+Desolder the regulator or test it in circuit on a powered-down board with an external supply applied at the input. For a 7805, apply 8–12V to the input pin (pin 1 in the standard TO-220 orientation), connect ground to pin 2, and measure pin 3 against ground. A healthy 7805 reads 4.75–5.25V. A 7812 should read 11.5–12.5V. The datasheet tolerance is ±4%, so don't reject a part just because it reads 4.85V or 5.15V. The tab on a 78xx TO-220 is connected to the ground pin, so if you're using the tab as a ground reference it'll read correctly.
 
-The 79xx series uses the same physical package but the pinout is different: in the standard orientation (tab facing away, leads pointing down), pin 1 is ground, pin 2 is input (negative voltage), and pin 3 is output. Connect the negative terminal of your supply to pin 2 and measure pin 3 versus ground.
+The 79xx series uses the same physical package but the pinout is different: in the standard orientation (tab facing away, leads pointing down), pin 1 is ground, pin 2 is input (negative voltage), and pin 3 is output. Connect the negative terminal of your supply to pin 2 and measure pin 3 versus ground. Unlike the 78xx, the metal tab on a 79xx TO-220 connects to the input pin, not ground. If you bolt a 79xx to a heatsink, the heatsink will be at the negative supply voltage, so use an insulating pad.
 
 **Load test**
 
-A regulator that reads the right voltage at no load can still fail under current. Add a load resistor between output and ground to draw 100–200mA: for a 5V regulator, a 27Ω to 47Ω resistor works. The output should stay within 1% of rated voltage while the load is connected. If the output droops more than 5% under that load, the regulator is degraded.
+A regulator that reads the right voltage at no load can still fail under current. Add a load resistor between output and ground to draw 100–200mA: for a 5V regulator, a 27Ω to 47Ω resistor works. Note the no-load reading, then connect the resistor and note the loaded reading. A healthy regulator droops less than 0.5% between the two. If the output sags more than 5% from the no-load reading under that modest current, the pass element is degraded.
 
 Linear regulators dissipate (Vin minus Vout) times load current as heat. A 7805 running from 12V input at 500mA dissipates 3.5W. It will go into thermal shutdown without a heatsink, and the output will cut out and recover repeatedly. If you see the output cycling on and off during a load test, that's thermal shutdown, not a failed part.
 

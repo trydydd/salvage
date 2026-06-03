@@ -9,19 +9,19 @@ Bipolar junction transistors turn up on almost every board in salvage, from the 
 
 The TO-92 package is the one you'll see most: a small D-shaped plastic block, flat face on one side, curved on the other, with three leads coming from the bottom in a row. Small-signal transistors like the 2N3904, BC547, S8050, and their PNP counterparts (2N3906, BC557, S8550) all live in this package. The flat face usually carries the part number in tiny text, sometimes faded, sometimes marked with abbreviations.
 
-Medium-power transistors use the TO-220 package: a taller body with a metal tab at the top for heatsinking, three leads in a row. You'll find TIP31, TIP41, TIP120, and similar parts driving motors, larger relay coils, and audio output stages. The TO-126 package is similar but smaller, and appears in older audio equipment. Metal-can transistors in the TO-18 package (small, round, like a tiny silver hat with three leads) are usually RF or low-noise audio types and are rarer in modern salvage.
+Medium-power transistors use the TO-220 package: a taller body with a metal tab at the top for heatsinking, three leads in a row. You'll find TIP31 and TIP41 driving motors, larger relay coils, and audio output stages. The TIP120 is also TO-220 but is a Darlington pair (two transistors in one package), not a standard BJT. Its VCE(sat) runs around 2 V rather than the 0.2 V you'd see from a single-junction device. The TO-126 package is similar to TO-220 but smaller, and appears in older audio equipment. Metal-can transistors in the TO-18 package (small, round, like a tiny silver hat with three leads) include general-purpose switching types like the 2N2222 as well as RF and low-noise audio parts. They're rarer in modern salvage but worth keeping when you find them.
 
-SMD transistors in SOT-23 packages look like three-legged beetles. They're very common on any board made in the last twenty years, and the marking is usually a two or three character code, not a full part number. A code like "1A" on a SOT-23 is MMBT3904 (NPN); "2A" is MMBT3906 (PNP). These codes vary by manufacturer, so searching "[code] SOT-23 transistor" usually gets you the answer faster than trying to memorize them.
+SMD transistors in SOT-23 packages look like three-legged beetles. They're very common on any board made in the last twenty years, and the marking is usually a two or three character code, not a full part number. A code like "1A" on a SOT-23 is MMBT3904 (NPN), and "2A" is MMBT3906 (PNP). These codes vary by manufacturer, so searching "[code] SOT-23 transistor" usually gets you the answer faster than trying to memorize them.
 
-The common confusion in TO-92 is that the pin order is not standardized across families. A 2N3904 read from the flat face (left to right) goes Emitter, Base, Collector. A BC547 in the same orientation goes Collector, Base, Emitter. The part number on the body is the only reliable guide; don't assume the pinout matches a part you've used before.
+The common confusion in TO-92 is that the pin order is not standardized across families. A 2N3904 read from the flat face (left to right) goes Emitter, Base, Collector. A BC547 in the same orientation goes Collector, Base, Emitter. The part number on the body is the only reliable guide. Don't assume the pinout matches a part you've used before.
 
 ## NPN versus PNP
 
-NPN transistors conduct from collector to emitter when the base is pulled above the emitter voltage. PNP transistors conduct from emitter to collector when the base is pulled below the emitter voltage. In salvage, the distinction matters immediately for storage: mixing them means test work later.
+NPN transistors conduct from collector to emitter when the base is pulled above the emitter voltage. PNP transistors conduct from emitter to collector when the base is pulled below the emitter voltage. In salvage, the distinction matters the moment you pull a part: mix them in the same bin and you'll be re-testing everything later.
 
 The naming is a clue for older Japanese parts. The 2SC and 2SD series are NPN. The 2SA and 2SB series are PNP. European parts follow no universal rule, but BC5xx devices split by the final two digits: BC547/548/549 are NPN, BC557/558/559 are PNP. S8050 is NPN, S8550 is PNP.
 
-In diode mode, you can confirm polarity by finding which probe on the base gives you forward junction readings to both other pins. For an NPN, the red probe on the base reads 0.55–0.75V to the emitter and 0.55–0.75V to the collector. Swap the probes and both read OL. For a PNP, the black probe on the base reads 0.55–0.75V to emitter and collector; swap to red and both read OL.
+In diode mode, you can confirm polarity by finding which probe on the base gives you forward junction readings to both other pins. For an NPN, the red probe on the base reads 0.55–0.75V to the emitter and 0.55–0.75V to the collector. Swap the probes and both read OL. For a PNP, the black probe on the base reads 0.55–0.75V to emitter and collector. Swap to red and both read OL.
 
 ## Diode-mode testing
 
@@ -47,7 +47,7 @@ A cheap transistor tester (around £10–20) displays NPN or PNP, labels each pi
 
 **Shorted collector-emitter**
 
-The most common failure in power transistors. Overvoltage or overcurrent fuses the silicon and leaves C-E looking like a short. In diode mode, you'll get a near-zero reading between collector and emitter in both directions. The body is often intact; you can't see the damage. Any TO-220 pulled from near a burned section of board should be tested for C-E continuity before being trusted.
+The most common failure in power transistors. Overvoltage or overcurrent fuses the silicon and leaves C-E looking like a short. In diode mode, you'll get a near-zero reading between collector and emitter in both directions. The body is often intact. You can't see the damage. Any TO-220 pulled from near a burned section of board should be tested for C-E continuity before being trusted.
 
 **Open junction**
 
@@ -59,7 +59,7 @@ A degraded transistor passes some current even when it should be off. In diode m
 
 **Thermal stress in TO-92**
 
-TO-92 transistors don't heatsink well, and in circuits where they ran near their limits you'll sometimes find the plastic body slightly browned or the leads discolored close to the package. These parts may still pass a junction test but have uncertain long-term reliability. They're fine for experiments; don't use them in anything you need to trust.
+TO-92 transistors don't heatsink well, and in circuits where they ran near their limits you'll sometimes find the plastic body slightly browned or the leads discolored close to the package. These parts may still pass a junction test but have uncertain long-term reliability. They're fine for experiments. Don't use them in anything you need to trust.
 
 ## Pin identification
 
