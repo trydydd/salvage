@@ -146,16 +146,43 @@ a build layout, and a test/use procedure. ✅
 
 ---
 
-## Milestone 6 — Design, accessibility & print pass
+## Milestone 6 — Design, accessibility & print pass ✅ done
 
-- [ ] Run the `i-audit` skill; triage P0/P1 findings.
-- [ ] Verify light/dark (`prefers-color-scheme`), responsive layout on a small
-      viewport, and full no-JS usability.
-- [ ] Verify print output: hazard borders kept, banner shadow removed, readable.
-- [ ] Confirm hazard colors use the standard safety palette, not the OC accent
-      (per `HAZARD-SYSTEM.md`).
+Audit score: 13/20 → 20/20 across three `i-audit` passes on branch
+`feature/design-audit`. All P0, P1, P2, and P3 findings resolved.
 
-**Exit:** no P0 accessibility issues; print + dark mode + no-JS all verified.
+- [x] `i-audit` run (initial score 13/20 — Acceptable). All P1/P2/P3 findings
+      triaged and fixed programmatically.
+- [x] Skip-to-main-content link added (`<a class="skip-link">` → `#main-content`).
+- [x] `aria-current="page"` on active section nav link (WCAG 2.4.8).
+- [x] `<noscript>` fallback section nav for mobile/no-JS (44px touch targets).
+- [x] Nav toggle increased from 36px to 44px (WCAG 2.5.5).
+- [x] `.oc-vol-nav a` touch targets raised to 44px at tablet widths (481–768px).
+- [x] Explicit `.oc-vol-nav a:focus-visible` ring (2px `--oc-accent`) added.
+- [x] `.tier::before` side-stripe removed; replaced with tinted border +
+      background per tier level (anti-pattern cleanup).
+- [x] `.haz--level-4` box-shadow converted from hard-coded `rgba` to `color-mix`
+      from the active `--haz-4-border` token (dark-mode-aware).
+- [x] `@media (forced-colors: active)` block: `forced-color-adjust: none` on
+      `.haz` preserves safety palette in Windows High Contrast mode.
+- [x] `@media (prefers-reduced-motion: reduce)` block: zeroes transitions on
+      body, sidebar, toggle, all nav elements, and skip link.
+- [x] `@media print`: `.haz::before` stripe hidden; `border-width: 2px`;
+      `box-shadow: none`. Print output: hazard borders retained, readable.
+- [x] `loading="lazy"` added to all three schematic `<img>` tags.
+- [x] Font preloads (`<link rel="preload">`) for Vollkorn and Chivo roman faces.
+- [x] Hazard banner `aria-label` and icon `alt` now include severity label name
+      ("Low Risk / Moderate / Significant / Lethal Danger").
+- [x] Hazard banner markup and `--haz-*` tokens protected in `CLAUDE.md` against
+      future style-skill edits.
+- [x] Dark mode: all hazard levels verified correct; `.haz--level-4` shadow fixed.
+- [x] No-JS: fully usable at all viewport sizes via `<noscript>` nav fallback.
+- [x] `hazard_label` context variable added to `build.py`; `HAZARD_LABELS` dict.
+- [x] `font_vollkorn` / `font_chivo` context variables added to `build.py`.
+- [x] 216 tests pass throughout.
+
+**Exit:** audit score 20/20; no P0–P3 accessibility issues outstanding; print +
+dark mode + no-JS + reduced-motion + forced-colors all verified. ✅
 
 ---
 
