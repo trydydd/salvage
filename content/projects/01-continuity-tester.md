@@ -39,7 +39,7 @@ Through-hole resistors from desktop computer motherboards or 1990s–2000s consu
 The circuit is a series loop: battery positive runs through an optional switch, then through the resistor, through the LED (anode to cathode), to probe A. Battery negative goes to probe B. When both probes touch a conductive path, the loop closes and the LED lights.
 
 <figure>
-  <img src="../images/continuity-tester.svg" alt="Series circuit: 3 V battery, optional switch, 100–220 Ω resistor, and LED wired in a loop with Probe A at the LED output and Probe B at the battery negative terminal.">
+  <img src="../images/continuity-tester.svg" alt="Series circuit: 3 V battery, optional switch, 100–220 Ω resistor, and LED wired in a loop with Probe A at the LED output and Probe B at the battery negative terminal." loading="lazy">
   <figcaption>Continuity tester circuit: battery, series resistor, and LED in a loop. Touch Probe A and Probe B to the path under test to complete the circuit.</figcaption>
 </figure>
 
