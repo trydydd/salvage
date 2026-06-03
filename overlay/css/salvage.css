@@ -284,26 +284,17 @@ h1:first-of-type {
 
 .tier {
   --tier-accent: var(--oc-accent);
-  position: relative;
   margin: 1.25em 0;
-  padding: 0.9em 1.1em 0.9em calc(1.1em + 5px);
-  border: 1px solid var(--oc-border);
+  padding: 0.9em 1.1em;
+  border: 1px solid color-mix(in oklch, var(--tier-accent) 45%, var(--oc-border) 55%);
   border-radius: var(--oc-radius);
-  background: color-mix(in oklch, var(--oc-surface) 72%, var(--oc-bg) 28%);
+  background: color-mix(in oklch, var(--tier-accent) 7%, var(--oc-surface) 93%);
   color: var(--oc-text);
   font-style: normal;
 }
 
-.tier::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: var(--tier-accent);
-}
-
 blockquote.tier {
-  border-left: 0;
+  border-left: 1px solid color-mix(in oklch, var(--tier-accent) 45%, var(--oc-border) 55%);
 }
 
 .tier > :first-child {
