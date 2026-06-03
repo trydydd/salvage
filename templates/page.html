@@ -18,6 +18,17 @@
       <!-- populated by navigation.js -->
     </aside>
     <main id="main-content">
+      <noscript>
+        <nav class="noscript-nav" aria-label="Section navigation">
+          <ul>
+            <li><a href="{{ foundations }}">Foundations</a></li>
+            <li><a href="{{ donor_guides }}">Donors</a></li>
+            <li><a href="{{ components }}">Components</a></li>
+            <li><a href="{{ projects }}">Projects</a></li>
+            <li><a href="/open-circuits/index.html">Theory</a></li>
+          </ul>
+        </nav>
+      </noscript>
       {% if hazard %}{% include "partials/hazard-banner.html" %}{% endif %}
       <article>
         <h1>{{ title }}</h1>

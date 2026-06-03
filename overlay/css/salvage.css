@@ -27,6 +27,48 @@
   outline: none;
 }
 
+/* No-JS fallback section navigation. Only rendered by <noscript>; never
+   shown when JS is active. Flows at the top of <main>, below the fixed header. */
+.noscript-nav {
+  margin: 0 0 1.5em;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--oc-border);
+}
+
+.noscript-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.noscript-nav li {
+  margin: 0;
+}
+
+.noscript-nav a {
+  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--oc-text-2);
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--oc-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.noscript-nav a:hover {
+  color: var(--oc-text);
+  border-color: var(--oc-border-strong);
+  background: var(--oc-surface);
+}
+
 /* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
    because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
    pages have exactly one H1 — the page title — so reset to normal heading. */
