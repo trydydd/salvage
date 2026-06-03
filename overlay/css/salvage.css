@@ -98,6 +98,14 @@
   }
 }
 
+/* Explicit focus ring for header section nav links. The shared CSS provides
+   none; browser defaults vary across browsers and may be low-contrast on the
+   dark header background. */
+.oc-vol-nav a:focus-visible {
+  outline: 2px solid var(--oc-accent);
+  outline-offset: 2px;
+}
+
 /* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
    because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
    pages have exactly one H1 — the page title — so reset to normal heading. */
