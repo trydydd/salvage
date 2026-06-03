@@ -76,6 +76,22 @@
   height: 44px;
 }
 
+/* At tablet widths (480–768px) the section nav is visible but shared CSS gives
+   links only ~27px height. Increase padding to meet the 44px touch-target
+   minimum at screen sizes where touch input is common. */
+@media (max-width: 768px) and (min-width: 481px) {
+  .oc-vol-nav {
+    display: flex;
+  }
+
+  .oc-vol-nav a {
+    padding: 0.7rem 0.7rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* open-circuits.css styles h1:first-of-type as a tiny uppercase volume label
    because Kuphaldt pages have two H1s (volume name + chapter name). Salvage
    pages have exactly one H1 — the page title — so reset to normal heading. */
