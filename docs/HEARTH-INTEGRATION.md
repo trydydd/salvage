@@ -35,7 +35,7 @@ The `hearth.yaml` configuration (in the `hearth` repo) pins the release version:
 services:
   salvage:
     enabled: true
-    version: "v0.1.0"
+    version: "v1.0.0"
     mode: static
 ```
 

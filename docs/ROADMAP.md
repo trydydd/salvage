@@ -188,13 +188,13 @@ dark mode + no-JS + reduced-motion + forced-colors all verified. ✅
 
 ## Milestone 7 — Release engineering & 1.0.0 cut
 
-- [ ] Confirm CI (`build.yml`, `pages.yml`, `release.yml`) is green on `main`.
-- [ ] Confirm the release workflow produces `salvage-vX.Y.Z.tar.gz` and attaches it
+- [x] Confirm CI (`build.yml`, `pages.yml`, `release.yml`) is green on `main`.
+- [x] Confirm the release workflow produces `salvage-vX.Y.Z.tar.gz` and attaches it
       to the tag, with shared assets bundled (no CDN deps in the artifact).
-- [ ] Smoke-test the tarball against the nginx path contract in
+- [x] Smoke-test the tarball against the nginx path contract in
       `HEARTH-INTEGRATION.md` (`/salvage/...` paths stable, footer license/attribution reachable).
-- [ ] Update the pinned `version:` example in `HEARTH-INTEGRATION.md` to `v1.0.0`.
-- [ ] Tag `v1.0.0` and verify the release artifact downloads and serves clean.
+- [x] Update the pinned `version:` example in `HEARTH-INTEGRATION.md` to `v1.0.0`.
+- [x] Tag `v1.0.0` and verify the release artifact downloads and serves clean.
 
 **Exit:** `v1.0.0` tagged, artifact published, Hearth can pin it.
 

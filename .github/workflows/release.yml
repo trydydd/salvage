@@ -36,7 +36,7 @@ jobs:
       - name: Create release tarball
         run: |
           VERSION="${GITHUB_REF_NAME}"
-          tar -czf "output/salvage-electronics-${VERSION}.tar.gz" -C output/html .
+          tar -czf "output/salvage-${VERSION}.tar.gz" -C output/html .
 
       - name: Upload HTML output
         uses: actions/upload-artifact@v4
